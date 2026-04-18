@@ -1,0 +1,8 @@
+node_modules
+dist
+.DS_Store
+site-ref-*.png
+.env
+.env.*
+!.env.example
+.cache

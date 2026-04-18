@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="uk" class="font-sans">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Храм Харе Крішна (ISKCON) у Харкові на Холодній Горі. Недільні програми, кіртан, бгакті-йога, розклад араті та лекцій з «Шрімад Бгаґаватам»."
+    />
+    <meta name="theme-color" content="#e85d04" />
+    <title>Храм Харе Крішна у Харкові — ISKCON Kharkiv</title>
+    <link rel="preload" as="image" href="/hero-banner.png" fetchpriority="high" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body
+    class="font-sans text-sm font-normal leading-normal text-gray-800 antialiased bg-white"
+  >
+    <div id="app">
+      <!-- Header -->
+      <header
+        class="relative sticky top-0 z-50 border-b border-gray-100 bg-white/95 backdrop-blur-sm"
+      >
+        <div
+          class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-y-3 px-4 py-3 md:flex-nowrap md:px-6"
+        >
+          <a href="#home" class="order-1 flex shrink-0 items-center gap-3">
+            <img
+              src="/iskcon-kharkiv-logo.png"
+              alt="ISKCON Kharkiv"
+              class="h-[7.65rem] w-auto md:h-[8.55rem]"
+              width="216"
+              height="270"
+              decoding="async"
+            />
+          </a>
+          <details class="relative order-2 md:hidden">
+            <summary
+              class="list-none cursor-pointer rounded border border-gray-200 px-3 py-1.5 text-sm font-normal uppercase tracking-wide text-gray-700 [&::-webkit-details-marker]:hidden"
+            >
+              Меню
+            </summary>
+            <nav
+              class="absolute right-0 top-full z-50 mt-2 flex min-w-[12rem] flex-col gap-3 rounded-md border border-gray-100 bg-white px-4 py-4 text-sm font-normal uppercase tracking-wide text-gray-700 shadow-lg"
+            >
+              <a href="#home" class="hover:text-brand">Головна</a>
+              <a href="#events" class="hover:text-brand">Події</a>
+              <a href="#donate" class="hover:text-brand">Допомога</a>
+              <a href="#contacts" class="hover:text-brand">Контакти</a>
+            </nav>
+          </details>
+          <nav
+            class="order-4 hidden flex-1 justify-center gap-6 text-sm font-normal uppercase tracking-[0.14em] text-gray-700 md:order-2 md:flex lg:gap-10"
+            aria-label="Основна навігація"
+          >
+            <a href="#home" class="hover:text-brand transition-colors"
+              >Головна</a
+            >
+            <a href="#events" class="hover:text-brand transition-colors"
+              >Події</a
+            >
+            <a href="#donate" class="hover:text-brand transition-colors"
+              >Допомога</a
+            >
+            <a href="#contacts" class="hover:text-brand transition-colors"
+              >Контакти</a
+            >
+          </nav>
+          <div class="order-3 flex shrink-0 gap-1.5 md:order-3">
+            <a
+              href="#"
+              class="flex h-7 w-7 items-center justify-center rounded bg-brand text-[10px] font-normal text-white shadow-sm hover:bg-brand-dark"
+              aria-label="Telegram"
+              >T</a
+            >
+            <a
+              href="#"
+              class="flex h-7 w-7 items-center justify-center rounded bg-brand text-[10px] font-normal text-white shadow-sm hover:bg-brand-dark"
+              aria-label="Facebook"
+              >f</a
+            >
+            <a
+              href="#"
+              class="flex h-7 w-7 items-center justify-center rounded bg-brand text-[10px] font-normal text-white shadow-sm hover:bg-brand-dark"
+              aria-label="YouTube"
+              >▶</a
+            >
+            <a
+              href="#"
+              class="flex h-7 w-7 items-center justify-center rounded bg-brand text-[10px] font-normal text-white shadow-sm hover:bg-brand-dark"
+              aria-label="Instagram"
+              >◎</a
+            >
+          </div>
+        </div>
+      </header>
+
+      <!-- Hero -->
+      <section
+        id="home"
+        class="relative flex min-h-[min(70vh,434px)] items-center justify-center bg-gray-900"
+      >
+        <div
+          class="absolute inset-0 bg-[url('/hero-banner.png')] bg-cover bg-no-repeat bg-center"
+        ></div>
+        <div
+          class="absolute inset-0 bg-gradient-to-b from-black/55 via-black/45 to-black/60"
+        ></div>
+        <div class="relative z-10 max-w-4xl px-6 text-center text-white">
+          <h1
+            class="mb-4 text-3xl font-normal leading-tight tracking-tight drop-shadow md:text-4xl lg:text-[2.75rem]"
+          >
+            Храм Харе Крішна у Харкові
+          </h1>
+          <p
+            class="mx-auto max-w-2xl text-sm font-normal text-white/95 drop-shadow"
+          >
+            Запрошуємо вас відвідати наші недільні програми
+          </p>
+        </div>
+      </section>
+
+      <!-- About -->
+      <section class="bg-gray-50 py-8 md:py-12">
+        <div
+          class="mx-auto grid max-w-6xl grid-cols-1 gap-6 px-6 lg:grid-cols-12 lg:gap-10 lg:items-start"
+        >
+          <div class="lg:col-span-5">
+            <h2
+              class="text-[calc(1.5rem+2px)] font-normal leading-snug text-brand md:text-[calc(1.65rem+2px)] lg:text-[calc(1.85rem+2px)]"
+            >
+              Щиро вітаємо вас у центрі бгакті-йоги в Харкові
+            </h2>
+          </div>
+          <div
+            class="space-y-5 text-[calc(0.875rem+2px)] leading-relaxed text-gray-600 lg:col-span-7"
+          >
+            <p>
+              У Харкові, на Холодній Горі, ми запрошуємо вас відкрити для себе
+              бгакті-йогу — шлях відданості, де гармонійно поєднуються звук,
+              спільнота та натхнення.
+            </p>
+            <p>
+              Наш храм — дім з відчиненими дверима: ви можете взяти участь у
+              Манґала-араті, співати кіртан, у колі медитації знайти спокій,
+              або просто залишитись у залі храму на хвилину тиші.
+            </p>
+            <p>
+              Чи ви вперше, чи вже маєте досвід — ми раді вітати вас і разом
+              поглибитися у запитання про мантру, вегетаріанство та Веди.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Daily schedule -->
+      <section class="bg-white py-14 md:py-16">
+        <div class="mx-auto max-w-3xl px-6">
+          <h2
+            class="mb-8 text-center text-2xl font-normal text-brand md:mb-10 md:text-[1.75rem] lg:text-3xl"
+          >
+            Розклад подій кожного дня
+          </h2>
+          <ul
+            class="space-y-2 text-[calc(0.875rem+2px)] leading-tight text-gray-700"
+          >
+            <li class="flex flex-col gap-1 sm:flex-row sm:gap-6">
+              <span class="shrink-0 tabular-nums font-semibold text-gray-900">05:00–05:45</span>
+              <span>Мангала-араті. Ранкові сприятливі молитви</span>
+            </li>
+            <li class="flex flex-col gap-1 sm:flex-row sm:gap-6">
+              <span class="shrink-0 tabular-nums font-semibold text-gray-900">05:45–07:30</span>
+              <span>Оспівування Святих Імен на вервицях</span>
+            </li>
+            <li class="flex flex-col gap-1 sm:flex-row sm:gap-6">
+              <span class="shrink-0 tabular-nums font-semibold text-gray-900">07:30–08:00</span>
+              <span
+                >Привітання Їх Світлостей Шрі Шрі Гаура Нітай, Гуру-пуджа Його
+                Божественній Милості Шрілі Прабгупаді</span>
+            </li>
+            <li class="flex flex-col gap-1 sm:flex-row sm:gap-6">
+              <span class="shrink-0 tabular-nums font-semibold text-gray-900">08:00–09:00</span>
+              <span>Шрімад Бгаґаватам</span>
+            </li>
+            <li class="flex flex-col gap-1 sm:flex-row sm:gap-6">
+              <span class="shrink-0 tabular-nums font-semibold text-gray-900">09:00–10:00</span>
+              <span>Вшанування прасаду</span>
+            </li>
+            <li class="flex flex-col gap-1 sm:flex-row sm:gap-6">
+              <span class="shrink-0 tabular-nums font-semibold text-gray-900">15:30–16:00</span>
+              <span>Вшанування прасаду</span>
+            </li>
+            <li class="flex flex-col gap-1 sm:flex-row sm:gap-6">
+              <span class="shrink-0 tabular-nums font-semibold text-gray-900">19:00–19:30</span>
+              <span>Гаура-араті</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Lectures poster -->
+      <section class="bg-gray-50 py-14 md:py-16" aria-label="Афіша лекцій">
+        <div
+          class="mx-auto max-w-md px-6 md:max-w-2xl lg:max-w-3xl"
+        >
+          <img
+            src="/bhagavatam-lectures-poster.png"
+            alt="Афіша: лекції з «Шрімад Бгаґаватам» — розклад у Харкові"
+            class="w-full rounded-lg shadow-md"
+            width="724"
+            height="1024"
+            loading="lazy"
+            decoding="async"
+          />
+        </div>
+      </section>
+
+      <!-- Orange features -->
+      <section
+        class="bg-gradient-to-r from-[#F78849] to-[#F9B74F] py-[2.4rem] text-white md:py-[2.8rem]"
+      >
+        <div
+          class="mx-auto grid max-w-5xl grid-cols-1 gap-8 px-6 md:grid-cols-3 md:gap-[1.6rem]"
+        >
+          <div class="flex flex-col items-center text-center">
+            <div
+              class="mb-3 flex h-16 w-16 items-center justify-center rounded-full border-2 border-white/90 bg-white/10"
+            >
+              <svg
+                class="h-7 w-7 text-white"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"
+                  d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
+                />
+              </svg>
+            </div>
+            <h3 class="mb-1 text-lg font-normal md:text-xl">Філософія</h3>
+            <p class="text-sm font-normal text-white/90">Вічна мудрість Вед</p>
+          </div>
+          <div class="flex flex-col items-center text-center">
+            <div
+              class="mb-3 flex h-16 w-16 items-center justify-center rounded-full border-2 border-white/90 bg-white/10"
+            >
+              <svg
+                class="h-7 w-7 text-white"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
+                />
+              </svg>
+            </div>
+            <h3 class="mb-1 text-lg font-normal md:text-xl">Бгакті-йога</h3>
+            <p class="text-sm font-normal text-white/90">
+              Шлях відданості та любові
+            </p>
+          </div>
+          <div class="flex flex-col items-center text-center">
+            <div
+              class="mb-3 flex h-16 w-16 items-center justify-center rounded-full border-2 border-white/90 bg-white/10"
+            >
+              <svg
+                class="h-7 w-7 text-white"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"
+                  d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"
+                />
+              </svg>
+            </div>
+            <h3 class="mb-1 text-lg font-normal md:text-xl">Наш храм</h3>
+            <p class="text-sm font-normal text-white/90">
+              Місце духовного спілкування
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Gallery -->
+      <section id="events" class="bg-white py-14 md:py-16">
+        <div class="mx-auto max-w-6xl px-6">
+          <h2
+            class="mb-8 text-left text-2xl font-normal text-brand md:text-3xl"
+          >
+            У нас багато чого цікавого
+          </h2>
+          <div
+            class="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 lg:gap-6"
+          >
+            <article
+              class="group relative aspect-[3/4] overflow-hidden rounded-lg bg-gray-300 shadow-md"
+            >
+              <img
+                src="/gallery-harinami.png"
+                alt="Харінами у місті: кожної суботи об 11:00"
+                class="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+                width="900"
+                height="1200"
+                loading="lazy"
+                decoding="async"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/25 to-transparent"
+              ></div>
+              <div class="absolute bottom-0 left-0 p-4 text-white">
+                <p class="text-lg font-normal">ХАРІНАМИ У МІСТІ</p>
+                <p class="text-sm font-normal text-white/90">
+                  кожної суботи об 11:00
+                </p>
+              </div>
+            </article>
+            <article
+              class="group relative aspect-[3/4] overflow-hidden rounded-lg bg-gray-300 shadow-md"
+            >
+              <img
+                src="/gallery-kirtan-vaishnavi.png"
+                alt="Кіртан-вайшнаві: у вівтарі з 13:00 до 14:00"
+                class="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+                width="900"
+                height="1200"
+                loading="lazy"
+                decoding="async"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/25 to-transparent"
+              ></div>
+              <div class="absolute bottom-0 left-0 p-4 text-white">
+                <p class="text-lg font-normal">КІРТАН-ВАЙШНАВІ</p>
+                <p class="text-sm font-normal text-white/90">
+                  У вівтарі<br />
+                  З 13:00 до 14:00
+                </p>
+              </div>
+            </article>
+            <article
+              class="group relative aspect-[3/4] overflow-hidden rounded-lg bg-gray-300 shadow-md"
+            >
+              <img
+                src="/gallery-lectures-schedule.png"
+                alt="Розклад лекцій з «Шрімад Бгаґаватам»"
+                class="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+                width="900"
+                height="1200"
+                loading="lazy"
+                decoding="async"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/25 to-transparent"
+              ></div>
+              <div class="absolute bottom-0 left-0 p-4 text-white">
+                <p class="text-lg font-normal">РОЗКЛАД ЛЕКЦІЙ</p>
+              </div>
+            </article>
+            <article
+              class="group relative aspect-[3/4] overflow-hidden rounded-lg bg-gray-300 shadow-md"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?auto=format&fit=crop&w=800&q=80"
+                alt=""
+                class="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+                width="800"
+                height="533"
+                loading="lazy"
+                decoding="async"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/25 to-transparent"
+              ></div>
+              <div class="absolute bottom-0 left-0 p-4 text-white">
+                <p class="text-lg font-normal">Храм</p>
+                <p class="text-sm font-normal text-white/90">
+                  Наш храм і його цікавості
+                </p>
+              </div>
+            </article>
+            <article
+              class="group relative aspect-[3/4] overflow-hidden rounded-lg bg-gray-300 shadow-md"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1464207687429-7505649dae38?auto=format&fit=crop&w=800&q=80"
+                alt=""
+                class="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+                width="800"
+                height="533"
+                loading="lazy"
+                decoding="async"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/25 to-transparent"
+              ></div>
+              <div class="absolute bottom-0 left-0 p-4 text-white">
+                <p class="text-lg font-normal">Храм</p>
+                <p class="text-sm font-normal text-white/90">
+                  Наш храм і його цікавості
+                </p>
+              </div>
+            </article>
+            <article
+              class="group relative aspect-[3/4] overflow-hidden rounded-lg bg-gray-300 shadow-md"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1499438072817-faa0c6b95a3b?auto=format&fit=crop&w=800&q=80"
+                alt=""
+                class="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+                width="800"
+                height="533"
+                loading="lazy"
+                decoding="async"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/25 to-transparent"
+              ></div>
+              <div class="absolute bottom-0 left-0 p-4 text-white">
+                <p class="text-lg font-normal">Храм</p>
+                <p class="text-sm font-normal text-white/90">
+                  Наш храм і його цікавості
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Donate: centered column — heading, tagline, bank details -->
+      <section
+        id="donate"
+        class="bg-gradient-to-r from-[#F9B74F] to-[#F78849] py-12 text-white md:py-[3.25rem]"
+      >
+        <div
+          class="mx-auto flex max-w-3xl flex-col items-center px-6 text-center md:max-w-4xl"
+        >
+          <h2
+            class="mb-6 text-[calc(1.5rem+2px)] font-normal leading-tight tracking-tight text-white md:mb-7 md:text-[calc(1.875rem+2px)]"
+          >
+            Дякуємо за вашу пожертву!
+          </h2>
+          <p
+            class="mb-9 max-w-2xl text-[calc(0.875rem+2px)] leading-relaxed text-white md:mb-10"
+          >
+            Піклування про храм у Харкові, вегетаріанська їжа та наші програми
+            можливі завдяки пожертвам. Щира вдячність за вашу підтримку!
+          </p>
+          <div
+            class="flex w-full max-w-md flex-col gap-y-1 text-[calc(0.875rem+2px)] leading-snug tabular-nums text-white"
+          >
+            <p class="font-normal">Храм Харе Крішна, Харків</p>
+            <p>IBAN: 8999 2374 7773 2344</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer id="contacts" class="border-t border-gray-100 bg-white py-12">
+        <div class="mx-auto max-w-6xl px-6 pb-8">
+          <div
+            class="grid grid-cols-1 gap-10 lg:grid-cols-12 lg:gap-8 lg:items-start"
+          >
+            <div class="lg:col-span-4">
+              <img
+                src="/iskcon-kharkiv-logo.png"
+                alt="ISKCON Kharkiv"
+                class="mb-5 h-[11.475rem] w-auto md:h-[12.825rem]"
+                width="324"
+                height="405"
+                loading="lazy"
+                decoding="async"
+              />
+              <p class="text-sm leading-relaxed text-gray-600">
+                Бгакті-йога та ведична культура в Харкові — відчинені для всіх,
+                хто хоче пройти шлях відданості в спільноті.
+              </p>
+            </div>
+            <div class="lg:col-span-3 lg:col-start-6">
+              <h3 class="mb-3 text-sm font-semibold uppercase tracking-wide text-gray-800">
+                Адреса храму
+              </h3>
+              <address
+                class="not-italic text-sm leading-relaxed text-gray-600"
+              >
+                вул. Холодногірська, 39<br />
+                61098 Харків, Україна
+              </address>
+            </div>
+            <div class="lg:col-span-3">
+              <h3 class="mb-3 text-sm font-semibold uppercase tracking-wide text-gray-800">
+                Посилання
+              </h3>
+              <ul class="space-y-2 text-sm text-gray-600">
+                <li>
+                  <a href="#" class="hover:text-brand transition-colors"
+                    >Новини в телеграмі</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="hover:text-brand transition-colors"
+                    >Група у Facebook</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="hover:text-brand transition-colors"
+                    >Їжа життя Харків - благодійний проект</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="hover:text-brand transition-colors"
+                    >YouTube - лекції, м. Харків</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="border-t border-gray-100 bg-gray-50/80 py-6">
+          <p
+            class="mx-auto max-w-4xl px-6 text-center text-xs leading-relaxed text-gray-500"
+          >
+            Міжнародне товариство свідомості Крішни.<br />
+            Засновник-ачарʼя Його Божественна Милість А. Ч. Бгактіведанта Свамі
+            Прабгупада.
+          </p>
+        </div>
+      </footer>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

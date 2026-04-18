@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    @apply font-sans text-sm font-normal;
+  }
+
+  body,
+  button,
+  input,
+  textarea,
+  select {
+    @apply font-sans text-sm font-normal;
+  }
+}
