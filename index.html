@@ -10,103 +10,299 @@
     />
     <meta name="theme-color" content="#e85d04" />
     <title>Храм Харе Крішна у Харкові — ISKCON Kharkiv</title>
-    <link rel="preload" as="image" href="/hero-banner.png" fetchpriority="high" />
+    <link rel="preload" as="image" href="/images/hero-banner.png" fetchpriority="high" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="/src/css/style.css" />
   </head>
   <body
     class="font-sans text-sm font-normal leading-normal text-gray-800 antialiased bg-white"
   >
-    <div id="app">
-      <!-- Header -->
-      <header
-        class="relative sticky top-0 z-50 border-b border-gray-100 bg-white/95 backdrop-blur-sm"
+    <div
+      id="app"
+      class="flex min-h-screen flex-col bg-white lg:flex-row"
+    >
+      <!-- Left column nav (like krishna.ua: logo + vertical list) -->
+      <aside
+        class="z-40 shrink-0 border-b border-gray-200 bg-white lg:sticky lg:top-0 lg:flex lg:h-screen lg:w-[17.5rem] lg:flex-col lg:overflow-y-auto lg:border-b-0 lg:border-r lg:border-gray-200 lg:px-6 lg:py-10"
+        aria-label="Навігація сайту"
       >
         <div
-          class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-y-3 px-4 py-3 md:flex-nowrap md:px-6"
+          class="flex items-center justify-between gap-4 px-4 py-3 lg:flex-col lg:items-stretch lg:gap-8 lg:px-0 lg:py-0"
         >
-          <a href="#home" class="order-1 flex shrink-0 items-center gap-3">
+          <a
+            href="#home"
+            class="block shrink-0 lg:mx-auto lg:w-full lg:text-center"
+          >
             <img
-              src="/iskcon-kharkiv-logo.png"
+              src="/images/iskcon-kharkiv-logo.png"
               alt="ISKCON Kharkiv"
-              class="h-[7.65rem] w-auto md:h-[8.55rem]"
+              class="mx-auto h-[8.25rem] w-auto lg:h-[11.25rem]"
               width="216"
               height="270"
               decoding="async"
             />
           </a>
-          <details class="relative order-2 md:hidden">
+          <details class="relative lg:hidden">
             <summary
               class="list-none cursor-pointer rounded border border-gray-200 px-3 py-1.5 text-sm font-normal uppercase tracking-wide text-gray-700 [&::-webkit-details-marker]:hidden"
             >
               Меню
             </summary>
             <nav
-              class="absolute right-0 top-full z-50 mt-2 flex min-w-[12rem] flex-col gap-3 rounded-md border border-gray-100 bg-white px-4 py-4 text-sm font-normal uppercase tracking-wide text-gray-700 shadow-lg"
+              class="absolute right-0 top-full z-50 mt-2 flex min-w-[14.5rem] flex-col rounded-md border border-gray-100 bg-white py-0 text-sm uppercase tracking-[0.12em] text-gray-700 shadow-lg"
+              aria-label="Основна навігація"
             >
-              <a href="#home" class="hover:text-brand">Головна</a>
-              <a href="#events" class="hover:text-brand">Події</a>
-              <a href="#donate" class="hover:text-brand">Допомога</a>
-              <a href="#contacts" class="hover:text-brand">Контакти</a>
+              <div
+                class="temple-nav border-b border-gray-100 last:border-b-0"
+                data-temple-nav
+              >
+                <button
+                  type="button"
+                  id="kharkiv-temple-btn-m"
+                  class="temple-nav-trigger flex w-full cursor-pointer items-center justify-between border-0 bg-transparent px-4 py-2.5 text-left text-sm font-semibold uppercase tracking-[0.12em] text-gray-900"
+                  aria-expanded="false"
+                  aria-controls="kharkiv-temple-submenu-m"
+                >
+                  Храм
+                  <svg
+                    class="temple-chevron h-4 w-4 shrink-0 text-gray-400"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M19 9l-7 7-7-7"
+                    />
+                  </svg>
+                </button>
+                <div
+                  id="kharkiv-temple-submenu-m"
+                  class="temple-nav-panel"
+                  role="region"
+                  aria-labelledby="kharkiv-temple-btn-m"
+                >
+                  <div class="temple-nav-inner">
+                    <ul
+                      class="border-t border-gray-100 bg-gray-50/90 text-sm font-semibold uppercase tracking-[0.12em] text-gray-900"
+                    >
+                      <li class="border-b border-gray-100 last:border-0">
+                        <a
+                          href="darshan.html"
+                          class="block py-2.5 pl-6 pr-4 transition-colors hover:bg-white hover:text-brand"
+                          >Даршан Божеств</a
+                        >
+                      </li>
+                      <li class="border-b border-gray-100 last:border-0">
+                        <a
+                          href="schedule.html"
+                          class="block py-2.5 pl-6 pr-4 transition-colors hover:bg-white hover:text-brand"
+                          >Розклад</a
+                        >
+                      </li>
+                      <li class="border-b border-gray-100 last:border-0">
+                        <a
+                          href="broadcast.html"
+                          class="block py-2.5 pl-6 pr-4 transition-colors hover:bg-white hover:text-brand"
+                          >Трансляція</a
+                        >
+                      </li>
+                      <li class="border-b border-gray-100 last:border-0">
+                        <a
+                          href="education.html"
+                          class="block py-2.5 pl-6 pr-4 transition-colors hover:bg-white hover:text-brand"
+                          >Навчання</a
+                        >
+                      </li>
+                      <li class="border-b border-gray-100 last:border-0">
+                        <a
+                          href="how-to-get.html"
+                          class="block py-2.5 pl-6 pr-4 transition-colors hover:bg-white hover:text-brand"
+                          >Як доїхати</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <a
+                href="events.html"
+                class="px-4 py-2.5 hover:bg-gray-50 hover:text-brand"
+                >Події</a
+              >
+              <a
+                href="donate.html"
+                class="px-4 py-2.5 hover:bg-gray-50 hover:text-brand"
+                >Підтримати</a
+              >
+              <a
+                href="contacts.html"
+                class="px-4 py-2.5 hover:bg-gray-50 hover:text-brand"
+                >Контакти</a
+              >
             </nav>
           </details>
-          <nav
-            class="order-4 hidden flex-1 justify-center gap-6 text-sm font-normal uppercase tracking-[0.14em] text-gray-700 md:order-2 md:flex lg:gap-10"
-            aria-label="Основна навігація"
-          >
-            <a href="#home" class="hover:text-brand transition-colors"
-              >Головна</a
-            >
-            <a href="#events" class="hover:text-brand transition-colors"
-              >Події</a
-            >
-            <a href="#donate" class="hover:text-brand transition-colors"
-              >Допомога</a
-            >
-            <a href="#contacts" class="hover:text-brand transition-colors"
-              >Контакти</a
-            >
-          </nav>
-          <div class="order-3 flex shrink-0 gap-1.5 md:order-3">
-            <a
-              href="#"
-              class="flex h-7 w-7 items-center justify-center rounded bg-brand text-[10px] font-normal text-white shadow-sm hover:bg-brand-dark"
-              aria-label="Telegram"
-              >T</a
-            >
-            <a
-              href="#"
-              class="flex h-7 w-7 items-center justify-center rounded bg-brand text-[10px] font-normal text-white shadow-sm hover:bg-brand-dark"
-              aria-label="Facebook"
-              >f</a
-            >
-            <a
-              href="#"
-              class="flex h-7 w-7 items-center justify-center rounded bg-brand text-[10px] font-normal text-white shadow-sm hover:bg-brand-dark"
-              aria-label="YouTube"
-              >▶</a
-            >
-            <a
-              href="#"
-              class="flex h-7 w-7 items-center justify-center rounded bg-brand text-[10px] font-normal text-white shadow-sm hover:bg-brand-dark"
-              aria-label="Instagram"
-              >◎</a
-            >
-          </div>
         </div>
-      </header>
+        <nav
+          class="hidden flex-col px-4 pb-4 text-sm font-normal uppercase tracking-[0.12em] text-gray-700 lg:flex lg:px-0 lg:pb-0"
+          aria-label="Основна навігація"
+        >
+          <div class="temple-nav border-b border-gray-100" data-temple-nav>
+            <button
+              type="button"
+              id="kharkiv-temple-btn-d"
+              class="temple-nav-trigger flex w-full cursor-pointer items-center justify-between rounded-t-md border-0 bg-transparent px-3 py-2.5 text-sm font-semibold uppercase tracking-[0.12em] text-gray-900 transition-colors hover:bg-gray-50"
+              aria-expanded="false"
+              aria-controls="kharkiv-temple-submenu-d"
+            >
+              Храм
+              <svg
+                class="temple-chevron h-4 w-4 shrink-0 text-gray-400"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </button>
+            <div
+              id="kharkiv-temple-submenu-d"
+              class="temple-nav-panel"
+              role="region"
+              aria-labelledby="kharkiv-temple-btn-d"
+            >
+              <div class="temple-nav-inner">
+                <ul
+                  class="border-t border-gray-100 bg-gray-50/80 text-sm font-semibold uppercase tracking-[0.12em] text-gray-900"
+                >
+                  <li class="border-b border-gray-100 last:border-0">
+                    <a
+                      href="darshan.html"
+                      class="block py-2.5 pl-6 pr-3 transition-colors hover:bg-white hover:text-brand"
+                      >Даршан Божеств</a
+                    >
+                  </li>
+                  <li class="border-b border-gray-100 last:border-0">
+                    <a
+                      href="schedule.html"
+                      class="block py-2.5 pl-6 pr-3 transition-colors hover:bg-white hover:text-brand"
+                      >Розклад</a
+                    >
+                  </li>
+                  <li class="border-b border-gray-100 last:border-0">
+                    <a
+                      href="broadcast.html"
+                      class="block py-2.5 pl-6 pr-3 transition-colors hover:bg-white hover:text-brand"
+                      >Трансляція</a
+                    >
+                  </li>
+                  <li class="border-b border-gray-100 last:border-0">
+                    <a
+                      href="education.html"
+                      class="block py-2.5 pl-6 pr-3 transition-colors hover:bg-white hover:text-brand"
+                      >Навчання</a
+                    >
+                  </li>
+                  <li class="border-b border-gray-100 last:border-0">
+                    <a
+                      href="how-to-get.html"
+                      class="block py-2.5 pl-6 pr-3 transition-colors hover:bg-white hover:text-brand"
+                      >Як доїхати</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <a
+            href="events.html"
+            class="rounded-md px-3 py-2.5 transition-colors hover:bg-gray-50 hover:text-brand"
+            >Події</a
+          >
+          <a
+            href="donate.html"
+            class="rounded-md px-3 py-2.5 transition-colors hover:bg-gray-50 hover:text-brand"
+            >Підтримати</a
+          >
+          <a
+            href="contacts.html"
+            class="rounded-md px-3 py-2.5 transition-colors hover:bg-gray-50 hover:text-brand"
+            >Контакти</a
+          >
+        </nav>
+        <div
+          class="flex flex-wrap justify-center gap-1.5 border-t border-gray-100 px-4 py-3 lg:mt-6 lg:justify-start lg:border-t-0 lg:px-0 lg:pt-0"
+        >
+          <a
+            href="https://t.me/iskcon_kh"
+            class="flex h-9 w-9 items-center justify-center rounded-full bg-[#34A9DB] text-white shadow-sm transition hover:brightness-110 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#34A9DB]"
+            aria-label="Telegram"
+            rel="noopener noreferrer"
+            target="_blank"
+            ><i class="fab fa-telegram text-[1.05rem] leading-none" aria-hidden="true"></i></a
+          >
+          <a
+            href="https://www.facebook.com/hare.krishna.kharkov/"
+            class="flex h-9 w-9 items-center justify-center rounded-full bg-[#3B5998] text-white shadow-sm transition hover:brightness-110 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#3B5998]"
+            aria-label="Facebook"
+            rel="noopener noreferrer"
+            target="_blank"
+            ><i class="fab fa-facebook-f text-[1rem] leading-none" aria-hidden="true"></i></a
+          >
+          <a
+            href="https://www.youtube.com/channel/UC6aTIMPbCOMH9yk6WRukj-A"
+            class="flex h-9 w-9 items-center justify-center rounded-full bg-[#F70000] text-white shadow-sm transition hover:brightness-110 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-600"
+            aria-label="YouTube"
+            rel="noopener noreferrer"
+            target="_blank"
+            ><i class="fab fa-youtube text-[1rem] leading-none" aria-hidden="true"></i></a
+          >
+          <a
+            href="https://www.instagram.com/iskconkharkiv/"
+            class="flex h-9 w-9 items-center justify-center rounded-full bg-[#FF546B] text-white shadow-sm transition hover:brightness-110 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#FF546B]"
+            aria-label="Instagram"
+            rel="noopener noreferrer"
+            target="_blank"
+            ><i class="fab fa-instagram text-[1.05rem] leading-none" aria-hidden="true"></i></a
+          >
+        </div>
+        <p
+          class="mt-3 max-w-[15rem] border-t border-gray-100 px-4 pb-1 pt-4 text-left text-[1rem] leading-snug text-gray-500 lg:mt-4 lg:max-w-none lg:px-0"
+        >
+          Міжнародне товариство свідомості Крішни.<br />
+          Засновник-ачарʼя Його Божественна Милість А. Ч. Бгактіведанта Свамі
+          Прабгупада.
+        </p>
+      </aside>
 
+      <div class="flex min-h-screen min-w-0 flex-1 flex-col">
       <!-- Hero -->
       <section
         id="home"
         class="relative flex min-h-[min(70vh,434px)] items-center justify-center bg-gray-900"
       >
         <div
-          class="absolute inset-0 bg-[url('/hero-banner.png')] bg-cover bg-no-repeat bg-center"
+          class="absolute inset-0 bg-[url('/images/hero-banner.png')] bg-cover bg-no-repeat bg-center"
         ></div>
         <div
           class="absolute inset-0 bg-gradient-to-b from-black/55 via-black/45 to-black/60"
@@ -126,7 +322,7 @@
       </section>
 
       <!-- About -->
-      <section class="bg-gray-50 py-8 md:py-12">
+      <section id="education" class="scroll-mt-4 bg-gray-50 py-8 md:py-12">
         <div
           class="mx-auto grid max-w-6xl grid-cols-1 gap-6 px-6 lg:grid-cols-12 lg:gap-10 lg:items-start"
         >
@@ -159,7 +355,7 @@
       </section>
 
       <!-- Daily schedule -->
-      <section class="bg-white py-14 md:py-16">
+      <section id="schedule" class="scroll-mt-4 bg-white py-14 md:py-16">
         <div class="mx-auto max-w-3xl px-6">
           <h2
             class="mb-8 text-center text-2xl font-normal text-brand md:mb-10 md:text-[1.75rem] lg:text-3xl"
@@ -204,12 +400,16 @@
       </section>
 
       <!-- Lectures poster -->
-      <section class="bg-gray-50 py-14 md:py-16" aria-label="Афіша лекцій">
+      <section
+        id="broadcast"
+        class="scroll-mt-4 bg-gray-50 py-14 md:py-16"
+        aria-label="Афіша лекцій"
+      >
         <div
           class="mx-auto max-w-md px-6 md:max-w-2xl lg:max-w-3xl"
         >
           <img
-            src="/bhagavatam-lectures-poster.png"
+            src="/images/bhagavatam-lectures-poster.png"
             alt="Афіша: лекції з «Шрімад Бгаґаватам» — розклад у Харкові"
             class="w-full rounded-lg shadow-md"
             width="724"
@@ -305,10 +505,11 @@
             class="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 lg:gap-6"
           >
             <article
-              class="group relative aspect-[3/4] overflow-hidden rounded-lg bg-gray-300 shadow-md"
+              id="darshan"
+              class="group relative aspect-[3/4] scroll-mt-4 overflow-hidden rounded-lg bg-gray-300 shadow-md"
             >
               <img
-                src="/gallery-harinami.png"
+                src="/images/gallery-harinami.png"
                 alt="Харінами у місті: кожної суботи об 11:00"
                 class="h-full w-full object-cover transition duration-500 group-hover:scale-105"
                 width="900"
@@ -330,7 +531,7 @@
               class="group relative aspect-[3/4] overflow-hidden rounded-lg bg-gray-300 shadow-md"
             >
               <img
-                src="/gallery-kirtan-vaishnavi.png"
+                src="/images/gallery-kirtan-vaishnavi.png"
                 alt="Кіртан-вайшнаві: у вівтарі з 13:00 до 14:00"
                 class="h-full w-full object-cover transition duration-500 group-hover:scale-105"
                 width="900"
@@ -353,7 +554,7 @@
               class="group relative aspect-[3/4] overflow-hidden rounded-lg bg-gray-300 shadow-md"
             >
               <img
-                src="/gallery-lectures-schedule.png"
+                src="/images/gallery-lectures-schedule.png"
                 alt="Розклад лекцій з «Шрімад Бгаґаватам»"
                 class="h-full w-full object-cover transition duration-500 group-hover:scale-105"
                 width="900"
@@ -457,12 +658,12 @@
             Піклування про храм у Харкові, вегетаріанська їжа та наші програми
             можливі завдяки пожертвам. Щира вдячність за вашу підтримку!
           </p>
-          <div
-            class="flex w-full max-w-md flex-col gap-y-1 text-[calc(0.875rem+2px)] leading-snug tabular-nums text-white"
+          <a
+            href="donate.html"
+            class="inline-flex min-w-[14rem] items-center justify-center rounded-lg bg-brand px-8 py-3.5 text-center text-[calc(0.9375rem+2px)] font-semibold text-white shadow-md ring-2 ring-white/25 transition hover:bg-brand-dark hover:ring-white/35 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
           >
-            <p class="font-normal">Храм Харе Крішна, Харків</p>
-            <p>IBAN: 8999 2374 7773 2344</p>
-          </div>
+            Підтримати
+          </a>
         </div>
       </section>
 
@@ -474,7 +675,7 @@
           >
             <div class="lg:col-span-4">
               <img
-                src="/iskcon-kharkiv-logo.png"
+                src="/images/iskcon-kharkiv-logo.png"
                 alt="ISKCON Kharkiv"
                 class="mb-5 h-[11.475rem] w-auto md:h-[12.825rem]"
                 width="324"
@@ -487,7 +688,7 @@
                 хто хоче пройти шлях відданості в спільноті.
               </p>
             </div>
-            <div class="lg:col-span-3 lg:col-start-6">
+            <div id="how-to-get" class="scroll-mt-4 lg:col-span-3 lg:col-start-6">
               <h3 class="mb-3 text-sm font-semibold uppercase tracking-wide text-gray-800">
                 Адреса храму
               </h3>
@@ -504,12 +705,20 @@
               </h3>
               <ul class="space-y-2 text-sm text-gray-600">
                 <li>
-                  <a href="#" class="hover:text-brand transition-colors"
+                  <a
+                    href="https://t.me/iskcon_kh"
+                    class="hover:text-brand transition-colors"
+                    rel="noopener noreferrer"
+                    target="_blank"
                     >Новини в телеграмі</a
                   >
                 </li>
                 <li>
-                  <a href="#" class="hover:text-brand transition-colors"
+                  <a
+                    href="https://www.facebook.com/hare.krishna.kharkov/"
+                    class="hover:text-brand transition-colors"
+                    rel="noopener noreferrer"
+                    target="_blank"
                     >Група у Facebook</a
                   >
                 </li>
@@ -519,7 +728,11 @@
                   >
                 </li>
                 <li>
-                  <a href="#" class="hover:text-brand transition-colors"
+                  <a
+                    href="https://www.youtube.com/channel/UC6aTIMPbCOMH9yk6WRukj-A"
+                    class="hover:text-brand transition-colors"
+                    rel="noopener noreferrer"
+                    target="_blank"
                     >YouTube - лекції, м. Харків</a
                   >
                 </li>
@@ -527,17 +740,9 @@
             </div>
           </div>
         </div>
-        <div class="border-t border-gray-100 bg-gray-50/80 py-6">
-          <p
-            class="mx-auto max-w-4xl px-6 text-center text-xs leading-relaxed text-gray-500"
-          >
-            Міжнародне товариство свідомості Крішни.<br />
-            Засновник-ачарʼя Його Божественна Милість А. Ч. Бгактіведанта Свамі
-            Прабгупада.
-          </p>
-        </div>
       </footer>
+      </div>
     </div>
-    <script type="module" src="/src/main.js"></script>
+    <script type="module" src="/src/js/main.js"></script>
   </body>
 </html>
