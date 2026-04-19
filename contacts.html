@@ -16,6 +16,12 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" href="/src/css/style.css" />
   </head>
   <body
@@ -248,30 +254,45 @@
           class="flex flex-wrap justify-center gap-1.5 border-t border-gray-100 px-4 py-3 lg:mt-6 lg:justify-start lg:border-t-0 lg:px-0 lg:pt-0"
         >
           <a
-            href="#"
-            class="flex h-7 w-7 items-center justify-center rounded bg-brand text-[10px] font-normal text-white shadow-sm hover:bg-brand-dark"
+            href="https://t.me/iskcon_kh"
+            class="flex h-9 w-9 items-center justify-center rounded-full bg-[#34A9DB] text-white shadow-sm transition hover:brightness-110 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#34A9DB]"
             aria-label="Telegram"
-            >T</a
+            rel="noopener noreferrer"
+            target="_blank"
+            ><i class="fab fa-telegram text-[1.05rem] leading-none" aria-hidden="true"></i></a
           >
           <a
-            href="#"
-            class="flex h-7 w-7 items-center justify-center rounded bg-brand text-[10px] font-normal text-white shadow-sm hover:bg-brand-dark"
+            href="https://www.facebook.com/hare.krishna.kharkov/"
+            class="flex h-9 w-9 items-center justify-center rounded-full bg-[#3B5998] text-white shadow-sm transition hover:brightness-110 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#3B5998]"
             aria-label="Facebook"
-            >f</a
+            rel="noopener noreferrer"
+            target="_blank"
+            ><i class="fab fa-facebook-f text-[1rem] leading-none" aria-hidden="true"></i></a
           >
           <a
-            href="#"
-            class="flex h-7 w-7 items-center justify-center rounded bg-brand text-[10px] font-normal text-white shadow-sm hover:bg-brand-dark"
+            href="https://www.youtube.com/channel/UC6aTIMPbCOMH9yk6WRukj-A"
+            class="flex h-9 w-9 items-center justify-center rounded-full bg-[#F70000] text-white shadow-sm transition hover:brightness-110 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-600"
             aria-label="YouTube"
-            >▶</a
+            rel="noopener noreferrer"
+            target="_blank"
+            ><i class="fab fa-youtube text-[1rem] leading-none" aria-hidden="true"></i></a
           >
           <a
-            href="#"
-            class="flex h-7 w-7 items-center justify-center rounded bg-brand text-[10px] font-normal text-white shadow-sm hover:bg-brand-dark"
+            href="https://www.instagram.com/iskconkharkiv/"
+            class="flex h-9 w-9 items-center justify-center rounded-full bg-[#FF546B] text-white shadow-sm transition hover:brightness-110 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#FF546B]"
             aria-label="Instagram"
-            >◎</a
+            rel="noopener noreferrer"
+            target="_blank"
+            ><i class="fab fa-instagram text-[1.05rem] leading-none" aria-hidden="true"></i></a
           >
         </div>
+        <p
+          class="mt-3 max-w-[15rem] border-t border-gray-100 px-4 pb-1 pt-4 text-left text-[1rem] leading-snug text-gray-500 lg:mt-4 lg:max-w-none lg:px-0"
+        >
+          Міжнародне товариство свідомості Крішни.<br />
+          Засновник-ачарʼя Його Божественна Милість А. Ч. Бгактіведанта Свамі
+          Прабгупада.
+        </p>
       </aside>
 
       <div class="flex min-h-screen min-w-0 flex-1 flex-col">
@@ -283,71 +304,86 @@
             Контакти
           </h1>
           <div
-            class="grid grid-cols-1 gap-10 lg:grid-cols-12 lg:gap-8 lg:items-start"
+            class="flex flex-col gap-10 text-[14px] leading-relaxed lg:gap-12"
           >
-            <div class="lg:col-span-4">
-              <img
-                src="/images/iskcon-kharkiv-logo.png"
-                alt="ISKCON Kharkiv"
-                class="mb-5 h-[11.475rem] w-auto md:h-[12.825rem]"
-                width="324"
-                height="405"
-                loading="lazy"
-                decoding="async"
-              />
-              <p class="text-sm leading-relaxed text-gray-600">
-                Бгакті-йога та ведична культура в Харкові — відчинені для всіх,
-                хто хоче пройти шлях відданості в спільноті.
-              </p>
-            </div>
-            <div id="how-to-get" class="scroll-mt-4 lg:col-span-3 lg:col-start-6">
-              <h2 class="mb-3 text-sm font-semibold uppercase tracking-wide text-gray-800">
+            <div id="how-to-get" class="scroll-mt-4">
+              <h2 class="mb-3 font-semibold uppercase tracking-wide text-gray-800">
                 Адреса храму
               </h2>
-              <address
-                class="not-italic text-sm leading-relaxed text-gray-600"
-              >
+              <address class="not-italic text-gray-600">
                 вул. Холодногірська, 39<br />
                 61098 Харків, Україна
               </address>
             </div>
-            <div class="lg:col-span-3">
-              <h2 class="mb-3 text-sm font-semibold uppercase tracking-wide text-gray-800">
+            <div>
+              <h2 class="mb-3 font-semibold uppercase tracking-wide text-gray-800">
                 Посилання
               </h2>
-              <ul class="space-y-2 text-sm text-gray-600">
+              <div
+                class="mb-4 flex flex-wrap items-center gap-2 text-[14px] leading-relaxed text-gray-600"
+              >
+                <a
+                  href="https://t.me/iskcon_kh"
+                  class="flex h-[2.925rem] w-[2.925rem] shrink-0 items-center justify-center rounded-full bg-[#34A9DB] text-white shadow-sm transition hover:brightness-110 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#34A9DB]"
+                  aria-label="Telegram"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  ><i class="fab fa-telegram text-[1.365rem] leading-none" aria-hidden="true"></i></a
+                >
+                <a
+                  href="https://www.facebook.com/hare.krishna.kharkov/"
+                  class="flex h-[2.925rem] w-[2.925rem] shrink-0 items-center justify-center rounded-full bg-[#3B5998] text-white shadow-sm transition hover:brightness-110 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#3B5998]"
+                  aria-label="Facebook"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  ><i class="fab fa-facebook-f text-[1.3rem] leading-none" aria-hidden="true"></i></a
+                >
+                <a
+                  href="https://www.instagram.com/iskconkharkiv/"
+                  class="flex h-[2.925rem] w-[2.925rem] shrink-0 items-center justify-center rounded-full bg-[#FF546B] text-white shadow-sm transition hover:brightness-110 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#FF546B]"
+                  aria-label="Instagram"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  ><i class="fab fa-instagram text-[1.365rem] leading-none" aria-hidden="true"></i></a
+                >
+                <span class="min-w-0 pl-1 text-gray-600">новини храму</span>
+              </div>
+              <div
+                class="mb-6 flex flex-wrap items-center gap-2 text-[14px] leading-relaxed text-gray-600"
+              >
+                <a
+                  href="https://www.youtube.com/channel/UC6aTIMPbCOMH9yk6WRukj-A"
+                  class="flex h-[2.925rem] w-[2.925rem] shrink-0 items-center justify-center rounded-full bg-[#F70000] text-white shadow-sm transition hover:brightness-110 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-600"
+                  aria-label="YouTube"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  ><i class="fab fa-youtube text-[1.3rem] leading-none" aria-hidden="true"></i></a
+                >
+                <span class="min-w-0 max-w-xl pl-1 text-gray-600">Щоденні лекції та трансляції вайшнавських свят</span>
+              </div>
+              <ul class="space-y-3 text-gray-600">
                 <li>
-                  <a href="#" class="hover:text-brand transition-colors"
-                    >Новини в телеграмі</a
+                  <a
+                    href="https://t.me/foodForLifeKh"
+                    class="inline-flex items-center gap-2.5 transition-colors hover:text-brand"
+                    rel="noopener noreferrer"
+                    target="_blank"
                   >
-                </li>
-                <li>
-                  <a href="#" class="hover:text-brand transition-colors"
-                    >Група у Facebook</a
-                  >
-                </li>
-                <li>
-                  <a href="#" class="hover:text-brand transition-colors"
-                    >Їжа життя Харків - благодійний проект</a
-                  >
-                </li>
-                <li>
-                  <a href="#" class="hover:text-brand transition-colors"
-                    >YouTube - лекції, м. Харків</a
-                  >
+                    <img
+                      src="/images/food-for-life-kharkiv.png"
+                      alt=""
+                      width="47"
+                      height="47"
+                      class="h-[2.925rem] w-[2.925rem] shrink-0 rounded-sm object-contain"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                    <span>Їжа життя Харків - благодійний проект</span>
+                  </a>
                 </li>
               </ul>
             </div>
           </div>
-        </div>
-        <div class="border-t border-gray-100 bg-gray-50/80 py-6">
-          <p
-            class="mx-auto max-w-4xl px-6 text-center text-xs leading-relaxed text-gray-500"
-          >
-            Міжнародне товариство свідомості Крішни.<br />
-            Засновник-ачарʼя Його Божественна Милість А. Ч. Бгактіведанта Свамі
-            Прабгупада.
-          </p>
         </div>
       </main>
 
