@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    @apply font-sans text-sm font-normal;
+    background-color: #fff;
+  }
+
+  /* Smoother cross-document navigations in supporting browsers (Chrome 126+). */
+  @media (prefers-reduced-motion: no-preference) {
+    @view-transition {
+      navigation: auto;
+    }
+  }
+
+  body,
+  button,
+  input,
+  textarea,
+  select {
+    @apply font-sans text-sm font-normal;
+  }
+}
+
+@layer components {
+  /* Open state: default height from CSS (no flash before JS). In/out animation still uses inline height in main.js */
+  .temple-nav.is-open .temple-nav-panel {
+    height: auto;
+  }
+
+  /* Height is driven from src/js/main.js (px → px); transition stays smooth across browsers */
+  .temple-nav .temple-nav-panel {
+    height: 0;
+    overflow: hidden;
+    transition: height 0.65s cubic-bezier(0.25, 1, 0.5, 1);
+  }
+
+  .temple-nav.is-open .temple-chevron {
+    @apply rotate-180;
+  }
+
+  .temple-nav .temple-chevron {
+    transition: transform 0.65s cubic-bezier(0.25, 1, 0.5, 1);
+  }
+
+  .temple-nav-trigger:focus-visible {
+    @apply rounded-md outline outline-2 outline-offset-2 outline-brand;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .temple-nav .temple-nav-panel,
+    .temple-nav .temple-chevron {
+      transition-duration: 0.01ms !important;
+    }
+  }
+}

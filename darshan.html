@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="uk" class="font-sans">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Даршан Божеств у храмі Харе Крішна (ISKCON) у Харкові — відвідування вівтаря, араті та спільної молитви."
+    />
+    <meta name="theme-color" content="#e85d04" />
+    <title>Даршан Божеств — Храм Харе Крішна у Харкові</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/src/css/style.css" />
+  </head>
+  <body
+    class="font-sans text-sm font-normal leading-normal text-gray-800 antialiased bg-white"
+  >
+    <div
+      id="app"
+      class="flex min-h-screen flex-col bg-white lg:flex-row"
+    >
+      <aside
+        class="z-40 shrink-0 border-b border-gray-200 bg-white lg:sticky lg:top-0 lg:flex lg:h-screen lg:w-[17.5rem] lg:flex-col lg:overflow-y-auto lg:border-b-0 lg:border-r lg:border-gray-200 lg:px-6 lg:py-10"
+        aria-label="Навігація сайту"
+      >
+        <div
+          class="flex items-center justify-between gap-4 px-4 py-3 lg:flex-col lg:items-stretch lg:gap-8 lg:px-0 lg:py-0"
+        >
+          <a
+            href="index.html"
+            class="block shrink-0 lg:mx-auto lg:w-full lg:text-center"
+          >
+            <img
+              src="/images/iskcon-kharkiv-logo.png"
+              alt="ISKCON Kharkiv"
+              class="mx-auto h-[8.25rem] w-auto lg:h-[11.25rem]"
+              width="216"
+              height="270"
+              decoding="async"
+            />
+          </a>
+          <details class="relative lg:hidden">
+            <summary
+              class="list-none cursor-pointer rounded border border-gray-200 px-3 py-1.5 text-sm font-normal uppercase tracking-wide text-gray-700 [&::-webkit-details-marker]:hidden"
+            >
+              Меню
+            </summary>
+            <nav
+              class="absolute right-0 top-full z-50 mt-2 flex min-w-[14.5rem] flex-col rounded-md border border-gray-100 bg-white py-0 text-sm uppercase tracking-[0.12em] text-gray-700 shadow-lg"
+              aria-label="Основна навігація"
+            >
+              <div
+                class="temple-nav is-open border-b border-gray-100 last:border-b-0"
+                data-temple-nav
+              >
+                <button
+                  type="button"
+                  id="darshan-temple-btn-m"
+                  class="temple-nav-trigger flex w-full cursor-pointer items-center justify-between border-0 bg-transparent px-4 py-2.5 text-left text-sm font-semibold uppercase tracking-[0.12em] text-gray-900"
+                  aria-expanded="false"
+                  aria-controls="darshan-temple-submenu-m"
+                >
+                  Храм
+                  <svg
+                    class="temple-chevron h-4 w-4 shrink-0 text-gray-400"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M19 9l-7 7-7-7"
+                    />
+                  </svg>
+                </button>
+                <div
+                  id="darshan-temple-submenu-m"
+                  class="temple-nav-panel"
+                  role="region"
+                  aria-labelledby="darshan-temple-btn-m"
+                >
+                  <div class="temple-nav-inner">
+                    <ul
+                      class="border-t border-gray-100 bg-gray-50/90 text-sm font-semibold uppercase tracking-[0.12em] text-gray-900"
+                    >
+                      <li class="border-b border-gray-100 last:border-0">
+                        <a
+                          href="darshan.html"
+                          class="block py-2.5 pl-6 pr-4 font-semibold text-brand"
+                          aria-current="page"
+                          >Даршан Божеств</a
+                        >
+                      </li>
+                      <li class="border-b border-gray-100 last:border-0">
+                        <a
+                          href="schedule.html"
+                          class="block py-2.5 pl-6 pr-4 transition-colors hover:bg-white hover:text-brand"
+                          >Розклад</a
+                        >
+                      </li>
+                      <li class="border-b border-gray-100 last:border-0">
+                        <a
+                          href="broadcast.html"
+                          class="block py-2.5 pl-6 pr-4 transition-colors hover:bg-white hover:text-brand"
+                          >Трансляція</a
+                        >
+                      </li>
+                      <li class="border-b border-gray-100 last:border-0">
+                        <a
+                          href="education.html"
+                          class="block py-2.5 pl-6 pr-4 transition-colors hover:bg-white hover:text-brand"
+                          >Навчання</a
+                        >
+                      </li>
+                      <li class="border-b border-gray-100 last:border-0">
+                        <a
+                          href="how-to-get.html"
+                          class="block py-2.5 pl-6 pr-4 transition-colors hover:bg-white hover:text-brand"
+                          >Як доїхати</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <a
+                href="events.html"
+                class="px-4 py-2.5 hover:bg-gray-50 hover:text-brand"
+                >Події</a
+              >
+              <a
+                href="donate.html"
+                class="px-4 py-2.5 hover:bg-gray-50 hover:text-brand"
+                >Підтримати</a
+              >
+              <a
+                href="contacts.html"
+                class="px-4 py-2.5 hover:bg-gray-50 hover:text-brand"
+                >Контакти</a
+              >
+            </nav>
+          </details>
+        </div>
+        <nav
+          class="hidden flex-col px-4 pb-4 text-sm font-normal uppercase tracking-[0.12em] text-gray-700 lg:flex lg:px-0 lg:pb-0"
+          aria-label="Основна навігація"
+        >
+          <div class="temple-nav is-open border-b border-gray-100" data-temple-nav>
+            <button
+              type="button"
+              id="darshan-temple-btn-d"
+              class="temple-nav-trigger flex w-full cursor-pointer items-center justify-between rounded-t-md border-0 bg-transparent px-3 py-2.5 text-sm font-semibold uppercase tracking-[0.12em] text-gray-900 transition-colors hover:bg-gray-50"
+              aria-expanded="false"
+              aria-controls="darshan-temple-submenu-d"
+            >
+              Храм
+              <svg
+                class="temple-chevron h-4 w-4 shrink-0 text-gray-400"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </button>
+            <div
+              id="darshan-temple-submenu-d"
+              class="temple-nav-panel"
+              role="region"
+              aria-labelledby="darshan-temple-btn-d"
+            >
+              <div class="temple-nav-inner">
+                <ul
+                  class="border-t border-gray-100 bg-gray-50/80 text-sm font-semibold uppercase tracking-[0.12em] text-gray-900"
+                >
+                  <li class="border-b border-gray-100 last:border-0">
+                    <a
+                      href="darshan.html"
+                      class="block py-2.5 pl-6 pr-3 font-semibold text-brand"
+                      aria-current="page"
+                      >Даршан Божеств</a
+                    >
+                  </li>
+                  <li class="border-b border-gray-100 last:border-0">
+                    <a
+                      href="schedule.html"
+                      class="block py-2.5 pl-6 pr-3 transition-colors hover:bg-white hover:text-brand"
+                      >Розклад</a
+                    >
+                  </li>
+                  <li class="border-b border-gray-100 last:border-0">
+                    <a
+                      href="broadcast.html"
+                      class="block py-2.5 pl-6 pr-3 transition-colors hover:bg-white hover:text-brand"
+                      >Трансляція</a
+                    >
+                  </li>
+                  <li class="border-b border-gray-100 last:border-0">
+                    <a
+                      href="education.html"
+                      class="block py-2.5 pl-6 pr-3 transition-colors hover:bg-white hover:text-brand"
+                      >Навчання</a
+                    >
+                  </li>
+                  <li class="border-b border-gray-100 last:border-0">
+                    <a
+                      href="how-to-get.html"
+                      class="block py-2.5 pl-6 pr-3 transition-colors hover:bg-white hover:text-brand"
+                      >Як доїхати</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <a
+            href="events.html"
+            class="rounded-md px-3 py-2.5 transition-colors hover:bg-gray-50 hover:text-brand"
+            >Події</a
+          >
+          <a
+            href="donate.html"
+            class="rounded-md px-3 py-2.5 transition-colors hover:bg-gray-50 hover:text-brand"
+            >Підтримати</a
+          >
+          <a
+            href="contacts.html"
+            class="rounded-md px-3 py-2.5 transition-colors hover:bg-gray-50 hover:text-brand"
+            >Контакти</a
+          >
+        </nav>
+        <div
+          class="flex flex-wrap justify-center gap-1.5 border-t border-gray-100 px-4 py-3 lg:mt-6 lg:justify-start lg:border-t-0 lg:px-0 lg:pt-0"
+        >
+          <a
+            href="#"
+            class="flex h-7 w-7 items-center justify-center rounded bg-brand text-[10px] font-normal text-white shadow-sm hover:bg-brand-dark"
+            aria-label="Telegram"
+            >T</a
+          >
+          <a
+            href="#"
+            class="flex h-7 w-7 items-center justify-center rounded bg-brand text-[10px] font-normal text-white shadow-sm hover:bg-brand-dark"
+            aria-label="Facebook"
+            >f</a
+          >
+          <a
+            href="#"
+            class="flex h-7 w-7 items-center justify-center rounded bg-brand text-[10px] font-normal text-white shadow-sm hover:bg-brand-dark"
+            aria-label="YouTube"
+            >▶</a
+          >
+          <a
+            href="#"
+            class="flex h-7 w-7 items-center justify-center rounded bg-brand text-[10px] font-normal text-white shadow-sm hover:bg-brand-dark"
+            aria-label="Instagram"
+            >◎</a
+          >
+        </div>
+      </aside>
+
+      <div class="flex min-h-screen min-w-0 flex-1 flex-col">
+      <main class="py-12 md:py-16">
+        <div class="mx-auto max-w-3xl px-6">
+          <h1
+            class="mb-6 text-[calc(1.5rem+2px)] font-normal leading-tight text-brand md:text-[calc(1.875rem+2px)]"
+          >
+            Даршан Божеств
+          </h1>
+          <p class="mb-8 text-[calc(0.875rem+2px)] leading-relaxed text-gray-600">
+            Даршан — «бачення» Божеств: спокійна присутність у вівтарі, спільні
+            молитви та кіртан. Запрошуємо приєднатися до Манґала-араті, Гаура-араті
+            та інших подій за
+            <a href="schedule.html" class="text-brand underline-offset-2 hover:underline"
+              >розкладом</a
+            >.
+          </p>
+          <figure
+            class="overflow-hidden rounded-lg border border-gray-100 bg-gray-50/90 shadow-sm"
+          >
+            <img
+              src="/images/gallery-harinami.png"
+              alt="Спільнота біля храму: харінами та програми в Харкові"
+              class="w-full object-cover"
+              width="900"
+              height="1200"
+              loading="lazy"
+              decoding="async"
+            />
+            <figcaption
+              class="px-4 py-3 text-[calc(0.8125rem+2px)] text-gray-600"
+            >
+              Харінами у місті — кожної суботи об 11:00. Також у храмі проходять
+              кіртан і зустрічі для тих, хто хоче ближче познайомитися з
+              практикою.
+            </figcaption>
+          </figure>
+        </div>
+      </main>
+
+      <footer class="border-t border-gray-100 bg-gray-50/80 py-8">
+        <p class="mx-auto max-w-2xl px-6 text-center text-xs text-gray-500">
+          <a href="index.html" class="text-brand transition-colors hover:text-brand-dark"
+            >На головну</a
+          >
+        </p>
+      </footer>
+      </div>
+    </div>
+    <script type="module" src="/src/js/main.js"></script>
+  </body>
+</html>
