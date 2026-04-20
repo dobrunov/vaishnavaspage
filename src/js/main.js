@@ -69,10 +69,37 @@ function initTempleNav() {
   });
 }
 
+function initMobileMenu() {
+  const mobileMenus = document.querySelectorAll('aside details');
+
+  if (!mobileMenus.length) return;
+
+  mobileMenus.forEach((menu) => {
+    const menuLinks = menu.querySelectorAll('nav a');
+
+    menuLinks.forEach((link) => {
+      link.addEventListener('click', () => {
+        menu.removeAttribute('open');
+      });
+    });
+  });
+
+  document.addEventListener('click', (event) => {
+    mobileMenus.forEach((menu) => {
+      if (!menu.hasAttribute('open')) return;
+      if (menu.contains(event.target)) return;
+
+      menu.removeAttribute('open');
+    });
+  });
+}
+
+const ASSET_BASE_URL = import.meta.env.BASE_URL;
+
 const EVENT_CARDS = [
   {
     id: 'darshan',
-    imageSrc: '/images/gallery-harinami.png',
+    imageSrc: `${ASSET_BASE_URL}images/gallery-harinami.png`,
     imageAlt: 'Харінами у місті: кожної суботи об 11:00',
     width: 900,
     height: 1200,
@@ -81,7 +108,7 @@ const EVENT_CARDS = [
     href: 'harinamy-u-misti.html',
   },
   {
-    imageSrc: '/images/gallery-kirtan-vaishnavi.png',
+    imageSrc: `${ASSET_BASE_URL}images/gallery-kirtan-vaishnavi.png`,
     imageAlt: 'Кіртан-вайшнаві: у вівтарі з 13:00 до 14:00',
     width: 900,
     height: 1200,
@@ -90,7 +117,7 @@ const EVENT_CARDS = [
     href: 'kirtan-vaishnavi.html',
   },
   {
-    imageSrc: '/images/krishna-katha.png',
+    imageSrc: `${ASSET_BASE_URL}images/krishna-katha.png`,
     imageAlt: 'Крішна катха',
     width: 768,
     height: 1024,
@@ -98,7 +125,7 @@ const EVENT_CARDS = [
     href: 'krishna-katha.html',
   },
   {
-    imageSrc: '/images/education-bhagavad-gita.png',
+    imageSrc: `${ASSET_BASE_URL}images/education-bhagavad-gita.png`,
     imageAlt: 'Бгагавад-гіта, окуляри та вервиця',
     width: 535,
     height: 302,
@@ -107,7 +134,7 @@ const EVENT_CARDS = [
     href: 'shkola-bhakti.html',
   },
   {
-    imageSrc: '/images/womens-nama-hatta.png',
+    imageSrc: `${ASSET_BASE_URL}images/womens-nama-hatta.png`,
     imageAlt: 'Женская нама-хатта',
     width: 674,
     height: 1200,
@@ -115,7 +142,7 @@ const EVENT_CARDS = [
     href: 'zhenskaya-nama-hatta.html',
   },
   {
-    imageSrc: '/images/holiday-card.png',
+    imageSrc: `${ASSET_BASE_URL}images/holiday-card.png`,
     imageAlt: 'Святкова афіша',
     width: 724,
     height: 1024,
@@ -221,23 +248,25 @@ function initEventReturnLink() {
 
   if (from === 'events') {
     returnLink.href = 'events.html';
-    returnLink.textContent = 'До подій';
+    returnLink.textContent = 'ДО ПОДІЙ';
     return;
   }
 
   returnLink.href = 'index.html';
-  returnLink.textContent = 'На головну';
+  returnLink.textContent = 'НА ГОЛОВНУ';
 }
 
 if (document.readyState === 'loading') {
   document.addEventListener('DOMContentLoaded', () => {
     initTempleNav();
+    initMobileMenu();
     initEventCards();
     initCardCarousel();
     initEventReturnLink();
   });
 } else {
   initTempleNav();
+  initMobileMenu();
   initEventCards();
   initCardCarousel();
   initEventReturnLink();
