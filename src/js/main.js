@@ -96,6 +96,94 @@ function initMobileMenu() {
 
 const ASSET_BASE_URL = import.meta.env.BASE_URL;
 
+function initRevealOnScroll() {
+  const elements = Array.from(document.querySelectorAll('[data-reveal]'));
+  if (!elements.length) return;
+
+  // In case JS runs after first paint, avoid a "flash" when already visible.
+  const prefersReducedMotion =
+    window.matchMedia &&
+    window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (prefersReducedMotion) {
+    elements.forEach((el) => {
+      el.classList.remove('reveal');
+      el.classList.add('is-in');
+    });
+    return;
+  }
+
+  elements.forEach((el) => el.classList.add('reveal'));
+
+  const io = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add('is-in');
+        io.unobserve(entry.target);
+      });
+    },
+    { threshold: 0.12, rootMargin: '0px 0px -6% 0px' }
+  );
+
+  elements.forEach((el) => io.observe(el));
+}
+
+function initPageEnterAnimation() {
+  const prefersReducedMotion =
+    window.matchMedia &&
+    window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (prefersReducedMotion) return;
+
+  // Avoid fighting with bfcache back/forward restores.
+  const navEntry = performance.getEntriesByType?.('navigation')?.[0];
+  if (navEntry && navEntry.type === 'back_forward') return;
+
+  // If View Transitions is supported, cross-document transitions handle navigation.
+  // Running an additional body fade can cause a visible "blink" after navigation.
+  if ('startViewTransition' in document) return;
+
+  // Fallback for browsers without View Transitions support.
+  const duration = 420;
+  const easing = 'cubic-bezier(0.25, 1, 0.5, 1)';
+
+  try {
+    document.body.animate(
+      [
+        // Opacity-only: avoids perceivable "micro-shift" when fonts/images settle.
+        { opacity: 0 },
+        { opacity: 1 },
+      ],
+      { duration, easing, fill: 'both' }
+    );
+  } catch {
+    // no-op
+  }
+}
+
+function initScheduleReveal() {
+  // Add reveal-on-scroll to schedule blocks/items.
+  // We do it in JS so the page stays clean and we can add a subtle stagger.
+  if (!/\/schedule\.html$/.test(window.location.pathname)) return;
+
+  const sections = Array.from(document.querySelectorAll('main section'));
+  if (!sections.length) return;
+
+  sections.forEach((section, sectionIdx) => {
+    // Only target the two schedule content blocks (rounded paper-like sections).
+    if (!section.classList.contains('rounded-2xl')) return;
+
+    section.setAttribute('data-reveal', '');
+    section.style.transitionDelay = `${Math.min(sectionIdx, 3) * 60}ms`;
+
+    const items = Array.from(section.querySelectorAll('li'));
+    items.forEach((li, idx) => {
+      li.setAttribute('data-reveal', '');
+      // Gentle stagger; cap so long lists don't feel sluggish.
+      li.style.transitionDelay = `${Math.min(idx, 10) * 45}ms`;
+    });
+  });
+}
+
 const EVENT_CARDS = [
   {
     id: 'darshan',
@@ -156,8 +244,8 @@ function createEventCardMarkup(card, view) {
   const href = `${card.href}?from=${sourcePage}`;
   const cardClass =
     view === 'carousel'
-      ? 'group relative block aspect-[3/4] min-w-[15.5rem] snap-start overflow-hidden rounded-lg bg-gray-300 shadow-md transition-transform duration-300 hover:-translate-y-1 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand sm:min-w-[17.5rem] lg:min-w-[18.5rem]'
-      : 'group relative block aspect-[3/4] overflow-hidden rounded-lg bg-gray-300 shadow-md transition-transform duration-300 hover:-translate-y-1 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand';
+      ? 'ui-event-card group relative block aspect-[3/4] min-w-[15.5rem] snap-start overflow-hidden rounded-lg bg-gray-300 shadow-md transition-transform duration-300 hover:-translate-y-1 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand sm:min-w-[17.5rem] lg:min-w-[18.5rem]'
+      : 'ui-event-card group relative block aspect-[3/4] overflow-hidden rounded-lg bg-gray-300 shadow-md transition-transform duration-300 hover:-translate-y-1 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand';
 
   const idAttr = card.id ? ` id="${card.id}"` : '';
   const carouselAttr = view === 'carousel' ? ' data-carousel-card' : '';
@@ -197,6 +285,16 @@ function initEventCards() {
   document.querySelectorAll('[data-event-cards]').forEach((container) => {
     const view = container.getAttribute('data-event-cards') || 'grid';
     container.innerHTML = EVENT_CARDS.map((card) => createEventCardMarkup(card, view)).join('');
+
+    // Soft reveal for carousel cards (staggered, low-risk)
+    if (view === 'carousel') {
+      const cards = Array.from(container.querySelectorAll('[data-carousel-card]'));
+      cards.forEach((cardEl, idx) => {
+        cardEl.setAttribute('data-reveal', '');
+        // keep the motion subtle; cap delay so it doesn't feel sluggish on long lists
+        cardEl.style.transitionDelay = `${Math.min(idx, 7) * 70}ms`;
+      });
+    }
   });
 }
 
@@ -263,6 +361,9 @@ if (document.readyState === 'loading') {
     initEventCards();
     initCardCarousel();
     initEventReturnLink();
+    initScheduleReveal();
+    initRevealOnScroll();
+    initPageEnterAnimation();
   });
 } else {
   initTempleNav();
@@ -270,4 +371,7 @@ if (document.readyState === 'loading') {
   initEventCards();
   initCardCarousel();
   initEventReturnLink();
+  initScheduleReveal();
+  initRevealOnScroll();
+  initPageEnterAnimation();
 }

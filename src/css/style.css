@@ -3,6 +3,14 @@
 @tailwind utilities;
 
 @layer base {
+  :root {
+    --ease-quick: cubic-bezier(0.2, 0.8, 0.2, 1);
+    --ease-reveal: cubic-bezier(0.25, 1, 0.5, 1);
+    --dur-quick: 180ms;
+    --dur-reveal: 520ms;
+    --reveal-shift: 8px;
+  }
+
   html {
     scroll-behavior: smooth;
     @apply font-sans text-sm font-normal;
@@ -13,6 +21,45 @@
   @media (prefers-reduced-motion: no-preference) {
     @view-transition {
       navigation: auto;
+    }
+  }
+
+  /* Premium cross-page transitions (View Transitions API). */
+  @media (prefers-reduced-motion: no-preference) {
+    ::view-transition-old(root) {
+      animation: page-exit 220ms var(--ease-quick) both;
+    }
+
+    ::view-transition-new(root) {
+      animation: page-enter 520ms var(--ease-reveal) both;
+    }
+  }
+
+  @keyframes page-exit {
+    from {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+      filter: saturate(1) contrast(1);
+    }
+    to {
+      opacity: 0;
+      /* avoid vertical motion to prevent "micro-shift" feeling on late font/image layout */
+      transform: scale(0.995);
+      filter: saturate(0.98) contrast(0.99);
+    }
+  }
+
+  @keyframes page-enter {
+    from {
+      opacity: 0;
+      /* avoid vertical motion to prevent "micro-shift" feeling on late font/image layout */
+      transform: scale(0.998);
+      filter: saturate(0.98) contrast(0.99);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+      filter: saturate(1) contrast(1);
     }
   }
 
@@ -70,6 +117,162 @@
     touch-action: pan-x pinch-zoom;
     -webkit-overflow-scrolling: touch;
     overscroll-behavior-x: contain;
+  }
+
+  /* Unified motion system */
+  .ui-ease-quick {
+    transition-timing-function: var(--ease-quick);
+  }
+
+  .ui-ease-reveal {
+    transition-timing-function: var(--ease-reveal);
+  }
+
+  /* Reveal-on-scroll (IntersectionObserver toggles .is-in) */
+  .reveal {
+    opacity: 0;
+    transform: translate3d(0, var(--reveal-shift), 0);
+    transition-property: opacity, transform;
+    transition-duration: var(--dur-reveal);
+    transition-timing-function: var(--ease-reveal);
+    will-change: opacity, transform;
+  }
+
+  .reveal.is-in {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .reveal {
+      opacity: 1 !important;
+      transform: none !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+
+  /* Carousel buttons micro-interactions (consistent easing/duration) */
+  [data-carousel-prev],
+  [data-carousel-next] {
+    transition-property: transform, background-color, opacity, filter;
+    transition-duration: var(--dur-quick);
+    transition-timing-function: var(--ease-quick);
+    will-change: transform;
+  }
+
+  [data-carousel-prev]:not(:disabled):hover,
+  [data-carousel-next]:not(:disabled):hover {
+    transform: translate3d(0, -1px, 0);
+  }
+
+  [data-carousel-prev]:not(:disabled):active,
+  [data-carousel-next]:not(:disabled):active {
+    transform: translate3d(0, 0, 0) scale(0.97);
+  }
+
+  /* Event cards: unify easing and durations even with Tailwind classes */
+  .ui-event-card {
+    transition-timing-function: var(--ease-quick);
+    transition-duration: 220ms;
+    will-change: transform;
+  }
+
+  .ui-event-card img {
+    transition-timing-function: var(--ease-quick);
+    transition-duration: 520ms;
+    will-change: transform;
+  }
+
+  /* Premium nav + logo micro-interactions */
+  aside nav a {
+    position: relative;
+    transition-property: color, background-color, transform, box-shadow;
+    transition-duration: var(--dur-quick);
+    transition-timing-function: var(--ease-quick);
+  }
+
+  /* underline sweep */
+  aside nav a::after {
+    content: '';
+    position: absolute;
+    left: 0.75rem;
+    right: 0.75rem;
+    bottom: 0.45rem;
+    height: 2px;
+    border-radius: 999px;
+    background: currentColor;
+    opacity: 0.18;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform var(--dur-quick) var(--ease-quick),
+      opacity var(--dur-quick) var(--ease-quick);
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    /* Desktop: subtle lift + pill highlight */
+    aside nav a:hover {
+      transform: translate3d(2px, 0, 0);
+      background-color: rgba(232, 93, 4, 0.08); /* brand tint */
+      box-shadow: 0 1px 0 rgba(0, 0, 0, 0.02);
+    }
+
+    aside nav a:hover::after {
+      transform: scaleX(1);
+      opacity: 0.35;
+    }
+
+    aside nav a:active {
+      transform: translate3d(1px, 0, 0);
+    }
+
+    /* Logo: calm, premium hover */
+    aside a[href="#home"] img,
+    aside a[href="index.html"] img {
+      transition: transform 380ms var(--ease-reveal),
+        filter var(--dur-quick) var(--ease-quick);
+      transform-origin: 50% 40%;
+      will-change: transform;
+    }
+
+    aside a[href="#home"]:hover img,
+    aside a[href="index.html"]:hover img {
+      transform: translate3d(0, -1px, 0) scale(1.015);
+      filter: saturate(1.03) contrast(1.03);
+    }
+  }
+
+  /* Mobile: tap-friendly highlight (no sideways motion) */
+  @media (max-width: 1023px) {
+    aside details nav a::after {
+      left: 0.85rem;
+      right: 0.85rem;
+      bottom: 0.55rem;
+    }
+
+    aside details nav a:active {
+      background-color: rgba(232, 93, 4, 0.1);
+      transform: none;
+    }
+
+    aside details nav a:active::after {
+      transform: scaleX(1);
+      opacity: 0.32;
+    }
+
+    /* Logo: tiny press feedback on touch */
+    aside a[href="#home"]:active img,
+    aside a[href="index.html"]:active img {
+      transform: scale(0.99);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    aside nav a,
+    aside nav a::after,
+    aside a[href="#home"] img,
+    aside a[href="index.html"] img {
+      transition-duration: 0.01ms !important;
+    }
   }
 
   aside > div.border-t {
