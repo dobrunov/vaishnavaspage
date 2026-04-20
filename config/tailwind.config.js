@@ -14,7 +14,7 @@ export default {
         },
       },
       fontFamily: {
-        sans: ['Montserrat', 'system-ui', 'sans-serif'],
+        sans: ['Roboto', 'system-ui', 'sans-serif'],
       },
     },
   },
