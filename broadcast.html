@@ -36,7 +36,7 @@
         aria-label="Навігація сайту"
       >
         <div
-          class="flex items-center justify-between gap-4 px-4 py-3 lg:flex-col lg:items-stretch lg:gap-8 lg:px-0 lg:py-0"
+          class="relative flex items-center justify-center px-4 py-3 lg:flex-col lg:items-stretch lg:gap-8 lg:px-0 lg:py-0"
         >
           <a
             href="index.html"
@@ -51,14 +51,28 @@
               decoding="async"
             />
           </a>
-          <details class="relative lg:hidden">
+          <details class="absolute left-4 top-1/2 -translate-y-1/2 lg:hidden">
             <summary
-              class="list-none cursor-pointer rounded border border-gray-200 px-3 py-1.5 text-sm font-normal uppercase tracking-wide text-gray-700 [&::-webkit-details-marker]:hidden"
+              class="list-none cursor-pointer rounded-md p-2 text-gray-700 transition hover:bg-gray-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand [&::-webkit-details-marker]:hidden"
+              aria-label="Меню"
             >
-              Меню
+              <svg
+                class="h-7 w-7"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <path d="M4 7h16" />
+                <path d="M4 12h16" />
+                <path d="M4 17h16" />
+              </svg>
             </summary>
             <nav
-              class="absolute right-0 top-full z-50 mt-2 flex min-w-[14.5rem] flex-col rounded-md border border-gray-100 bg-white py-0 text-sm uppercase tracking-[0.12em] text-gray-700 shadow-lg"
+              class="absolute left-0 top-full z-50 mt-2 flex min-w-[14.5rem] flex-col rounded-md border border-gray-100 bg-white py-0 text-sm uppercase tracking-[0.12em] text-gray-700 shadow-lg"
               aria-label="Основна навігація"
             >
               <div
@@ -125,13 +139,6 @@
                           href="education.html"
                           class="block py-2.5 pl-6 pr-4 transition-colors hover:bg-white hover:text-brand"
                           >Навчання</a
-                        >
-                      </li>
-                      <li class="border-b border-gray-100 last:border-0">
-                        <a
-                          href="how-to-get.html"
-                          class="block py-2.5 pl-6 pr-4 transition-colors hover:bg-white hover:text-brand"
-                          >Як доїхати</a
                         >
                       </li>
                     </ul>
@@ -223,13 +230,6 @@
                       >Навчання</a
                     >
                   </li>
-                  <li class="border-b border-gray-100 last:border-0">
-                    <a
-                      href="how-to-get.html"
-                      class="block py-2.5 pl-6 pr-3 transition-colors hover:bg-white hover:text-brand"
-                      >Як доїхати</a
-                    >
-                  </li>
                 </ul>
               </div>
             </div>
@@ -287,7 +287,7 @@
           >
         </div>
         <p
-          class="mt-3 max-w-[15rem] border-t border-gray-100 px-4 pb-1 pt-4 text-left text-[1rem] leading-snug text-gray-500 lg:mt-4 lg:max-w-none lg:px-0"
+          class="mx-auto mt-3 max-w-[30rem] border-t border-gray-100 px-4 pb-1 pt-4 text-center text-[1rem] leading-snug text-gray-500 lg:mx-0 lg:mt-4 lg:max-w-none lg:px-0 lg:text-left"
         >
           Міжнародне товариство свідомості Крішни.<br />
           Засновник-ачарʼя Його Божественна Милість А. Ч. Бгактіведанта Свамі
