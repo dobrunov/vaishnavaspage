@@ -1,0 +1,231 @@
+{
+  "lang": {
+    "groupLabel": "Site language",
+    "uk": "UK",
+    "en": "EN"
+  },
+  "nav": {
+    "darshan": "Deity darshan",
+    "schedule": "Schedule",
+    "broadcast": "Broadcast",
+    "education": "Learning",
+    "events": "Events",
+    "donate": "Support",
+    "contacts": "Contact"
+  },
+  "aside": {
+    "siteNav": "Site navigation",
+    "mainNav": "Main navigation",
+    "menu": "Menu",
+    "footer": "International Society for Krishna Consciousness.<br />Founder-acharya His Divine Grace A. C. Bhaktivedanta Swami Prabhupāda."
+  },
+  "page": {
+    "index": {
+      "title": "Hare Krishna Temple in Kharkiv — ISKCON Kharkiv",
+      "description": "Hare Krishna temple (ISKCON) in Kharkiv on Kholodna Hora. Sunday programmes, kirtan, bhakti-yoga, ārati and Śrīmad Bhāgavatam lecture schedule."
+    },
+    "contacts": {
+      "title": "Contact — Hare Krishna Temple in Kharkiv",
+      "description": "Hare Krishna temple (ISKCON) Kharkiv — address and social media links."
+    },
+    "darshan": {
+      "title": "Deity darshan — Hare Krishna Temple in Kharkiv",
+      "description": "Deity darshan at Hare Krishna temple (ISKCON) Kharkiv — visiting the altar, ārati and prayer together."
+    },
+    "schedule": {
+      "title": "Schedule — Hare Krishna Temple in Kharkiv",
+      "description": "Daily temple schedule in Kharkiv — ārati, kirtan, Śrīmad Bhāgavatam, prasādam."
+    },
+    "broadcast": {
+      "title": "Broadcast — Hare Krishna Temple in Kharkiv",
+      "description": "Live streams and Śrīmad Bhāgavatam lecture listings — Hare Krishna temple, Kharkiv."
+    },
+    "education": {
+      "title": "Learning — Hare Krishna Temple in Kharkiv",
+      "description": "Study and bhakti-yoga at Hare Krishna temple Kharkiv — talks, mantra, community."
+    },
+    "events": {
+      "title": "Events — Hare Krishna Temple in Kharkiv",
+      "description": "Temple events and activities in Kharkiv — harināma, kirtan, lectures."
+    },
+    "donate": {
+      "title": "Donate — Hare Krishna Temple in Kharkiv",
+      "description": "Donation details — Hare Krishna temple (ISKCON), Kharkiv."
+    },
+    "howToGet": {
+      "title": "How to get here — Hare Krishna Temple in Kharkiv",
+      "description": "How to reach Hare Krishna temple Kharkiv — address on Kholodna Hora, public transport."
+    },
+    "harinamy": {
+      "title": "Harināma in the city — Hare Krishna Temple in Kharkiv",
+      "description": "Harināma in the city — street kirtan and an invitation to mantra meditation together."
+    },
+    "kirtanVaishnavi": {
+      "title": "Kīrtan vaiṣṇavī — Hare Krishna Temple in Kharkiv",
+      "description": "Kīrtan vaiṣṇavī — singing, prayer and a warm atmosphere in the temple."
+    },
+    "krishnaKatha": {
+      "title": "Kṛṣṇa kathā — Hare Krishna Temple in Kharkiv",
+      "description": "Kṛṣṇa kathā — gatherings for spiritual stories, talks and shared inspiration."
+    },
+    "shkolaBhakti": {
+      "title": "School of bhakti — Hare Krishna Temple in Kharkiv",
+      "description": "School of bhakti — a space to learn, ask questions and explore the basics of bhakti-yoga."
+    },
+    "zhenskayaNamaHatta": {
+      "title": "Women’s nāma-haṭṭa — Hare Krishna Temple in Kharkiv",
+      "description": "Women’s nāma-haṭṭa — a warm women’s gathering for conversation, mantra and mutual support."
+    },
+    "vaishnavskeSvyato": {
+      "title": "Vaiṣṇava festival — Hare Krishna Temple in Kharkiv",
+      "description": "Vaiṣṇava festival — festive programme with kirtan, a talk and prasādam."
+    }
+  },
+  "home": {
+    "carouselPrev": "Previous cards",
+    "carouselNext": "Next cards",
+    "aboutHeading": "Welcome to the centre of bhakti-yoga in Kharkiv",
+    "aboutP1": "In Kharkiv, on Kholodna Hora, we invite you to discover bhakti-yoga — the path of devotion where sound, community and inspiration come together.",
+    "aboutP2": "Our temple is a home with open doors: you can join Maṅgala-ārati, sing kirtan, find stillness in a meditation circle, or simply stay in the hall for a quiet moment.",
+    "aboutP3": "Whether it is your first visit or you already have experience — we are glad to welcome you and explore questions about mantra, vegetarian life and the Vedas together."
+  },
+  "events": {
+    "returnToList": "BACK TO EVENTS",
+    "returnHome": "HOME",
+    "cards": {
+      "harinami": {
+        "title": "Harināma in the city",
+        "subtitle": "every Saturday at 11:00",
+        "imageAlt": "Harināma in the city: every Saturday at 11:00"
+      },
+      "kirtanVaishnavi": {
+        "title": "Kīrtan vaiṣṇavī",
+        "subtitle": "In the altar hall from 13:00 to 14:00",
+        "imageAlt": "Kīrtan vaiṣṇavī: in the altar hall from 13:00 to 14:00"
+      },
+      "krishnaKatha": {
+        "title": "Kṛṣṇa kathā",
+        "imageAlt": "Kṛṣṇa kathā"
+      },
+      "shkolaBhakti": {
+        "title": "School of bhakti",
+        "subtitle": "learn to love",
+        "imageAlt": "Bhagavad-gītā, glasses and japa beads"
+      },
+      "namaHatta": {
+        "title": "Women’s nāma-haṭṭa",
+        "imageAlt": "Women’s nāma-haṭṭa"
+      },
+      "vaishnavaHoliday": {
+        "title": "Vaiṣṇava festival",
+        "imageAlt": "Festival poster"
+      }
+    }
+  },
+  "content": {
+    "contacts": {
+      "h1": "Contact",
+      "linksHeading": "Links",
+      "socialHint1": "temple news",
+      "socialHint2": "Daily lectures and broadcasts of Vaiṣṇava festivals",
+      "foodForLife": "Food for Life Kharkiv — charity project",
+      "howToGetHeading": "How to get here",
+      "howToGetP": "The temple is in the Kholodna Hora area. It is easiest to take public transport to a nearby stop in this district and walk the rest using the map.",
+      "addressHeading": "Temple address",
+      "addressHtml": "39 Kholodnohirska St.<br />61098 Kharkiv, Ukraine",
+      "mapsHintHtml": "You can plan a detailed route in <a href=\"https://www.google.com/maps/search/?api=1&query=%D0%A5%D0%BE%D0%BB%D0%BE%D0%B4%D0%BD%D0%BE%D0%B3%D1%96%D1%80%D1%81%D1%8C%D0%BA%D0%B0%2C%2039%2C%20%D0%A5%D0%B0%D1%80%D0%BA%D1%96%D0%B2\" class=\"text-brand underline-offset-2 hover:underline\" rel=\"noopener noreferrer\" target=\"_blank\">Google Maps</a>."
+    },
+    "howToGet": {
+      "h1": "How to get here",
+      "intro": "The temple is in the Kholodna Hora area. It is easiest to take public transport to a nearby stop in this district and walk the rest using the map.",
+      "addressHeading": "Temple address",
+      "addressHtml": "39 Kholodnohirska St.<br />61098 Kharkiv, Ukraine",
+      "mapsHintHtml": "You can plan a detailed route in <a href=\"https://www.google.com/maps/search/?api=1&query=%D0%A5%D0%BE%D0%BB%D0%BE%D0%B4%D0%BD%D0%BE%D0%B3%D1%96%D1%80%D1%81%D1%8C%D0%BA%D0%B0%2C%2039%2C%20%D0%A5%D0%B0%D1%80%D0%BA%D1%96%D0%B2\" class=\"text-brand underline-offset-2 hover:underline\" rel=\"noopener noreferrer\" target=\"_blank\">Google Maps</a>."
+    },
+    "darshan": {
+      "h1": "Deity darshan",
+      "introHtml": "Darshan is the “sight” of the Deities: a calm presence at the altar, shared prayers and kirtan. Join us for Maṅgala-ārati, Gaura-ārati and other events according to the <a href=\"schedule.html\" class=\"text-brand underline-offset-2 hover:underline\">schedule</a>.",
+      "imageAlt": "Deities at the Hare Krishna temple"
+    },
+    "donate": {
+      "h1": "Support",
+      "intro": "Care for the temple in Kharkiv, vegetarian food and our programmes are possible thanks to donations. Thank you sincerely for your support!",
+      "bankHeading": "Bank details",
+      "recipientLabel": "Recipient",
+      "recipientName": "Hare Krishna Temple, Kharkiv",
+      "ibanLabel": "IBAN"
+    },
+    "broadcast": {
+      "h1": "Lecture broadcast",
+      "blurb": "Every day at 8:00, and on Sunday at 12:00, watch Śrīmad Bhāgavatam lectures on our channel.",
+      "posterAlt": "Poster: Śrīmad Bhāgavatam lectures — schedule in Kharkiv"
+    },
+    "events": {
+      "h1": "Events"
+    },
+    "schedule": {
+      "h1Lecturers": "Speakers and weekly lecture topics",
+      "posterAlt": "Poster: Śrīmad Bhāgavatam lectures — schedule in Kharkiv",
+      "h2Daily": "Daily programme",
+      "daily": {
+        "mangala": "Maṅgala-ārati. Morning auspicious prayers",
+        "japa": "Chanting the Holy Names on japa beads",
+        "greeting": "Welcoming Śrī Śrī Gaura Nitāi, guru-pūjā to His Divine Grace Śrīla Prabhupāda",
+        "bhagavatam": "Śrīmad Bhāgavatam",
+        "prasad1": "Honouring prasādam",
+        "prasad2": "Honouring prasādam",
+        "gaura": "Gaura-ārati"
+      },
+      "h2Sunday": "Sunday festival",
+      "sunday": {
+        "kirtan1": "Kīrtan",
+        "lecture": "Lecture",
+        "kirtan2": "Kīrtan",
+        "announcements": "Announcements",
+        "feast": "Feast",
+        "altar": "Altar cleaning",
+        "meetings": "Sunday gatherings — heartfelt conversations about Krishna and Krishna consciousness",
+        "gaura": "Gaura-ārati"
+      }
+    },
+    "harinamy": {
+      "h1": "Harināma in the city",
+      "imageAlt": "Harināma in the city: every Saturday at 11:00",
+      "p1": "Harināma is singing the holy names in the city together, when devotees go out with music, mantra and a joyful mood to share the spiritual atmosphere with everyone who wishes.",
+      "p2": "This page can later hold a detailed description of the event, route, meeting time and everything good to know before joining."
+    },
+    "kirtan": {
+      "h1": "Kīrtan vaiṣṇavī",
+      "imageAlt": "Kīrtan vaiṣṇavī: in the altar hall from 13:00 to 14:00",
+      "p1": "Kīrtan vaiṣṇavī is a time of focused singing, prayer and inspired association, when you can feel the calm of the temple atmosphere and go deeper into bhakti practice together.",
+      "p2": "Later you can add a fuller description of the format, who may join, how the programme runs and other important details."
+    },
+    "krishnaKatha": {
+      "h1": "Kṛṣṇa kathā",
+      "imageAlt": "Kṛṣṇa kathā",
+      "p1": "Kṛṣṇa kathā is dedicated to hearing stories about Lord Krishna, reflecting on spiritual themes and live discussion that inspires deeper practice and mindful living.",
+      "p2": "Later you can add the meeting programme, the next lecture topic, the speaker’s name and other event details."
+    },
+    "shkola": {
+      "h1": "School of bhakti",
+      "imageAlt": "Bhagavad-gītā, glasses and japa beads",
+      "p1": "The school of bhakti is for those who want to calmly and steadily learn the basics of Vedic culture, mantra meditation and spiritual practice in a friendly atmosphere.",
+      "p2": "Later this page can list class topics, schedule, format and answers to common questions."
+    },
+    "namaHatta": {
+      "h1": "Women’s nāma-haṭṭa",
+      "imageAlt": "Women’s nāma-haṭṭa",
+      "p1": "Women’s nāma-haṭṭa is a warm separate gathering where you can sing together, share experience, receive support and spend time in a peaceful spiritual atmosphere.",
+      "p2": "Later you can add the full programme, the topic of the next meeting, how to take part and other practical information."
+    },
+    "holiday": {
+      "h1": "Vaiṣṇava festival",
+      "imageAlt": "Festival poster",
+      "p1": "The Vaiṣṇava festival brings together festive kīrtan, a lecture, prayer and prasādam so that all guests can share an atmosphere of spiritual inspiration and joy.",
+      "p2": "This page can later be filled with the next festival announcement, programme, starting time and other important details."
+    },
+    "education": {
+      "imageAlt": "Bhagavad-gītā, glasses and japa beads"
+    }
+  }
+}

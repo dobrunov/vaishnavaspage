@@ -1,15 +1,26 @@
 <!DOCTYPE html>
 <html lang="uk" class="font-sans">
   <head>
+    <script>
+      (function () {
+        try {
+          if (localStorage.getItem('iskcon-lang') === 'en') {
+            document.documentElement.classList.add('i18n-pending');
+          }
+        } catch (_) {}
+      })();
+    </script>
+    <style>html.i18n-pending body{visibility:hidden}</style>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="%BASE_URL%favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
       content="Даршан Божеств у храмі Харе Крішна (ISKCON) у Харкові — відвідування вівтаря, араті та спільної молитви."
+      data-i18n="page.darshan.description"
     />
     <meta name="theme-color" content="#e85d04" />
-    <title>Даршан Божеств — Храм Харе Крішна у Харкові</title>
+    <title data-i18n="page.darshan.title">Даршан Божеств — Храм Харе Крішна у Харкові</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -33,7 +44,7 @@
     >
       <aside
         class="z-40 shrink-0 border-b border-gray-200 bg-white lg:sticky lg:top-0 lg:flex lg:h-screen lg:w-[17.5rem] lg:flex-col lg:overflow-y-auto lg:border-b-0 lg:border-r lg:border-gray-200 lg:px-6 lg:py-10"
-        aria-label="Навігація сайту"
+        aria-label="Навігація сайту" data-i18n-aria-label="aside.siteNav"
       >
         <div
           class="relative flex items-center justify-center px-4 py-3 lg:flex-col lg:items-stretch lg:gap-8 lg:px-0 lg:py-0"
@@ -54,7 +65,7 @@
           <details class="absolute left-4 top-1/2 -translate-y-1/2 lg:hidden">
             <summary
               class="list-none cursor-pointer rounded-md p-2 text-gray-700 transition hover:bg-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand [&::-webkit-details-marker]:hidden"
-              aria-label="Меню"
+              aria-label="Меню" data-i18n-aria-label="aside.menu"
             >
               <svg
                 class="h-7 w-7"
@@ -73,42 +84,42 @@
             </summary>
             <nav
               class="absolute left-0 top-full z-50 mt-2 flex min-w-[14.5rem] flex-col rounded-xl bg-white px-2 py-1.5 text-[16px] text-gray-700 shadow-lg"
-              aria-label="Основна навігація"
+              aria-label="Основна навігація" data-i18n-aria-label="aside.mainNav"
             >
               <a
                 href="darshan.html"
                 class="rounded-xl px-3 py-2 font-semibold text-brand"
-                aria-current="page"
+                aria-current="page" data-i18n="nav.darshan"
                 >Даршан Божеств</a
               >
               <a
                 href="schedule.html"
-                class="rounded-xl px-3 py-2 font-semibold transition-colors hover:text-brand"
+                class="rounded-xl px-3 py-2 font-semibold transition-colors hover:text-brand" data-i18n="nav.schedule"
                 >Розклад</a
               >
               <a
                 href="broadcast.html"
-                class="rounded-xl px-3 py-2 font-semibold transition-colors hover:text-brand"
+                class="rounded-xl px-3 py-2 font-semibold transition-colors hover:text-brand" data-i18n="nav.broadcast"
                 >Трансляція</a
               >
               <a
                 href="education.html"
-                class="rounded-xl px-3 py-2 font-semibold transition-colors hover:text-brand"
+                class="rounded-xl px-3 py-2 font-semibold transition-colors hover:text-brand" data-i18n="nav.education"
                 >Навчання</a
               >
               <a
                 href="events.html"
-                class="rounded-xl px-3 py-2 font-semibold transition-colors hover:text-brand"
+                class="rounded-xl px-3 py-2 font-semibold transition-colors hover:text-brand" data-i18n="nav.events"
                 >Події</a
               >
               <a
                 href="donate.html"
-                class="rounded-xl px-3 py-2 font-semibold transition-colors hover:text-brand"
+                class="rounded-xl px-3 py-2 font-semibold transition-colors hover:text-brand" data-i18n="nav.donate"
                 >Підтримати</a
               >
               <a
                 href="contacts.html"
-                class="rounded-xl px-3 py-2 font-semibold transition-colors hover:text-brand"
+                class="rounded-xl px-3 py-2 font-semibold transition-colors hover:text-brand" data-i18n="nav.contacts"
                 >Контакти</a
               >
             </nav>
@@ -116,42 +127,42 @@
         </div>
         <nav
           class="hidden flex-col rounded-2xl bg-white px-2 py-1.5 text-[16px] font-normal text-gray-700 shadow-sm lg:mt-4 lg:flex lg:border-t lg:border-gray-100 lg:px-2 lg:py-2 lg:pt-2.5"
-          aria-label="Основна навігація"
+          aria-label="Основна навігація" data-i18n-aria-label="aside.mainNav"
         >
           <a
             href="darshan.html"
             class="rounded-xl px-3 py-2 font-semibold text-brand"
-            aria-current="page"
+            aria-current="page" data-i18n="nav.darshan"
             >Даршан Божеств</a
           >
           <a
             href="schedule.html"
-            class="rounded-xl px-3 py-2 font-semibold transition-colors hover:text-brand"
+            class="rounded-xl px-3 py-2 font-semibold transition-colors hover:text-brand" data-i18n="nav.schedule"
             >Розклад</a
           >
           <a
             href="broadcast.html"
-            class="rounded-xl px-3 py-2 font-semibold transition-colors hover:text-brand"
+            class="rounded-xl px-3 py-2 font-semibold transition-colors hover:text-brand" data-i18n="nav.broadcast"
             >Трансляція</a
           >
           <a
             href="education.html"
-            class="rounded-xl px-3 py-2 font-semibold transition-colors hover:text-brand"
+            class="rounded-xl px-3 py-2 font-semibold transition-colors hover:text-brand" data-i18n="nav.education"
             >Навчання</a
           >
           <a
             href="events.html"
-            class="rounded-xl px-3 py-2 font-semibold transition-colors hover:text-brand"
+            class="rounded-xl px-3 py-2 font-semibold transition-colors hover:text-brand" data-i18n="nav.events"
             >Події</a
           >
           <a
             href="donate.html"
-            class="rounded-xl px-3 py-2 font-semibold transition-colors hover:text-brand"
+            class="rounded-xl px-3 py-2 font-semibold transition-colors hover:text-brand" data-i18n="nav.donate"
             >Підтримати</a
           >
           <a
             href="contacts.html"
-            class="rounded-xl px-3 py-2 font-semibold transition-colors hover:text-brand"
+            class="rounded-xl px-3 py-2 font-semibold transition-colors hover:text-brand" data-i18n="nav.contacts"
             >Контакти</a
           >
         </nav>
@@ -191,8 +202,32 @@
             ><i class="fab fa-instagram text-[1.05rem] leading-none" aria-hidden="true"></i></a
           >
         </div>
+        <div
+          class="flex flex-wrap justify-center gap-2 border-t border-gray-100 px-4 pb-2 pt-3 lg:justify-start lg:border-t-0 lg:px-0 lg:pt-2"
+          role="group"
+          data-i18n-aria-label="lang.groupLabel"
+        >
+          <button
+            type="button"
+            class="rounded-md px-2 py-1 text-sm text-gray-600 transition hover:text-brand focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
+            data-set-lang="uk"
+            data-i18n="lang.uk"
+          >
+            УК
+          </button>
+          <span class="text-gray-300" aria-hidden="true">|</span>
+          <button
+            type="button"
+            class="rounded-md px-2 py-1 text-sm text-gray-600 transition hover:text-brand focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
+            data-set-lang="en"
+            data-i18n="lang.en"
+          >
+            EN
+          </button>
+        </div>
+
         <p
-          class="mx-auto mt-2 max-w-[30rem] border-t border-gray-100 px-4 pb-3 pt-2.5 text-center text-[1rem] leading-snug text-gray-500 lg:mx-0 lg:mt-6 lg:max-w-none lg:px-0 lg:text-left"
+          class="mx-auto mt-2 max-w-[30rem] border-t border-gray-100 px-4 pb-3 pt-2.5 text-center text-[1rem] leading-snug text-gray-500 lg:mx-0 lg:mt-6 lg:max-w-none lg:px-0 lg:text-left" data-i18n-html="aside.footer"
         >
           Міжнародне товариство свідомості Крішни.<br />
           Засновник-ачарʼя Його Божественна Милість А. Ч. Бгактіведанта Свамі
@@ -205,11 +240,12 @@
         <div class="mx-auto max-w-3xl px-6">
           <h1
             class="mb-8 text-center text-[calc(1.65rem+2px)] font-normal leading-tight text-brand md:text-[calc(2.0625rem+2px)]"
+            data-i18n="content.darshan.h1"
           >
             Даршан Божеств
           </h1>
           <div class="rounded-2xl bg-[#FFFBF6] p-6 md:p-8">
-            <p class="mb-8 text-[calc(0.875rem+2px)] leading-relaxed text-gray-600">
+            <p class="mb-8 text-[calc(0.875rem+2px)] leading-relaxed text-gray-600" data-i18n-html="content.darshan.introHtml">
               Даршан — «бачення» Божеств: спокійна присутність у вівтарі, спільні
               молитви та кіртан. Запрошуємо приєднатися до Манґала-араті, Гаура-араті
               та інших подій за
@@ -222,6 +258,7 @@
             >
               <img
                 src="%BASE_URL%images/darshan-deities.png"
+                data-i18n-alt="content.darshan.imageAlt"
                 alt="Божества у храмі Харе Крішна"
                 class="w-full object-cover"
                 width="1024"
@@ -236,7 +273,7 @@
 
       <footer class="border-t border-gray-100 bg-white py-8">
         <p class="mx-auto max-w-2xl px-6 text-center text-xs text-gray-500">
-          <a href="index.html" class="text-brand transition-colors hover:text-brand-dark"
+          <a href="index.html" class="text-brand transition-colors hover:text-brand-dark" data-i18n="events.returnHome"
             >НА ГОЛОВНУ</a
           >
         </p>

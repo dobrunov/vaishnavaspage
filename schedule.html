@@ -1,15 +1,26 @@
 <!DOCTYPE html>
 <html lang="uk" class="font-sans">
   <head>
+    <script>
+      (function () {
+        try {
+          if (localStorage.getItem('iskcon-lang') === 'en') {
+            document.documentElement.classList.add('i18n-pending');
+          }
+        } catch (_) {}
+      })();
+    </script>
+    <style>html.i18n-pending body{visibility:hidden}</style>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="%BASE_URL%favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
       content="Щоденний розклад храму Харе Крішна у Харкові — араті, кіртан, Шрімад Бгаґаватам, прасад."
+      data-i18n="page.schedule.description"
     />
     <meta name="theme-color" content="#e85d04" />
-    <title>Розклад — Храм Харе Крішна у Харкові</title>
+    <title data-i18n="page.schedule.title">Розклад — Храм Харе Крішна у Харкові</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -33,7 +44,7 @@
     >
       <aside
         class="z-40 shrink-0 border-b border-gray-200 bg-white lg:sticky lg:top-0 lg:flex lg:h-screen lg:w-[17.5rem] lg:flex-col lg:overflow-y-auto lg:border-b-0 lg:border-r lg:border-gray-200 lg:px-6 lg:py-10"
-        aria-label="Навігація сайту"
+        aria-label="Навігація сайту" data-i18n-aria-label="aside.siteNav"
       >
         <div
           class="relative flex items-center justify-center px-4 py-3 lg:flex-col lg:items-stretch lg:gap-8 lg:px-0 lg:py-0"
@@ -54,7 +65,7 @@
           <details class="absolute left-4 top-1/2 -translate-y-1/2 lg:hidden">
             <summary
               class="list-none cursor-pointer rounded-md p-2 text-gray-700 transition hover:bg-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand [&::-webkit-details-marker]:hidden"
-              aria-label="Меню"
+              aria-label="Меню" data-i18n-aria-label="aside.menu"
             >
               <svg
                 class="h-7 w-7"
@@ -73,42 +84,42 @@
             </summary>
             <nav
               class="absolute left-0 top-full z-50 mt-2 flex min-w-[14.5rem] flex-col rounded-xl bg-white px-2 py-1.5 text-[16px] text-gray-700 shadow-lg"
-              aria-label="Основна навігація"
+              aria-label="Основна навігація" data-i18n-aria-label="aside.mainNav"
             >
               <a
                 href="darshan.html"
-                class="rounded-xl px-3 py-2 font-semibold transition-colors hover:text-brand"
+                class="rounded-xl px-3 py-2 font-semibold transition-colors hover:text-brand" data-i18n="nav.darshan"
                 >Даршан Божеств</a
               >
               <a
                 href="schedule.html"
                 class="rounded-xl px-3 py-2 font-semibold text-brand"
-                aria-current="page"
+                aria-current="page" data-i18n="nav.schedule"
                 >Розклад</a
               >
               <a
                 href="broadcast.html"
-                class="rounded-xl px-3 py-2 font-semibold transition-colors hover:text-brand"
+                class="rounded-xl px-3 py-2 font-semibold transition-colors hover:text-brand" data-i18n="nav.broadcast"
                 >Трансляція</a
               >
               <a
                 href="education.html"
-                class="rounded-xl px-3 py-2 font-semibold transition-colors hover:text-brand"
+                class="rounded-xl px-3 py-2 font-semibold transition-colors hover:text-brand" data-i18n="nav.education"
                 >Навчання</a
               >
               <a
                 href="events.html"
-                class="rounded-xl px-3 py-2 font-semibold transition-colors hover:text-brand"
+                class="rounded-xl px-3 py-2 font-semibold transition-colors hover:text-brand" data-i18n="nav.events"
                 >Події</a
               >
               <a
                 href="donate.html"
-                class="rounded-xl px-3 py-2 font-semibold transition-colors hover:text-brand"
+                class="rounded-xl px-3 py-2 font-semibold transition-colors hover:text-brand" data-i18n="nav.donate"
                 >Підтримати</a
               >
               <a
                 href="contacts.html"
-                class="rounded-xl px-3 py-2 font-semibold transition-colors hover:text-brand"
+                class="rounded-xl px-3 py-2 font-semibold transition-colors hover:text-brand" data-i18n="nav.contacts"
                 >Контакти</a
               >
             </nav>
@@ -116,42 +127,42 @@
         </div>
         <nav
           class="hidden flex-col rounded-2xl bg-white px-2 py-1.5 text-[16px] font-normal text-gray-700 shadow-sm lg:mt-4 lg:flex lg:border-t lg:border-gray-100 lg:px-2 lg:py-2 lg:pt-2.5"
-          aria-label="Основна навігація"
+          aria-label="Основна навігація" data-i18n-aria-label="aside.mainNav"
         >
           <a
             href="darshan.html"
-            class="rounded-xl px-3 py-2 font-semibold transition-colors hover:text-brand"
+            class="rounded-xl px-3 py-2 font-semibold transition-colors hover:text-brand" data-i18n="nav.darshan"
             >Даршан Божеств</a
           >
           <a
             href="schedule.html"
             class="rounded-xl px-3 py-2 font-semibold text-brand"
-            aria-current="page"
+            aria-current="page" data-i18n="nav.schedule"
             >Розклад</a
           >
           <a
             href="broadcast.html"
-            class="rounded-xl px-3 py-2 font-semibold transition-colors hover:text-brand"
+            class="rounded-xl px-3 py-2 font-semibold transition-colors hover:text-brand" data-i18n="nav.broadcast"
             >Трансляція</a
           >
           <a
             href="education.html"
-            class="rounded-xl px-3 py-2 font-semibold transition-colors hover:text-brand"
+            class="rounded-xl px-3 py-2 font-semibold transition-colors hover:text-brand" data-i18n="nav.education"
             >Навчання</a
           >
           <a
             href="events.html"
-            class="rounded-xl px-3 py-2 font-semibold transition-colors hover:text-brand"
+            class="rounded-xl px-3 py-2 font-semibold transition-colors hover:text-brand" data-i18n="nav.events"
             >Події</a
           >
           <a
             href="donate.html"
-            class="rounded-xl px-3 py-2 font-semibold transition-colors hover:text-brand"
+            class="rounded-xl px-3 py-2 font-semibold transition-colors hover:text-brand" data-i18n="nav.donate"
             >Підтримати</a
           >
           <a
             href="contacts.html"
-            class="rounded-xl px-3 py-2 font-semibold transition-colors hover:text-brand"
+            class="rounded-xl px-3 py-2 font-semibold transition-colors hover:text-brand" data-i18n="nav.contacts"
             >Контакти</a
           >
         </nav>
@@ -191,8 +202,32 @@
             ><i class="fab fa-instagram text-[1.05rem] leading-none" aria-hidden="true"></i></a
           >
         </div>
+        <div
+          class="flex flex-wrap justify-center gap-2 border-t border-gray-100 px-4 pb-2 pt-3 lg:justify-start lg:border-t-0 lg:px-0 lg:pt-2"
+          role="group"
+          data-i18n-aria-label="lang.groupLabel"
+        >
+          <button
+            type="button"
+            class="rounded-md px-2 py-1 text-sm text-gray-600 transition hover:text-brand focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
+            data-set-lang="uk"
+            data-i18n="lang.uk"
+          >
+            УК
+          </button>
+          <span class="text-gray-300" aria-hidden="true">|</span>
+          <button
+            type="button"
+            class="rounded-md px-2 py-1 text-sm text-gray-600 transition hover:text-brand focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
+            data-set-lang="en"
+            data-i18n="lang.en"
+          >
+            EN
+          </button>
+        </div>
+
         <p
-          class="mx-auto mt-2 max-w-[30rem] border-t border-gray-100 px-4 pb-3 pt-2.5 text-center text-[1rem] leading-snug text-gray-500 lg:mx-0 lg:mt-6 lg:max-w-none lg:px-0 lg:text-left"
+          class="mx-auto mt-2 max-w-[30rem] border-t border-gray-100 px-4 pb-3 pt-2.5 text-center text-[1rem] leading-snug text-gray-500 lg:mx-0 lg:mt-6 lg:max-w-none lg:px-0 lg:text-left" data-i18n-html="aside.footer"
         >
           Міжнародне товариство свідомості Крішни.<br />
           Засновник-ачарʼя Його Божественна Милість А. Ч. Бгактіведанта Свамі
@@ -205,12 +240,14 @@
         <div class="mx-auto max-w-3xl px-6">
           <h1
             class="mb-8 text-center text-[calc(1.65rem+2px)] font-normal leading-tight text-brand md:text-[calc(2.0625rem+2px)]"
+            data-i18n="content.schedule.h1Lecturers"
           >
             Лектори та теми лекцій на тиждень
           </h1>
           <div class="mx-auto mb-10 max-w-md md:mb-12 md:max-w-2xl">
             <img
               src="%BASE_URL%images/bhagavatam-lectures-poster.png"
+              data-i18n-alt="content.schedule.posterAlt"
               alt="Афіша: лекції з «Шрімад Бгаґаватам» — розклад у Харкові"
               class="w-full rounded-lg shadow-md"
               width="724"
@@ -221,6 +258,7 @@
           </div>
           <h2
             class="mb-8 text-center text-[calc(1.65rem+2px)] font-normal leading-tight text-brand md:text-[calc(2.0625rem+2px)]"
+            data-i18n="content.schedule.h2Daily"
           >
             Розклад подій кожного дня
           </h2>
@@ -230,38 +268,39 @@
             >
               <li class="flex flex-col gap-1 sm:flex-row sm:gap-6">
                 <span class="shrink-0 tabular-nums font-semibold text-gray-900">05:00–05:45</span>
-                <span>Мангала-араті. Ранкові сприятливі молитви</span>
+                <span data-i18n="content.schedule.daily.mangala">Мангала-араті. Ранкові сприятливі молитви</span>
               </li>
               <li class="flex flex-col gap-1 sm:flex-row sm:gap-6">
                 <span class="shrink-0 tabular-nums font-semibold text-gray-900">05:45–07:30</span>
-                <span>Оспівування Святих Імен на вервицях</span>
+                <span data-i18n="content.schedule.daily.japa">Оспівування Святих Імен на вервицях</span>
               </li>
               <li class="flex flex-col gap-1 sm:flex-row sm:gap-6">
                 <span class="shrink-0 tabular-nums font-semibold text-gray-900">07:30–08:00</span>
-                <span
+                <span data-i18n="content.schedule.daily.greeting"
                   >Привітання Їх Світлостей Шрі Шрі Гаура Нітай, Гуру-пуджа Його
                   Божественній Милості Шрілі Прабгупаді</span>
               </li>
               <li class="flex flex-col gap-1 sm:flex-row sm:gap-6">
                 <span class="shrink-0 tabular-nums font-semibold text-gray-900">08:00–09:00</span>
-                <span>Шрімад Бгаґаватам</span>
+                <span data-i18n="content.schedule.daily.bhagavatam">Шрімад Бгаґаватам</span>
               </li>
               <li class="flex flex-col gap-1 sm:flex-row sm:gap-6">
                 <span class="shrink-0 tabular-nums font-semibold text-gray-900">09:00–10:00</span>
-                <span>Вшанування прасаду</span>
+                <span data-i18n="content.schedule.daily.prasad1">Вшанування прасаду</span>
               </li>
               <li class="flex flex-col gap-1 sm:flex-row sm:gap-6">
                 <span class="shrink-0 tabular-nums font-semibold text-gray-900">15:30–16:00</span>
-                <span>Вшанування прасаду</span>
+                <span data-i18n="content.schedule.daily.prasad2">Вшанування прасаду</span>
               </li>
               <li class="flex flex-col gap-1 sm:flex-row sm:gap-6">
                 <span class="shrink-0 tabular-nums font-semibold text-gray-900">19:00–19:30</span>
-                <span>Гаура-араті</span>
+                <span data-i18n="content.schedule.daily.gaura">Гаура-араті</span>
               </li>
             </ul>
           </section>
           <h2
             class="mt-12 mb-8 text-center text-[calc(1.65rem+2px)] font-normal leading-tight text-brand md:mb-10 md:text-[calc(2.0625rem+2px)]"
+            data-i18n="content.schedule.h2Sunday"
           >
             Недільний фестиваль
           </h2>
@@ -271,35 +310,35 @@
             >
               <li class="grid grid-cols-[4.5rem_minmax(0,1fr)] items-start gap-x-4 gap-y-1 sm:flex sm:flex-row sm:gap-6">
                 <span class="shrink-0 tabular-nums font-semibold text-gray-900">12:00</span>
-                <span>Кіртан</span>
+                <span data-i18n="content.schedule.sunday.kirtan1">Кіртан</span>
               </li>
               <li class="grid grid-cols-[4.5rem_minmax(0,1fr)] items-start gap-x-4 gap-y-1 sm:flex sm:flex-row sm:gap-6">
                 <span class="shrink-0 tabular-nums font-semibold text-gray-900">12:30</span>
-                <span>Лекція</span>
+                <span data-i18n="content.schedule.sunday.lecture">Лекція</span>
               </li>
               <li class="grid grid-cols-[4.5rem_minmax(0,1fr)] items-start gap-x-4 gap-y-1 sm:flex sm:flex-row sm:gap-6">
                 <span class="shrink-0 tabular-nums font-semibold text-gray-900">13:45</span>
-                <span>Кіртан</span>
+                <span data-i18n="content.schedule.sunday.kirtan2">Кіртан</span>
               </li>
               <li class="grid grid-cols-[4.5rem_minmax(0,1fr)] items-start gap-x-4 gap-y-1 sm:flex sm:flex-row sm:gap-6">
                 <span class="shrink-0 tabular-nums font-semibold text-gray-900">14:45</span>
-                <span>Блок оголошень</span>
+                <span data-i18n="content.schedule.sunday.announcements">Блок оголошень</span>
               </li>
               <li class="grid grid-cols-[4.5rem_minmax(0,1fr)] items-start gap-x-4 gap-y-1 sm:flex sm:flex-row sm:gap-6">
                 <span class="shrink-0 tabular-nums font-semibold text-gray-900">15:00</span>
-                <span>Бенкет</span>
+                <span data-i18n="content.schedule.sunday.feast">Бенкет</span>
               </li>
               <li class="grid grid-cols-[4.5rem_minmax(0,1fr)] items-start gap-x-4 gap-y-1 sm:flex sm:flex-row sm:gap-6">
                 <span class="shrink-0 tabular-nums font-semibold text-gray-900">15:45</span>
-                <span>Прибирання вівтарної</span>
+                <span data-i18n="content.schedule.sunday.altar">Прибирання вівтарної</span>
               </li>
               <li class="grid grid-cols-[4.5rem_minmax(0,1fr)] items-start gap-x-4 gap-y-1 sm:flex sm:flex-row sm:gap-6">
                 <span class="shrink-0 tabular-nums font-semibold text-gray-900">16:30</span>
-                <span>Недільні зустрічі, душевні бесіди про Крішну та практику свідомості Крішни</span>
+                <span data-i18n="content.schedule.sunday.meetings">Недільні зустрічі, душевні бесіди про Крішну та практику свідомості Крішни</span>
               </li>
               <li class="grid grid-cols-[4.5rem_minmax(0,1fr)] items-start gap-x-4 gap-y-1 sm:flex sm:flex-row sm:gap-6">
                 <span class="shrink-0 tabular-nums font-semibold text-gray-900">17:30</span>
-                <span>Гаура-араті</span>
+                <span data-i18n="content.schedule.sunday.gaura">Гаура-араті</span>
               </li>
             </ul>
           </section>
@@ -308,7 +347,7 @@
 
       <footer class="border-t border-gray-100 bg-white py-8">
         <p class="mx-auto max-w-2xl px-6 text-center text-xs text-gray-500">
-          <a href="index.html" class="text-brand transition-colors hover:text-brand-dark"
+          <a href="index.html" class="text-brand transition-colors hover:text-brand-dark" data-i18n="events.returnHome"
             >НА ГОЛОВНУ</a
           >
         </p>

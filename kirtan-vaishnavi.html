@@ -1,15 +1,26 @@
 <!DOCTYPE html>
 <html lang="uk" class="font-sans">
   <head>
+    <script>
+      (function () {
+        try {
+          if (localStorage.getItem('iskcon-lang') === 'en') {
+            document.documentElement.classList.add('i18n-pending');
+          }
+        } catch (_) {}
+      })();
+    </script>
+    <style>html.i18n-pending body{visibility:hidden}</style>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="%BASE_URL%favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
       content="Кіртан-вайшнаві — спільний спів, молитва та тепла атмосфера у храмі."
+      data-i18n="page.kirtanVaishnavi.description"
     />
     <meta name="theme-color" content="#e85d04" />
-    <title>Кіртан-вайшнаві — Храм Харе Крішна у Харкові</title>
+    <title data-i18n="page.kirtanVaishnavi.title">Кіртан-вайшнаві — Храм Харе Крішна у Харкові</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -33,7 +44,7 @@
     >
       <aside
         class="z-40 shrink-0 border-b border-gray-200 bg-white lg:sticky lg:top-0 lg:flex lg:h-screen lg:w-[17.5rem] lg:flex-col lg:overflow-y-auto lg:border-b-0 lg:border-r lg:border-gray-200 lg:px-6 lg:py-10"
-        aria-label="Навігація сайту"
+        aria-label="Навігація сайту" data-i18n-aria-label="aside.siteNav"
       >
         <div
           class="relative flex items-center justify-center px-4 py-3 lg:flex-col lg:items-stretch lg:gap-8 lg:px-0 lg:py-0"
@@ -54,7 +65,7 @@
           <details class="absolute left-4 top-1/2 -translate-y-1/2 lg:hidden">
             <summary
               class="list-none cursor-pointer rounded-md p-2 text-gray-700 transition hover:bg-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand [&::-webkit-details-marker]:hidden"
-              aria-label="Меню"
+              aria-label="Меню" data-i18n-aria-label="aside.menu"
             >
               <svg
                 class="h-7 w-7"
@@ -73,29 +84,29 @@
             </summary>
             <nav
               class="absolute left-0 top-full z-50 mt-2 flex min-w-[14.5rem] flex-col rounded-xl bg-white px-2 py-1.5 text-[16px] text-gray-700 shadow-lg"
-              aria-label="Основна навігація"
+              aria-label="Основна навігація" data-i18n-aria-label="aside.mainNav"
             >
-              <a href="darshan.html" class="rounded-xl px-3 py-2 font-semibold transition-colors hover:text-brand">Даршан Божеств</a>
-              <a href="schedule.html" class="rounded-xl px-3 py-2 font-semibold transition-colors hover:text-brand">Розклад</a>
-              <a href="broadcast.html" class="rounded-xl px-3 py-2 font-semibold transition-colors hover:text-brand">Трансляція</a>
-              <a href="education.html" class="rounded-xl px-3 py-2 font-semibold transition-colors hover:text-brand">Навчання</a>
-              <a href="events.html" class="rounded-xl px-3 py-2 font-semibold text-brand" aria-current="page">Події</a>
-              <a href="donate.html" class="rounded-xl px-3 py-2 font-semibold transition-colors hover:text-brand">Підтримати</a>
-              <a href="contacts.html" class="rounded-xl px-3 py-2 font-semibold transition-colors hover:text-brand">Контакти</a>
+              <a href="darshan.html" class="rounded-xl px-3 py-2 font-semibold transition-colors hover:text-brand" data-i18n="nav.darshan">Даршан Божеств</a>
+              <a href="schedule.html" class="rounded-xl px-3 py-2 font-semibold transition-colors hover:text-brand" data-i18n="nav.schedule">Розклад</a>
+              <a href="broadcast.html" class="rounded-xl px-3 py-2 font-semibold transition-colors hover:text-brand" data-i18n="nav.broadcast">Трансляція</a>
+              <a href="education.html" class="rounded-xl px-3 py-2 font-semibold transition-colors hover:text-brand" data-i18n="nav.education">Навчання</a>
+              <a href="events.html" class="rounded-xl px-3 py-2 font-semibold text-brand" aria-current="page" data-i18n="nav.events">Події</a>
+              <a href="donate.html" class="rounded-xl px-3 py-2 font-semibold transition-colors hover:text-brand" data-i18n="nav.donate">Підтримати</a>
+              <a href="contacts.html" class="rounded-xl px-3 py-2 font-semibold transition-colors hover:text-brand" data-i18n="nav.contacts">Контакти</a>
             </nav>
           </details>
         </div>
         <nav
           class="hidden flex-col rounded-2xl bg-white px-2 py-1.5 text-[16px] font-normal text-gray-700 shadow-sm lg:mt-4 lg:flex lg:border-t lg:border-gray-100 lg:px-2 lg:py-2 lg:pt-2.5"
-          aria-label="Основна навігація"
+          aria-label="Основна навігація" data-i18n-aria-label="aside.mainNav"
         >
-          <a href="darshan.html" class="rounded-xl px-3 py-2 font-semibold transition-colors hover:text-brand">Даршан Божеств</a>
-          <a href="schedule.html" class="rounded-xl px-3 py-2 font-semibold transition-colors hover:text-brand">Розклад</a>
-          <a href="broadcast.html" class="rounded-xl px-3 py-2 font-semibold transition-colors hover:text-brand">Трансляція</a>
-          <a href="education.html" class="rounded-xl px-3 py-2 font-semibold transition-colors hover:text-brand">Навчання</a>
-          <a href="events.html" class="rounded-xl px-3 py-2 font-semibold text-brand" aria-current="page">Події</a>
-          <a href="donate.html" class="rounded-xl px-3 py-2 font-semibold transition-colors hover:text-brand">Підтримати</a>
-          <a href="contacts.html" class="rounded-xl px-3 py-2 font-semibold transition-colors hover:text-brand">Контакти</a>
+          <a href="darshan.html" class="rounded-xl px-3 py-2 font-semibold transition-colors hover:text-brand" data-i18n="nav.darshan">Даршан Божеств</a>
+          <a href="schedule.html" class="rounded-xl px-3 py-2 font-semibold transition-colors hover:text-brand" data-i18n="nav.schedule">Розклад</a>
+          <a href="broadcast.html" class="rounded-xl px-3 py-2 font-semibold transition-colors hover:text-brand" data-i18n="nav.broadcast">Трансляція</a>
+          <a href="education.html" class="rounded-xl px-3 py-2 font-semibold transition-colors hover:text-brand" data-i18n="nav.education">Навчання</a>
+          <a href="events.html" class="rounded-xl px-3 py-2 font-semibold text-brand" aria-current="page" data-i18n="nav.events">Події</a>
+          <a href="donate.html" class="rounded-xl px-3 py-2 font-semibold transition-colors hover:text-brand" data-i18n="nav.donate">Підтримати</a>
+          <a href="contacts.html" class="rounded-xl px-3 py-2 font-semibold transition-colors hover:text-brand" data-i18n="nav.contacts">Контакти</a>
         </nav>
         <div
           class="flex flex-wrap justify-center gap-1.5 border-t border-gray-100 px-4 pb-3 pt-[1.125rem] lg:mt-6 lg:justify-start lg:border-t-0 lg:px-0 lg:pt-0"
@@ -105,7 +116,31 @@
           <a href="https://www.youtube.com/channel/UC6aTIMPbCOMH9yk6WRukj-A" class="flex h-9 w-9 items-center justify-center rounded-full bg-[#F70000] text-white shadow-sm transition hover:brightness-110 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-600" aria-label="YouTube" rel="noopener noreferrer" target="_blank"><i class="fab fa-youtube text-[1rem] leading-none" aria-hidden="true"></i></a>
           <a href="https://www.instagram.com/iskconkharkiv/" class="flex h-9 w-9 items-center justify-center rounded-full bg-[#FF546B] text-white shadow-sm transition hover:brightness-110 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#FF546B]" aria-label="Instagram" rel="noopener noreferrer" target="_blank"><i class="fab fa-instagram text-[1.05rem] leading-none" aria-hidden="true"></i></a>
         </div>
-        <p class="mx-auto mt-2 max-w-[30rem] border-t border-gray-100 px-4 pb-3 pt-2.5 text-center text-[1rem] leading-snug text-gray-500 lg:mx-0 lg:mt-6 lg:max-w-none lg:px-0 lg:text-left">
+        <div
+          class="flex flex-wrap justify-center gap-2 border-t border-gray-100 px-4 pb-2 pt-3 lg:justify-start lg:border-t-0 lg:px-0 lg:pt-2"
+          role="group"
+          data-i18n-aria-label="lang.groupLabel"
+        >
+          <button
+            type="button"
+            class="rounded-md px-2 py-1 text-sm text-gray-600 transition hover:text-brand focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
+            data-set-lang="uk"
+            data-i18n="lang.uk"
+          >
+            УК
+          </button>
+          <span class="text-gray-300" aria-hidden="true">|</span>
+          <button
+            type="button"
+            class="rounded-md px-2 py-1 text-sm text-gray-600 transition hover:text-brand focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
+            data-set-lang="en"
+            data-i18n="lang.en"
+          >
+            EN
+          </button>
+        </div>
+
+        <p class="mx-auto mt-2 max-w-[30rem] border-t border-gray-100 px-4 pb-3 pt-2.5 text-center text-[1rem] leading-snug text-gray-500 lg:mx-0 lg:mt-6 lg:max-w-none lg:px-0 lg:text-left" data-i18n-html="aside.footer">
           Міжнародне товариство свідомості Крішни.<br />
           Засновник-ачарʼя Його Божественна Милість А. Ч. Бгактіведанта Свамі
           Прабгупада.
@@ -117,6 +152,7 @@
         <div class="mx-auto max-w-4xl px-6">
           <h1
             class="mb-8 text-center text-[calc(1.65rem+2px)] font-normal leading-tight text-brand md:text-[calc(2.0625rem+2px)]"
+            data-i18n="content.kirtan.h1"
           >
             Кіртан-вайшнаві
           </h1>
@@ -124,6 +160,7 @@
             <figure class="overflow-hidden rounded-xl border border-gray-100 bg-white shadow-sm">
               <img
                 src="%BASE_URL%images/gallery-kirtan-vaishnavi.png"
+                data-i18n-alt="content.kirtan.imageAlt"
                 alt="Кіртан-вайшнаві: у вівтарі з 13:00 до 14:00"
                 class="w-full object-cover"
                 width="900"
@@ -133,12 +170,12 @@
               />
             </figure>
             <div class="space-y-4 text-[calc(0.875rem+2px)] leading-relaxed text-gray-600">
-              <p>
+              <p data-i18n="content.kirtan.p1">
                 Кіртан-вайшнаві — це час зосередженого співу, молитви та натхненного
                 спілкування, коли можна відчути спокій храмової атмосфери й разом
                 зануритися у практику бгакті.
               </p>
-              <p>
+              <p data-i18n="content.kirtan.p2">
                 Тут зручно буде додати докладний опис формату зустрічі, хто може
                 приєднатися, як проходить програма та іншу важливу інформацію.
               </p>

@@ -8,6 +8,10 @@
     --ease-reveal: cubic-bezier(0.25, 1, 0.5, 1);
     --dur-quick: 180ms;
     --dur-reveal: 520ms;
+    /* Nav underline sweep (aside links): slower than --dur-quick */
+    --dur-nav-underline: 450ms;
+    /* Easing for underline: gentle start (slow in), then settles — smoother than ease-reveal */
+    --ease-nav-underline: cubic-bezier(0.4, 0, 0.2, 1);
     --reveal-shift: 8px;
   }
 
@@ -15,6 +19,11 @@
     scroll-behavior: smooth;
     @apply font-sans text-sm font-normal;
     background-color: #fff;
+  }
+
+  /* Avoid Ukrainian flash before client i18n when English is stored (see inline script in HTML). */
+  html.i18n-pending body {
+    visibility: hidden;
   }
 
   /* Smoother cross-document navigations in supporting browsers (Chrome 126+). */
@@ -198,14 +207,14 @@
     left: 0.75rem;
     right: 0.75rem;
     bottom: 0.45rem;
-    height: 2px;
+    height: 1px;
     border-radius: 999px;
     background: currentColor;
     opacity: 0.18;
     transform: scaleX(0);
     transform-origin: left;
-    transition: transform var(--dur-quick) var(--ease-quick),
-      opacity var(--dur-quick) var(--ease-quick);
+    transition: transform var(--dur-nav-underline) var(--ease-nav-underline),
+      opacity var(--dur-nav-underline) var(--ease-nav-underline);
   }
 
   @media (hover: hover) and (pointer: fine) {

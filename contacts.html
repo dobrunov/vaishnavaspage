@@ -1,15 +1,26 @@
 <!DOCTYPE html>
 <html lang="uk" class="font-sans">
   <head>
+    <script>
+      (function () {
+        try {
+          if (localStorage.getItem('iskcon-lang') === 'en') {
+            document.documentElement.classList.add('i18n-pending');
+          }
+        } catch (_) {}
+      })();
+    </script>
+    <style>html.i18n-pending body{visibility:hidden}</style>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="%BASE_URL%favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
       content="Контакти храму Харе Крішна (ISKCON) у Харкові — адреса, посилання на соцмережі."
+      data-i18n="page.contacts.description"
     />
     <meta name="theme-color" content="#e85d04" />
-    <title>Контакти — Храм Харе Крішна у Харкові</title>
+    <title data-i18n="page.contacts.title">Контакти — Храм Харе Крішна у Харкові</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -33,7 +44,7 @@
     >
       <aside
         class="z-40 shrink-0 border-b border-gray-200 bg-white lg:sticky lg:top-0 lg:flex lg:h-screen lg:w-[17.5rem] lg:flex-col lg:overflow-y-auto lg:border-b-0 lg:border-r lg:border-gray-200 lg:px-6 lg:py-10"
-        aria-label="Навігація сайту"
+        aria-label="Навігація сайту" data-i18n-aria-label="aside.siteNav"
       >
         <div
           class="relative flex items-center justify-center px-4 py-3 lg:flex-col lg:items-stretch lg:gap-8 lg:px-0 lg:py-0"
@@ -54,7 +65,7 @@
           <details class="absolute left-4 top-1/2 -translate-y-1/2 lg:hidden">
             <summary
               class="list-none cursor-pointer rounded-md p-2 text-gray-700 transition hover:bg-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand [&::-webkit-details-marker]:hidden"
-              aria-label="Меню"
+              aria-label="Меню" data-i18n-aria-label="aside.menu"
             >
               <svg
                 class="h-7 w-7"
@@ -73,42 +84,42 @@
             </summary>
             <nav
               class="absolute left-0 top-full z-50 mt-2 flex min-w-[14.5rem] flex-col rounded-xl bg-white px-2 py-1.5 text-[16px] text-gray-700 shadow-lg"
-              aria-label="Основна навігація"
+              aria-label="Основна навігація" data-i18n-aria-label="aside.mainNav"
             >
               <a
                 href="darshan.html"
-                class="rounded-xl px-3 py-2 font-semibold transition-colors hover:text-brand"
+                class="rounded-xl px-3 py-2 font-semibold transition-colors hover:text-brand" data-i18n="nav.darshan"
                 >Даршан Божеств</a
               >
               <a
                 href="schedule.html"
-                class="rounded-xl px-3 py-2 font-semibold transition-colors hover:text-brand"
+                class="rounded-xl px-3 py-2 font-semibold transition-colors hover:text-brand" data-i18n="nav.schedule"
                 >Розклад</a
               >
               <a
                 href="broadcast.html"
-                class="rounded-xl px-3 py-2 font-semibold transition-colors hover:text-brand"
+                class="rounded-xl px-3 py-2 font-semibold transition-colors hover:text-brand" data-i18n="nav.broadcast"
                 >Трансляція</a
               >
               <a
                 href="education.html"
-                class="rounded-xl px-3 py-2 font-semibold transition-colors hover:text-brand"
+                class="rounded-xl px-3 py-2 font-semibold transition-colors hover:text-brand" data-i18n="nav.education"
                 >Навчання</a
               >
               <a
                 href="events.html"
-                class="rounded-xl px-3 py-2 font-semibold transition-colors hover:text-brand"
+                class="rounded-xl px-3 py-2 font-semibold transition-colors hover:text-brand" data-i18n="nav.events"
                 >Події</a
               >
               <a
                 href="donate.html"
-                class="rounded-xl px-3 py-2 font-semibold transition-colors hover:text-brand"
+                class="rounded-xl px-3 py-2 font-semibold transition-colors hover:text-brand" data-i18n="nav.donate"
                 >Підтримати</a
               >
               <a
                 href="contacts.html"
                 class="rounded-xl px-3 py-2 font-semibold text-brand"
-                aria-current="page"
+                aria-current="page" data-i18n="nav.contacts"
                 >Контакти</a
               >
             </nav>
@@ -116,42 +127,42 @@
         </div>
         <nav
           class="hidden flex-col rounded-2xl bg-white px-2 py-1.5 text-[16px] font-normal text-gray-700 shadow-sm lg:mt-4 lg:flex lg:border-t lg:border-gray-100 lg:px-2 lg:py-2 lg:pt-2.5"
-          aria-label="Основна навігація"
+          aria-label="Основна навігація" data-i18n-aria-label="aside.mainNav"
         >
           <a
             href="darshan.html"
-            class="rounded-xl px-3 py-2 font-semibold transition-colors hover:text-brand"
+            class="rounded-xl px-3 py-2 font-semibold transition-colors hover:text-brand" data-i18n="nav.darshan"
             >Даршан Божеств</a
           >
           <a
             href="schedule.html"
-            class="rounded-xl px-3 py-2 font-semibold transition-colors hover:text-brand"
+            class="rounded-xl px-3 py-2 font-semibold transition-colors hover:text-brand" data-i18n="nav.schedule"
             >Розклад</a
           >
           <a
             href="broadcast.html"
-            class="rounded-xl px-3 py-2 font-semibold transition-colors hover:text-brand"
+            class="rounded-xl px-3 py-2 font-semibold transition-colors hover:text-brand" data-i18n="nav.broadcast"
             >Трансляція</a
           >
           <a
             href="education.html"
-            class="rounded-xl px-3 py-2 font-semibold transition-colors hover:text-brand"
+            class="rounded-xl px-3 py-2 font-semibold transition-colors hover:text-brand" data-i18n="nav.education"
             >Навчання</a
           >
           <a
             href="events.html"
-            class="rounded-xl px-3 py-2 font-semibold transition-colors hover:text-brand"
+            class="rounded-xl px-3 py-2 font-semibold transition-colors hover:text-brand" data-i18n="nav.events"
             >Події</a
           >
           <a
             href="donate.html"
-            class="rounded-xl px-3 py-2 font-semibold transition-colors hover:text-brand"
+            class="rounded-xl px-3 py-2 font-semibold transition-colors hover:text-brand" data-i18n="nav.donate"
             >Підтримати</a
           >
           <a
             href="contacts.html"
             class="rounded-xl px-3 py-2 font-semibold text-brand"
-            aria-current="page"
+            aria-current="page" data-i18n="nav.contacts"
             >Контакти</a
           >
         </nav>
@@ -191,8 +202,32 @@
             ><i class="fab fa-instagram text-[1.05rem] leading-none" aria-hidden="true"></i></a
           >
         </div>
+        <div
+          class="flex flex-wrap justify-center gap-2 border-t border-gray-100 px-4 pb-2 pt-3 lg:justify-start lg:border-t-0 lg:px-0 lg:pt-2"
+          role="group"
+          data-i18n-aria-label="lang.groupLabel"
+        >
+          <button
+            type="button"
+            class="rounded-md px-2 py-1 text-sm text-gray-600 transition hover:text-brand focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
+            data-set-lang="uk"
+            data-i18n="lang.uk"
+          >
+            УК
+          </button>
+          <span class="text-gray-300" aria-hidden="true">|</span>
+          <button
+            type="button"
+            class="rounded-md px-2 py-1 text-sm text-gray-600 transition hover:text-brand focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
+            data-set-lang="en"
+            data-i18n="lang.en"
+          >
+            EN
+          </button>
+        </div>
+
         <p
-          class="mx-auto mt-2 max-w-[30rem] border-t border-gray-100 px-4 pb-3 pt-2.5 text-center text-[1rem] leading-snug text-gray-500 lg:mx-0 lg:mt-6 lg:max-w-none lg:px-0 lg:text-left"
+          class="mx-auto mt-2 max-w-[30rem] border-t border-gray-100 px-4 pb-3 pt-2.5 text-center text-[1rem] leading-snug text-gray-500 lg:mx-0 lg:mt-6 lg:max-w-none lg:px-0 lg:text-left" data-i18n-html="aside.footer"
         >
           Міжнародне товариство свідомості Крішни.<br />
           Засновник-ачарʼя Його Божественна Милість А. Ч. Бгактіведанта Свамі
@@ -205,6 +240,7 @@
         <div class="mx-auto max-w-6xl px-6">
           <h1
             class="mb-8 text-center text-[calc(1.65rem+2px)] font-normal leading-tight text-brand md:text-[calc(2.0625rem+2px)]"
+            data-i18n="content.contacts.h1"
           >
             Контакти
           </h1>
@@ -212,7 +248,7 @@
             class="flex flex-col gap-10 text-[14px] leading-relaxed lg:gap-12"
           >
             <div class="rounded-2xl bg-[#FFFBF6] p-6 md:p-8">
-              <h2 class="mb-3 font-semibold uppercase tracking-wide text-gray-800">
+              <h2 class="mb-3 font-semibold uppercase tracking-wide text-gray-800" data-i18n="content.contacts.linksHeading">
                 Посилання
               </h2>
               <div
@@ -242,7 +278,7 @@
                   target="_blank"
                   ><i class="fab fa-instagram text-[1.365rem] leading-none" aria-hidden="true"></i></a
                 >
-                <span class="min-w-0 pl-1 text-gray-600">новини храму</span>
+                <span class="min-w-0 pl-1 text-gray-600" data-i18n="content.contacts.socialHint1">новини храму</span>
               </div>
               <div
                 class="mb-6 flex flex-wrap items-center gap-2 text-[14px] leading-relaxed text-gray-600"
@@ -255,7 +291,7 @@
                   target="_blank"
                   ><i class="fab fa-youtube text-[1.3rem] leading-none" aria-hidden="true"></i></a
                 >
-                <span class="min-w-0 max-w-xl pl-1 text-gray-600">Щоденні лекції та трансляції вайшнавських свят</span>
+                <span class="min-w-0 max-w-xl pl-1 text-gray-600" data-i18n="content.contacts.socialHint2">Щоденні лекції та трансляції вайшнавських свят</span>
               </div>
               <ul class="space-y-3 text-gray-600">
                 <li>
@@ -274,16 +310,16 @@
                       loading="lazy"
                       decoding="async"
                     />
-                    <span>Їжа життя Харків - благодійний проект</span>
+                    <span data-i18n="content.contacts.foodForLife">Їжа життя Харків - благодійний проект</span>
                   </a>
                 </li>
               </ul>
             </div>
             <div id="how-to-get" class="scroll-mt-4 rounded-2xl bg-[#FFFBF6] p-6 md:p-8">
-              <h2 class="mb-3 font-semibold uppercase tracking-wide text-gray-800">
+              <h2 class="mb-3 font-semibold uppercase tracking-wide text-gray-800" data-i18n="content.contacts.howToGetHeading">
                 Як доїхати
               </h2>
-              <p class="mb-6 text-gray-600">
+              <p class="mb-6 text-gray-600" data-i18n="content.contacts.howToGetP">
                 Храм розташований у районі Холодна Гора. Зручніше за все
                 дістатися громадським транспортом до найближчої зупинки в цьому
                 районі та пройти пішки за вказівниками на карті.
@@ -291,12 +327,12 @@
               <div
                 class="rounded-lg border border-gray-100 bg-white p-6 text-gray-800 shadow-sm md:p-8"
               >
-                <h3 class="mb-4 font-semibold text-gray-900">Адреса храму</h3>
-                <address class="not-italic text-gray-700">
+                <h3 class="mb-4 font-semibold text-gray-900" data-i18n="content.contacts.addressHeading">Адреса храму</h3>
+                <address class="not-italic text-gray-700" data-i18n-html="content.contacts.addressHtml">
                   вул. Холодногірська, 39<br />
                   61098 Харків, Україна
                 </address>
-                <p class="mt-4 text-gray-600">
+                <p class="mt-4 text-gray-600" data-i18n-html="content.contacts.mapsHintHtml">
                   Детальний маршрут можна побудувати в
                   <a
                     href="https://www.google.com/maps/search/?api=1&query=%D0%A5%D0%BE%D0%BB%D0%BE%D0%B4%D0%BD%D0%BE%D0%B3%D1%96%D1%80%D1%81%D1%8C%D0%BA%D0%B0%2C%2039%2C%20%D0%A5%D0%B0%D1%80%D0%BA%D1%96%D0%B2"
@@ -314,7 +350,7 @@
 
       <footer class="border-t border-gray-100 bg-white py-8">
         <p class="mx-auto max-w-2xl px-6 text-center text-xs text-gray-500">
-          <a href="index.html" class="text-brand transition-colors hover:text-brand-dark"
+          <a href="index.html" class="text-brand transition-colors hover:text-brand-dark" data-i18n="events.returnHome"
             >НА ГОЛОВНУ</a
           >
         </p>

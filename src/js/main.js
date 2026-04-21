@@ -1,3 +1,5 @@
+import { initI18n, t } from './i18n.js';
+
 function initTempleNav() {
   document.querySelectorAll('[data-temple-nav]').forEach((root) => {
     const trigger = root.querySelector('.temple-nav-trigger');
@@ -184,88 +186,98 @@ function initScheduleReveal() {
   });
 }
 
-const EVENT_CARDS = [
-  {
-    id: 'darshan',
-    imageSrc: `${ASSET_BASE_URL}images/gallery-harinami.png`,
-    imageAlt: 'Харінами у місті: кожної суботи об 11:00',
-    width: 900,
-    height: 1200,
-    title: 'Харінами у місті',
-    subtitle: 'кожної суботи об 11:00',
-    href: 'harinamy-u-misti.html',
-  },
-  {
-    imageSrc: `${ASSET_BASE_URL}images/gallery-kirtan-vaishnavi.png`,
-    imageAlt: 'Кіртан-вайшнаві: у вівтарі з 13:00 до 14:00',
-    width: 900,
-    height: 1200,
-    title: 'Кіртан-вайшнаві',
-    subtitle: 'У вівтарі З 13:00 до 14:00',
-    href: 'kirtan-vaishnavi.html',
-  },
-  {
-    imageSrc: `${ASSET_BASE_URL}images/krishna-katha.png`,
-    imageAlt: 'Крішна катха',
-    width: 768,
-    height: 1024,
-    title: 'Крішна катха',
-    href: 'krishna-katha.html',
-  },
-  {
-    imageSrc: `${ASSET_BASE_URL}images/education-bhagavad-gita.png`,
-    imageAlt: 'Бгагавад-гіта, окуляри та вервиця',
-    width: 535,
-    height: 302,
-    title: 'Школа бхакті',
-    subtitle: 'навчїться любити',
-    href: 'shkola-bhakti.html',
-  },
-  {
-    imageSrc: `${ASSET_BASE_URL}images/womens-nama-hatta.png`,
-    imageAlt: 'Женская нама-хатта',
-    width: 674,
-    height: 1200,
-    title: 'Женская нама-хатта',
-    href: 'zhenskaya-nama-hatta.html',
-  },
-  {
-    imageSrc: `${ASSET_BASE_URL}images/holiday-card.png`,
-    imageAlt: 'Святкова афіша',
-    width: 724,
-    height: 1024,
-    title: 'Вайшнавське свято',
-    href: 'vaishnavske-svyato.html',
-  },
-];
+function getEventCardDefs() {
+  return [
+    {
+      id: 'darshan',
+      imageSrc: `${ASSET_BASE_URL}images/gallery-harinami.png`,
+      width: 900,
+      height: 1200,
+      href: 'harinamy-u-misti.html',
+      titleKey: 'events.cards.harinami.title',
+      subtitleKey: 'events.cards.harinami.subtitle',
+      imageAltKey: 'events.cards.harinami.imageAlt',
+    },
+    {
+      imageSrc: `${ASSET_BASE_URL}images/gallery-kirtan-vaishnavi.png`,
+      width: 900,
+      height: 1200,
+      href: 'kirtan-vaishnavi.html',
+      titleKey: 'events.cards.kirtanVaishnavi.title',
+      subtitleKey: 'events.cards.kirtanVaishnavi.subtitle',
+      imageAltKey: 'events.cards.kirtanVaishnavi.imageAlt',
+    },
+    {
+      imageSrc: `${ASSET_BASE_URL}images/krishna-katha.png`,
+      width: 768,
+      height: 1024,
+      href: 'krishna-katha.html',
+      titleKey: 'events.cards.krishnaKatha.title',
+      imageAltKey: 'events.cards.krishnaKatha.imageAlt',
+    },
+    {
+      imageSrc: `${ASSET_BASE_URL}images/education-bhagavad-gita.png`,
+      width: 535,
+      height: 302,
+      href: 'shkola-bhakti.html',
+      titleKey: 'events.cards.shkolaBhakti.title',
+      subtitleKey: 'events.cards.shkolaBhakti.subtitle',
+      imageAltKey: 'events.cards.shkolaBhakti.imageAlt',
+    },
+    {
+      imageSrc: `${ASSET_BASE_URL}images/womens-nama-hatta.png`,
+      width: 674,
+      height: 1200,
+      href: 'zhenskaya-nama-hatta.html',
+      titleKey: 'events.cards.namaHatta.title',
+      imageAltKey: 'events.cards.namaHatta.imageAlt',
+    },
+    {
+      imageSrc: `${ASSET_BASE_URL}images/holiday-card.png`,
+      width: 724,
+      height: 1024,
+      href: 'vaishnavske-svyato.html',
+      titleKey: 'events.cards.vaishnavaHoliday.title',
+      imageAltKey: 'events.cards.vaishnavaHoliday.imageAlt',
+    },
+  ];
+}
 
 function createEventCardMarkup(card, view) {
+  const title = t(card.titleKey);
+  const imageAlt = t(card.imageAltKey);
+  const subtitle =
+    card.subtitleKey !== undefined ? t(card.subtitleKey) : undefined;
+
   const sourcePage = view === 'grid' ? 'events' : 'home';
   const href = `${card.href}?from=${sourcePage}`;
   const cardClass =
     view === 'carousel'
-      ? 'ui-event-card group relative block aspect-[3/4] min-w-[15.5rem] snap-start overflow-hidden rounded-lg bg-gray-300 shadow-md transition-transform duration-300 hover:-translate-y-1 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand sm:min-w-[17.5rem] lg:min-w-[18.5rem]'
+      ? 'ui-event-card group relative block aspect-[3/4] min-w-[18.6rem] snap-start overflow-hidden rounded-lg bg-gray-300 shadow-md transition-transform duration-300 hover:-translate-y-1 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand sm:min-w-[21rem] lg:min-w-[22.2rem]'
       : 'ui-event-card group relative block aspect-[3/4] overflow-hidden rounded-lg bg-gray-300 shadow-md transition-transform duration-300 hover:-translate-y-1 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand';
 
   const idAttr = card.id ? ` id="${card.id}"` : '';
   const carouselAttr = view === 'carousel' ? ' data-carousel-card' : '';
   const extraClass = card.id && view === 'carousel' ? ' scroll-mt-4' : '';
-  const subtitleMarkup = card.subtitle
+  const subtitleMarkup = subtitle
     ? `
-                  <p class="font-sans text-sm font-semibold text-white/90">
-                    ${card.subtitle}
+                  <p class="font-sans ${view === 'carousel' ? 'text-base' : 'text-sm'} font-semibold text-white/90">
+                    ${subtitle}
                   </p>`
     : '';
+
+  const titleClass = view === 'carousel' ? 'font-sans text-xl font-bold' : 'font-sans text-lg font-bold';
+  const overlayPad = view === 'carousel' ? 'p-5' : 'p-4';
 
   return `
               <a${idAttr}${carouselAttr}
                 href="${href}"
-                aria-label="${card.title}"
+                aria-label="${title}"
                 class="${cardClass}${extraClass}"
               >
                 <img
                   src="${card.imageSrc}"
-                  alt="${card.imageAlt}"
+                  alt="${imageAlt}"
                   class="h-full w-full object-cover transition duration-500 group-hover:scale-105"
                   width="${card.width}"
                   height="${card.height}"
@@ -275,8 +287,8 @@ function createEventCardMarkup(card, view) {
                 <div
                   class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/25 to-transparent"
                 ></div>
-                <div class="absolute bottom-0 left-0 p-4 text-white">
-                  <p class="font-sans text-lg font-bold">${card.title}</p>${subtitleMarkup}
+                <div class="absolute bottom-0 left-0 ${overlayPad} text-white">
+                  <p class="${titleClass}">${title}</p>${subtitleMarkup}
                 </div>
               </a>`;
 }
@@ -284,7 +296,8 @@ function createEventCardMarkup(card, view) {
 function initEventCards() {
   document.querySelectorAll('[data-event-cards]').forEach((container) => {
     const view = container.getAttribute('data-event-cards') || 'grid';
-    container.innerHTML = EVENT_CARDS.map((card) => createEventCardMarkup(card, view)).join('');
+    const cards = getEventCardDefs();
+    container.innerHTML = cards.map((card) => createEventCardMarkup(card, view)).join('');
 
     // Soft reveal for carousel cards (staggered, low-risk)
     if (view === 'carousel') {
@@ -346,26 +359,16 @@ function initEventReturnLink() {
 
   if (from === 'events') {
     returnLink.href = 'events.html';
-    returnLink.textContent = 'ДО ПОДІЙ';
+    returnLink.textContent = t('events.returnToList');
     return;
   }
 
   returnLink.href = 'index.html';
-  returnLink.textContent = 'НА ГОЛОВНУ';
+  returnLink.textContent = t('events.returnHome');
 }
 
-if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', () => {
-    initTempleNav();
-    initMobileMenu();
-    initEventCards();
-    initCardCarousel();
-    initEventReturnLink();
-    initScheduleReveal();
-    initRevealOnScroll();
-    initPageEnterAnimation();
-  });
-} else {
+function initShell() {
+  initI18n();
   initTempleNav();
   initMobileMenu();
   initEventCards();
@@ -374,4 +377,15 @@ if (document.readyState === 'loading') {
   initScheduleReveal();
   initRevealOnScroll();
   initPageEnterAnimation();
+}
+
+document.addEventListener('iskcon-localechange', () => {
+  initEventCards();
+  initEventReturnLink();
+});
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initShell);
+} else {
+  initShell();
 }
