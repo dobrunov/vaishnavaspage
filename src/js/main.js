@@ -361,6 +361,60 @@ function initCardCarousel() {
 
     if (!track || !prev || !next) return;
 
+    // Mobile: allow vertical page scroll, but make horizontal swipe always work.
+    // We do a simple direction-lock: if the gesture is predominantly horizontal,
+    // prevent default and scroll the carousel manually.
+    if (!track.dataset.touchSwipeBound) {
+      track.dataset.touchSwipeBound = '1';
+
+      let startX = 0;
+      let startY = 0;
+      let lastX = 0;
+      let locked = null; // 'x' | 'y' | null
+
+      const THRESH = 6; // px before locking direction
+      const RATIO = 1.15; // dx must beat dy by this ratio to lock X
+
+      track.addEventListener(
+        'touchstart',
+        (e) => {
+          if (e.touches.length !== 1) return;
+          const t = e.touches[0];
+          startX = lastX = t.clientX;
+          startY = t.clientY;
+          locked = null;
+        },
+        { passive: true }
+      );
+
+      track.addEventListener(
+        'touchmove',
+        (e) => {
+          if (e.touches.length !== 1) return;
+          const t = e.touches[0];
+          const dx = t.clientX - startX;
+          const dy = t.clientY - startY;
+
+          if (locked === null) {
+            if (Math.abs(dx) < THRESH && Math.abs(dy) < THRESH) return;
+            locked =
+              Math.abs(dx) > Math.abs(dy) * RATIO
+                ? 'x'
+                : 'y';
+          }
+
+          if (locked === 'x') {
+            // Stop the page from scrolling and move the carousel.
+            e.preventDefault();
+            const delta = lastX - t.clientX;
+            track.scrollLeft += delta;
+            lastX = t.clientX;
+          }
+        },
+        { passive: false }
+      );
+    }
+
     function getStep() {
       const card = track.querySelector('[data-carousel-card]');
       if (!card) return track.clientWidth * 0.85;
