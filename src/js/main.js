@@ -131,35 +131,47 @@ function initRevealOnScroll() {
 }
 
 function initPageEnterAnimation() {
+  // Deprecated: replaced by initPageTransitions() for consistent behavior across
+  // browsers and bfcache restores. Kept for backward compatibility if called elsewhere.
+}
+
+function initPageTransitions() {
   const prefersReducedMotion =
     window.matchMedia &&
     window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  if (prefersReducedMotion) return;
-
-  // Avoid fighting with bfcache back/forward restores.
-  const navEntry = performance.getEntriesByType?.('navigation')?.[0];
-  if (navEntry && navEntry.type === 'back_forward') return;
-
-  // If View Transitions is supported, cross-document transitions handle navigation.
-  // Running an additional body fade can cause a visible "blink" after navigation.
-  if ('startViewTransition' in document) return;
-
-  // Fallback for browsers without View Transitions support.
-  const duration = 840;
-  const easing = 'cubic-bezier(0.25, 1, 0.5, 1)';
-
-  try {
-    document.body.animate(
-      [
-        // Opacity-only: avoids perceivable "micro-shift" when fonts/images settle.
-        { opacity: 0 },
-        { opacity: 1 },
-      ],
-      { duration, easing, fill: 'both' }
-    );
-  } catch {
-    // no-op
+  if (prefersReducedMotion) {
+    document.documentElement.classList.remove('page-enter-pending');
+    return;
   }
+
+  const ENTER_MS = 1040;
+  // Fast start, smooth finish (ease-out): appears quickly then settles.
+  const easing = 'cubic-bezier(0, 0, 0.2, 1)';
+
+  function playEnter() {
+    try {
+      // Ensure we start from hidden if the page came from bfcache.
+      document.documentElement.classList.add('page-enter-pending');
+      document.body.getAnimations?.().forEach((a) => a.cancel());
+      document.body.animate([{ opacity: 0 }, { opacity: 1 }], {
+        duration: ENTER_MS,
+        easing,
+        fill: 'both',
+      });
+    } catch {
+      // no-op
+    } finally {
+      // Let CSS show content even if WAAPI fails.
+      // (We remove it immediately; the animation keeps opacity at 0→1 via fill.)
+      document.documentElement.classList.remove('page-enter-pending');
+    }
+  }
+
+  // Run on first load and on bfcache restores.
+  playEnter();
+  window.addEventListener('pageshow', (ev) => {
+    if (ev.persisted) playEnter();
+  });
 }
 
 function initScheduleReveal() {
@@ -183,6 +195,36 @@ function initScheduleReveal() {
       // Gentle stagger; cap so long lists don't feel sluggish.
       li.style.transitionDelay = `${Math.min(idx, 10) * 45}ms`;
     });
+  });
+}
+
+function initHomeInfoReveal() {
+  // Make the home info block feel as smooth as the carousel:
+  // reveal the inner elements with a subtle stagger instead of the whole section at once.
+  if (!/(^|\/)index\.html$/.test(window.location.pathname) && window.location.pathname !== '/' && window.location.pathname !== '') {
+    return;
+  }
+
+  const section = document.querySelector('section#education');
+  if (!section) return;
+
+  const heading = section.querySelector('h2');
+  const box = section.querySelector('div.rounded-2xl');
+  const paragraphs = box ? Array.from(box.querySelectorAll('p')) : [];
+
+  if (heading) {
+    heading.setAttribute('data-reveal', '');
+    heading.style.transitionDelay = '0ms';
+  }
+
+  if (box) {
+    box.setAttribute('data-reveal', '');
+    box.style.transitionDelay = '80ms';
+  }
+
+  paragraphs.forEach((p, idx) => {
+    p.setAttribute('data-reveal', '');
+    p.style.transitionDelay = `${140 + Math.min(idx, 6) * 70}ms`;
   });
 }
 
@@ -375,8 +417,9 @@ function initShell() {
   initCardCarousel();
   initEventReturnLink();
   initScheduleReveal();
+  initHomeInfoReveal();
   initRevealOnScroll();
-  initPageEnterAnimation();
+  initPageTransitions();
 }
 
 document.addEventListener('iskcon-localechange', () => {

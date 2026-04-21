@@ -4,13 +4,14 @@
     <script>
       (function () {
         try {
+          document.documentElement.classList.add('page-enter-pending');
           if (localStorage.getItem('iskcon-lang') === 'en') {
             document.documentElement.classList.add('i18n-pending');
           }
         } catch (_) {}
       })();
     </script>
-    <style>html.i18n-pending body{visibility:hidden}</style>
+    <style>html.i18n-pending body{visibility:hidden}html.page-enter-pending body{opacity:0}</style>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="%BASE_URL%favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />

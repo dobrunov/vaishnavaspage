@@ -29,18 +29,20 @@
   /* Smoother cross-document navigations in supporting browsers (Chrome 126+). */
   @media (prefers-reduced-motion: no-preference) {
     @view-transition {
-      navigation: auto;
+      /* Disabled: we use our own cross-page fade for consistent feel across browsers and bfcache restores */
+      navigation: none;
     }
   }
 
   /* Premium cross-page transitions (View Transitions API). */
   @media (prefers-reduced-motion: no-preference) {
     ::view-transition-old(root) {
-      animation: page-exit 440ms var(--ease-quick) both;
+      animation: page-exit 220ms var(--ease-quick) both;
     }
 
     ::view-transition-new(root) {
-      animation: page-enter 1040ms var(--ease-reveal) both;
+      /* Keep in sync with JS enter easing: fast start, smooth finish */
+      animation: page-enter 1040ms cubic-bezier(0, 0, 0.2, 1) both;
     }
   }
 
