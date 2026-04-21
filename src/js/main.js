@@ -373,8 +373,9 @@ function initCardCarousel() {
       let locked = null; // 'x' | 'y' | null
       let dragged = false;
 
-      const LOCK_THRESH = 7; // px before locking direction
+      const LOCK_THRESH = 5; // px before locking direction
       const DRAG_THRESH = 10; // px before treating as a drag (vs tap)
+      const X_BIAS = 0.85; // be slightly more willing to lock X on carousel
 
       track.addEventListener(
         'touchstart',
@@ -399,7 +400,7 @@ function initCardCarousel() {
 
           if (locked === null) {
             if (Math.abs(dx) < LOCK_THRESH && Math.abs(dy) < LOCK_THRESH) return;
-            locked = Math.abs(dx) > Math.abs(dy) ? 'x' : 'y';
+            locked = Math.abs(dx) > Math.abs(dy) * X_BIAS ? 'x' : 'y';
           }
 
           if (locked === 'x') {

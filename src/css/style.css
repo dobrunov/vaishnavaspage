@@ -172,6 +172,25 @@
     will-change: transform;
   }
 
+  /* Mobile portrait: hide arrows and disable card hover/transition animations.
+     Keep only native vertical page scroll + horizontal swipe on the carousel. */
+  @media (hover: none) and (pointer: coarse) and (orientation: portrait) {
+    [data-carousel-prev],
+    [data-carousel-next] {
+      display: none !important;
+    }
+
+    .ui-event-card {
+      transition-duration: 0.01ms !important;
+      transform: none !important;
+    }
+
+    .ui-event-card img {
+      transition-duration: 0.01ms !important;
+      transform: none !important;
+    }
+  }
+
   [data-carousel-prev]:not(:disabled):hover,
   [data-carousel-next]:not(:disabled):hover {
     transform: translate3d(0, -1px, 0);
