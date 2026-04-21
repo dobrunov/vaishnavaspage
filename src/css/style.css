@@ -36,11 +36,11 @@
   /* Premium cross-page transitions (View Transitions API). */
   @media (prefers-reduced-motion: no-preference) {
     ::view-transition-old(root) {
-      animation: page-exit 220ms var(--ease-quick) both;
+      animation: page-exit 440ms var(--ease-quick) both;
     }
 
     ::view-transition-new(root) {
-      animation: page-enter 520ms var(--ease-reveal) both;
+      animation: page-enter 1040ms var(--ease-reveal) both;
     }
   }
 

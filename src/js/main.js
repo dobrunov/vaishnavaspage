@@ -145,7 +145,7 @@ function initPageEnterAnimation() {
   if ('startViewTransition' in document) return;
 
   // Fallback for browsers without View Transitions support.
-  const duration = 420;
+  const duration = 840;
   const easing = 'cubic-bezier(0.25, 1, 0.5, 1)';
 
   try {
