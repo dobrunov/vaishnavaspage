@@ -371,9 +371,10 @@ function initCardCarousel() {
       let startY = 0;
       let lastX = 0;
       let locked = null; // 'x' | 'y' | null
+      let dragged = false;
 
-      const THRESH = 6; // px before locking direction
-      const RATIO = 1.15; // dx must beat dy by this ratio to lock X
+      const LOCK_THRESH = 7; // px before locking direction
+      const DRAG_THRESH = 10; // px before treating as a drag (vs tap)
 
       track.addEventListener(
         'touchstart',
@@ -383,6 +384,7 @@ function initCardCarousel() {
           startX = lastX = t.clientX;
           startY = t.clientY;
           locked = null;
+          dragged = false;
         },
         { passive: true }
       );
@@ -396,22 +398,32 @@ function initCardCarousel() {
           const dy = t.clientY - startY;
 
           if (locked === null) {
-            if (Math.abs(dx) < THRESH && Math.abs(dy) < THRESH) return;
-            locked =
-              Math.abs(dx) > Math.abs(dy) * RATIO
-                ? 'x'
-                : 'y';
+            if (Math.abs(dx) < LOCK_THRESH && Math.abs(dy) < LOCK_THRESH) return;
+            locked = Math.abs(dx) > Math.abs(dy) ? 'x' : 'y';
           }
 
           if (locked === 'x') {
             // Stop the page from scrolling and move the carousel.
-            e.preventDefault();
+            if (e.cancelable) e.preventDefault();
             const delta = lastX - t.clientX;
             track.scrollLeft += delta;
             lastX = t.clientX;
+            if (!dragged && Math.abs(dx) > DRAG_THRESH) dragged = true;
           }
         },
         { passive: false }
+      );
+
+      // If the user dragged horizontally, prevent accidental navigation on card tap.
+      track.addEventListener(
+        'click',
+        (e) => {
+          if (!dragged) return;
+          e.preventDefault();
+          e.stopPropagation();
+          dragged = false;
+        },
+        true
       );
     }
 
