@@ -125,8 +125,8 @@
   }
 
   .card-carousel {
-    /* Allow vertical page scroll even when touching the carousel */
-    touch-action: pan-y pinch-zoom;
+    /* Allow both: horizontal carousel scroll and vertical page scroll */
+    touch-action: pan-x pan-y pinch-zoom;
     -webkit-overflow-scrolling: touch;
     overscroll-behavior-x: contain;
   }
