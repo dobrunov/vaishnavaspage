@@ -58,6 +58,9 @@ function applyTranslations() {
       el.setAttribute('content', text);
     } else if (el.tagName === 'TITLE') {
       el.textContent = text;
+    } else if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
+      const i = /** @type {HTMLInputElement | HTMLTextAreaElement} */ (el);
+      i.placeholder = text;
     } else {
       el.textContent = text;
     }

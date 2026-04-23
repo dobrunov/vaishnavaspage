@@ -17,11 +17,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Цільові пожертви храму Харе Крішна (ISKCON) у Харкові — оберіть напрям підтримки."
+      content="Підтримка храму Харе Крішна (ISKCON) у Харкові — оберіть напрям."
       data-i18n="page.donations.description"
     />
     <meta name="theme-color" content="#e85d04" />
-    <title data-i18n="page.donations.title">Цільові пожертви — ISKCON Kharkiv</title>
+    <title data-i18n="page.donations.title">Підтримка — ISKCON Kharkiv</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -40,7 +40,7 @@
     <div id="app" class="flex min-h-screen flex-col bg-white">
       <header id="site-header" class="min-h-[4.25rem] md:min-h-20 bg-footer-cream/75 backdrop-blur-lg backdrop-saturate-150" data-site-header></header>
       <div class="flex min-w-0 flex-1 flex-col">
-        <main class="py-10 md:py-14">
+        <main class="py-6 md:py-14">
           <section
             class="bg-[#FFFBF6] py-8 md:py-10"
             aria-labelledby="donations-heading"
@@ -49,32 +49,41 @@
               <div
                 class="rounded-2xl border border-stone-100/80 bg-white p-6 shadow-[0_20px_25px_-5px_rgba(0,0,0,0.05),0_8px_10px_-6px_rgba(0,0,0,0.05)] sm:p-8 md:p-10"
               >
-                <div class="mb-8 flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
-                  <div>
+                <div class="mb-8">
+                  <div
+                    class="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between sm:gap-4"
+                  >
                     <h1
                       id="donations-heading"
                       class="text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl"
                       data-i18n="donationsPage.heading"
                     >
-                      Цільові пожертви
+                      Підтримка
                     </h1>
-                    <p class="mt-2 max-w-2xl text-base leading-relaxed text-slate-600" data-i18n="donationsPage.intro">
-                      Оберіть напрям підтримки. Кнопка «Пожертвувати» веде на сторінку з реквізитами.
-                    </p>
+                    <a
+                      href="donate.html"
+                      class="inline-flex w-full items-center justify-center rounded-md border border-footer-accent bg-footer-accent px-3.5 py-2 text-sm font-semibold text-white shadow-sm transition hover:brightness-110 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand sm:w-auto sm:shrink-0"
+                      data-i18n="donationsPage.toDetails"
+                    >
+                      Реквізити пожертви
+                    </a>
                   </div>
-                  <a
-                    href="donate.html"
-                    class="inline-flex items-center justify-center rounded-md border border-footer-accent bg-footer-accent px-3.5 py-2 text-sm font-semibold text-white shadow-sm transition hover:brightness-110 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
-                    data-i18n="donationsPage.toDetails"
+                  <p
+                    class="mt-5 max-w-2xl text-base leading-relaxed text-slate-600 sm:mt-6"
+                    data-i18n="donationsPage.intro"
                   >
-                    Реквізити пожертви
-                  </a>
+                    Оберіть напрям підтримки. Кнопка «Пожертвувати» веде на сторінку з подробицями обраного збору. Якщо не знаєте, куди тиснути — тисніть на «Реквізити пожертви» : )
+                  </p>
                 </div>
 
                 <ul class="grid list-none grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3" role="list">
                   <!-- 1 -->
-                  <li class="flex flex-col overflow-hidden rounded-xl border border-stone-100 bg-white shadow-sm">
-                    <div class="relative aspect-video w-full overflow-hidden bg-stone-100">
+                  <li
+                    class="flex flex-col overflow-hidden rounded-xl border border-stone-100 bg-white shadow-sm"
+                  >
+                    <div
+                      class="relative aspect-video w-full overflow-hidden bg-stone-100"
+                    >
                       <img
                         src="%BASE_URL%images/darshan-deities.png"
                         alt=""
@@ -86,14 +95,51 @@
                         data-i18n-alt="donationsPage.cards.card1.imageAlt"
                       />
                     </div>
-                    <div class="flex flex-1 flex-col px-4 pb-4 pt-4 text-center">
-                      <h2 class="text-base font-bold text-slate-900" data-i18n="donationsPage.cards.card1.title"></h2>
-                      <p class="mt-2 flex items-center justify-center gap-1.5 text-sm text-slate-600">
-                        <i class="fa-solid fa-calendar-check text-brand" aria-hidden="true"></i>
+                    <div
+                      class="flex flex-1 flex-col px-4 pb-4 pt-4 text-center"
+                    >
+                      <h2
+                        class="text-base font-bold text-slate-900"
+                        data-i18n="donationsPage.cards.card1.title"
+                      ></h2>
+                      <p
+                        class="mt-2 flex items-center justify-center gap-1.5 text-sm text-slate-600"
+                      >
+                        <i
+                          class="fa-solid fa-calendar-check text-brand"
+                          aria-hidden="true"
+                        ></i>
                         <span data-i18n="donationsPage.cards.card1.meta"></span>
                       </p>
+                      <div
+                        class="mt-2 w-full"
+                        role="progressbar"
+                        aria-valuemin="0"
+                        aria-valuemax="25000"
+                        aria-valuenow="17000"
+                        data-i18n-aria-label="donationsPage.cards.card1.progressAria"
+                      >
+                        <div
+                          class="mb-1 flex flex-wrap items-baseline justify-between gap-x-2 gap-y-0.5 text-xs text-slate-600"
+                        >
+                          <span data-i18n="donationsPage.progressLabel"></span>
+                          <span
+                            class="max-w-full text-right font-medium tabular-nums text-slate-800"
+                            data-i18n="donationsPage.cards.card1.progressValue"
+                          ></span>
+                        </div>
+                        <div
+                          class="h-1.5 w-full overflow-hidden rounded-full bg-stone-200"
+                          aria-hidden="true"
+                        >
+                          <div
+                            class="h-full rounded-full bg-brand"
+                            style="width: 68%"
+                          ></div>
+                        </div>
+                      </div>
                       <a
-                        href="donate.html"
+                        href="donation-mohini-ekadashi.html"
                         class="mt-4 inline-flex w-full items-center justify-center rounded-md border border-gray-300 bg-white px-3 py-2 text-center text-sm font-medium text-slate-700 transition hover:bg-slate-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-400"
                         data-i18n="donationsPage.donateNow"
                       ></a>
@@ -101,8 +147,12 @@
                   </li>
 
                   <!-- 2 -->
-                  <li class="flex flex-col overflow-hidden rounded-xl border border-stone-100 bg-white shadow-sm">
-                    <div class="relative aspect-video w-full overflow-hidden bg-stone-100">
+                  <li
+                    class="flex flex-col overflow-hidden rounded-xl border border-stone-100 bg-white shadow-sm"
+                  >
+                    <div
+                      class="relative aspect-video w-full overflow-hidden bg-stone-100"
+                    >
                       <img
                         src="%BASE_URL%images/holiday-card.png"
                         alt=""
@@ -114,14 +164,51 @@
                         data-i18n-alt="donationsPage.cards.card2.imageAlt"
                       />
                     </div>
-                    <div class="flex flex-1 flex-col px-4 pb-4 pt-4 text-center">
-                      <h2 class="text-base font-bold text-slate-900" data-i18n="donationsPage.cards.card2.title"></h2>
-                      <p class="mt-2 flex items-center justify-center gap-1.5 text-sm text-slate-600">
-                        <i class="fa-solid fa-calendar-check text-brand" aria-hidden="true"></i>
+                    <div
+                      class="flex flex-1 flex-col px-4 pb-4 pt-4 text-center"
+                    >
+                      <h2
+                        class="text-base font-bold text-slate-900"
+                        data-i18n="donationsPage.cards.card2.title"
+                      ></h2>
+                      <p
+                        class="mt-2 flex items-center justify-center gap-1.5 text-sm text-slate-600"
+                      >
+                        <i
+                          class="fa-solid fa-calendar-check text-brand"
+                          aria-hidden="true"
+                        ></i>
                         <span data-i18n="donationsPage.cards.card2.meta"></span>
                       </p>
+                      <div
+                        class="mt-2 w-full"
+                        role="progressbar"
+                        aria-valuemin="0"
+                        aria-valuemax="20000"
+                        aria-valuenow="9000"
+                        data-i18n-aria-label="donationsPage.cards.card2.progressAria"
+                      >
+                        <div
+                          class="mb-1 flex flex-wrap items-baseline justify-between gap-x-2 gap-y-0.5 text-xs text-slate-600"
+                        >
+                          <span data-i18n="donationsPage.progressLabel"></span>
+                          <span
+                            class="max-w-full text-right font-medium tabular-nums text-slate-800"
+                            data-i18n="donationsPage.cards.card2.progressValue"
+                          ></span>
+                        </div>
+                        <div
+                          class="h-1.5 w-full overflow-hidden rounded-full bg-stone-200"
+                          aria-hidden="true"
+                        >
+                          <div
+                            class="h-full rounded-full bg-brand"
+                            style="width: 45%"
+                          ></div>
+                        </div>
+                      </div>
                       <a
-                        href="donate.html"
+                        href="donation-narasimha.html"
                         class="mt-4 inline-flex w-full items-center justify-center rounded-md border border-gray-300 bg-white px-3 py-2 text-center text-sm font-medium text-slate-700 transition hover:bg-slate-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-400"
                         data-i18n="donationsPage.donateNow"
                       ></a>
@@ -129,8 +216,12 @@
                   </li>
 
                   <!-- 3 -->
-                  <li class="flex flex-col overflow-hidden rounded-xl border border-stone-100 bg-white shadow-sm">
-                    <div class="relative aspect-video w-full overflow-hidden bg-stone-100">
+                  <li
+                    class="flex flex-col overflow-hidden rounded-xl border border-stone-100 bg-white shadow-sm"
+                  >
+                    <div
+                      class="relative aspect-video w-full overflow-hidden bg-stone-100"
+                    >
                       <img
                         src="%BASE_URL%images/food-for-life-kharkiv.png"
                         alt=""
@@ -142,14 +233,24 @@
                         data-i18n-alt="donationsPage.cards.card3.imageAlt"
                       />
                     </div>
-                    <div class="flex flex-1 flex-col px-4 pb-4 pt-4 text-center">
-                      <h2 class="text-base font-bold text-slate-900" data-i18n="donationsPage.cards.card3.title"></h2>
-                      <p class="mt-2 flex items-center justify-center gap-1.5 text-sm text-slate-600">
-                        <i class="fa-solid fa-calendar-check text-brand" aria-hidden="true"></i>
+                    <div
+                      class="flex flex-1 flex-col px-4 pb-4 pt-4 text-center"
+                    >
+                      <h2
+                        class="text-base font-bold text-slate-900"
+                        data-i18n="donationsPage.cards.card3.title"
+                      ></h2>
+                      <p
+                        class="mt-2 flex items-center justify-center gap-1.5 text-sm text-slate-600"
+                      >
+                        <i
+                          class="fa-solid fa-calendar-check text-brand"
+                          aria-hidden="true"
+                        ></i>
                         <span data-i18n="donationsPage.cards.card3.meta"></span>
                       </p>
                       <a
-                        href="donate.html"
+                        href="donation-annadan.html"
                         class="mt-4 inline-flex w-full items-center justify-center rounded-md border border-gray-300 bg-white px-3 py-2 text-center text-sm font-medium text-slate-700 transition hover:bg-slate-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-400"
                         data-i18n="donationsPage.donateNow"
                       ></a>
@@ -157,8 +258,12 @@
                   </li>
 
                   <!-- 4 -->
-                  <li class="flex flex-col overflow-hidden rounded-xl border border-stone-100 bg-white shadow-sm">
-                    <div class="relative aspect-video w-full overflow-hidden bg-stone-100">
+                  <li
+                    class="flex flex-col overflow-hidden rounded-xl border border-stone-100 bg-white shadow-sm"
+                  >
+                    <div
+                      class="relative aspect-video w-full overflow-hidden bg-stone-100"
+                    >
                       <img
                         src="%BASE_URL%images/donation-cow-seva.jpg"
                         alt=""
@@ -170,14 +275,24 @@
                         data-i18n-alt="donationsPage.cards.card4.imageAlt"
                       />
                     </div>
-                    <div class="flex flex-1 flex-col px-4 pb-4 pt-4 text-center">
-                      <h2 class="text-base font-bold text-slate-900" data-i18n="donationsPage.cards.card4.title"></h2>
-                      <p class="mt-2 flex items-center justify-center gap-1.5 text-sm text-slate-600">
-                        <i class="fa-solid fa-calendar-check text-brand" aria-hidden="true"></i>
+                    <div
+                      class="flex flex-1 flex-col px-4 pb-4 pt-4 text-center"
+                    >
+                      <h2
+                        class="text-base font-bold text-slate-900"
+                        data-i18n="donationsPage.cards.card4.title"
+                      ></h2>
+                      <p
+                        class="mt-2 flex items-center justify-center gap-1.5 text-sm text-slate-600"
+                      >
+                        <i
+                          class="fa-solid fa-calendar-check text-brand"
+                          aria-hidden="true"
+                        ></i>
                         <span data-i18n="donationsPage.cards.card4.meta"></span>
                       </p>
                       <a
-                        href="donate.html"
+                        href="donation-cow-seva.html"
                         class="mt-4 inline-flex w-full items-center justify-center rounded-md border border-gray-300 bg-white px-3 py-2 text-center text-sm font-medium text-slate-700 transition hover:bg-slate-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-400"
                         data-i18n="donationsPage.donateNow"
                       ></a>
@@ -185,8 +300,12 @@
                   </li>
 
                   <!-- 5 -->
-                  <li class="flex flex-col overflow-hidden rounded-xl border border-stone-100 bg-white shadow-sm">
-                    <div class="relative aspect-video w-full overflow-hidden bg-stone-100">
+                  <li
+                    class="flex flex-col overflow-hidden rounded-xl border border-stone-100 bg-white shadow-sm"
+                  >
+                    <div
+                      class="relative aspect-video w-full overflow-hidden bg-stone-100"
+                    >
                       <img
                         src="%BASE_URL%images/bhagavatam-lectures-poster.png"
                         alt=""
@@ -198,14 +317,24 @@
                         data-i18n-alt="donationsPage.cards.card5.imageAlt"
                       />
                     </div>
-                    <div class="flex flex-1 flex-col px-4 pb-4 pt-4 text-center">
-                      <h2 class="text-base font-bold text-slate-900" data-i18n="donationsPage.cards.card5.title"></h2>
-                      <p class="mt-2 flex items-center justify-center gap-1.5 text-sm text-slate-600">
-                        <i class="fa-solid fa-calendar-check text-brand" aria-hidden="true"></i>
+                    <div
+                      class="flex flex-1 flex-col px-4 pb-4 pt-4 text-center"
+                    >
+                      <h2
+                        class="text-base font-bold text-slate-900"
+                        data-i18n="donationsPage.cards.card5.title"
+                      ></h2>
+                      <p
+                        class="mt-2 flex items-center justify-center gap-1.5 text-sm text-slate-600"
+                      >
+                        <i
+                          class="fa-solid fa-calendar-check text-brand"
+                          aria-hidden="true"
+                        ></i>
                         <span data-i18n="donationsPage.cards.card5.meta"></span>
                       </p>
                       <a
-                        href="donate.html"
+                        href="donation-lectures.html"
                         class="mt-4 inline-flex w-full items-center justify-center rounded-md border border-gray-300 bg-white px-3 py-2 text-center text-sm font-medium text-slate-700 transition hover:bg-slate-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-400"
                         data-i18n="donationsPage.donateNow"
                       ></a>
@@ -213,8 +342,12 @@
                   </li>
 
                   <!-- 6 -->
-                  <li class="flex flex-col overflow-hidden rounded-xl border border-stone-100 bg-white shadow-sm">
-                    <div class="relative aspect-video w-full overflow-hidden bg-stone-100">
+                  <li
+                    class="flex flex-col overflow-hidden rounded-xl border border-stone-100 bg-white shadow-sm"
+                  >
+                    <div
+                      class="relative aspect-video w-full overflow-hidden bg-stone-100"
+                    >
                       <img
                         src="%BASE_URL%images/education-bhagavad-gita.png"
                         alt=""
@@ -226,14 +359,24 @@
                         data-i18n-alt="donationsPage.cards.card6.imageAlt"
                       />
                     </div>
-                    <div class="flex flex-1 flex-col px-4 pb-4 pt-4 text-center">
-                      <h2 class="text-base font-bold text-slate-900" data-i18n="donationsPage.cards.card6.title"></h2>
-                      <p class="mt-2 flex items-center justify-center gap-1.5 text-sm text-slate-600">
-                        <i class="fa-solid fa-calendar-check text-brand" aria-hidden="true"></i>
+                    <div
+                      class="flex flex-1 flex-col px-4 pb-4 pt-4 text-center"
+                    >
+                      <h2
+                        class="text-base font-bold text-slate-900"
+                        data-i18n="donationsPage.cards.card6.title"
+                      ></h2>
+                      <p
+                        class="mt-2 flex items-center justify-center gap-1.5 text-sm text-slate-600"
+                      >
+                        <i
+                          class="fa-solid fa-calendar-check text-brand"
+                          aria-hidden="true"
+                        ></i>
                         <span data-i18n="donationsPage.cards.card6.meta"></span>
                       </p>
                       <a
-                        href="donate.html"
+                        href="donation-education.html"
                         class="mt-4 inline-flex w-full items-center justify-center rounded-md border border-gray-300 bg-white px-3 py-2 text-center text-sm font-medium text-slate-700 transition hover:bg-slate-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-400"
                         data-i18n="donationsPage.donateNow"
                       ></a>
@@ -241,8 +384,12 @@
                   </li>
 
                   <!-- 7 -->
-                  <li class="flex flex-col overflow-hidden rounded-xl border border-stone-100 bg-white shadow-sm">
-                    <div class="relative aspect-video w-full overflow-hidden bg-stone-100">
+                  <li
+                    class="flex flex-col overflow-hidden rounded-xl border border-stone-100 bg-white shadow-sm"
+                  >
+                    <div
+                      class="relative aspect-video w-full overflow-hidden bg-stone-100"
+                    >
                       <img
                         src="%BASE_URL%images/krishna-katha.png"
                         alt=""
@@ -254,14 +401,24 @@
                         data-i18n-alt="donationsPage.cards.card7.imageAlt"
                       />
                     </div>
-                    <div class="flex flex-1 flex-col px-4 pb-4 pt-4 text-center">
-                      <h2 class="text-base font-bold text-slate-900" data-i18n="donationsPage.cards.card7.title"></h2>
-                      <p class="mt-2 flex items-center justify-center gap-1.5 text-sm text-slate-600">
-                        <i class="fa-solid fa-calendar-check text-brand" aria-hidden="true"></i>
+                    <div
+                      class="flex flex-1 flex-col px-4 pb-4 pt-4 text-center"
+                    >
+                      <h2
+                        class="text-base font-bold text-slate-900"
+                        data-i18n="donationsPage.cards.card7.title"
+                      ></h2>
+                      <p
+                        class="mt-2 flex items-center justify-center gap-1.5 text-sm text-slate-600"
+                      >
+                        <i
+                          class="fa-solid fa-calendar-check text-brand"
+                          aria-hidden="true"
+                        ></i>
                         <span data-i18n="donationsPage.cards.card7.meta"></span>
                       </p>
                       <a
-                        href="donate.html"
+                        href="donation-kirtan.html"
                         class="mt-4 inline-flex w-full items-center justify-center rounded-md border border-gray-300 bg-white px-3 py-2 text-center text-sm font-medium text-slate-700 transition hover:bg-slate-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-400"
                         data-i18n="donationsPage.donateNow"
                       ></a>
@@ -269,8 +426,12 @@
                   </li>
 
                   <!-- 8 -->
-                  <li class="flex flex-col overflow-hidden rounded-xl border border-stone-100 bg-white shadow-sm">
-                    <div class="relative aspect-video w-full overflow-hidden bg-stone-100">
+                  <li
+                    class="flex flex-col overflow-hidden rounded-xl border border-stone-100 bg-white shadow-sm"
+                  >
+                    <div
+                      class="relative aspect-video w-full overflow-hidden bg-stone-100"
+                    >
                       <img
                         src="%BASE_URL%images/hero-banner.png"
                         alt=""
@@ -282,14 +443,24 @@
                         data-i18n-alt="donationsPage.cards.card8.imageAlt"
                       />
                     </div>
-                    <div class="flex flex-1 flex-col px-4 pb-4 pt-4 text-center">
-                      <h2 class="text-base font-bold text-slate-900" data-i18n="donationsPage.cards.card8.title"></h2>
-                      <p class="mt-2 flex items-center justify-center gap-1.5 text-sm text-slate-600">
-                        <i class="fa-solid fa-calendar-check text-brand" aria-hidden="true"></i>
+                    <div
+                      class="flex flex-1 flex-col px-4 pb-4 pt-4 text-center"
+                    >
+                      <h2
+                        class="text-base font-bold text-slate-900"
+                        data-i18n="donationsPage.cards.card8.title"
+                      ></h2>
+                      <p
+                        class="mt-2 flex items-center justify-center gap-1.5 text-sm text-slate-600"
+                      >
+                        <i
+                          class="fa-solid fa-calendar-check text-brand"
+                          aria-hidden="true"
+                        ></i>
                         <span data-i18n="donationsPage.cards.card8.meta"></span>
                       </p>
                       <a
-                        href="donate.html"
+                        href="donation-prasadam.html"
                         class="mt-4 inline-flex w-full items-center justify-center rounded-md border border-gray-300 bg-white px-3 py-2 text-center text-sm font-medium text-slate-700 transition hover:bg-slate-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-400"
                         data-i18n="donationsPage.donateNow"
                       ></a>

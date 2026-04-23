@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="uk" class="font-sans">
+  <head>
+    <script>
+      (function () {
+        try {
+          document.documentElement.classList.add('page-enter-pending');
+          if (localStorage.getItem('iskcon-lang') === 'en') {
+            document.documentElement.classList.add('i18n-pending');
+          }
+        } catch (_) {}
+      })();
+    </script>
+    <style>html.i18n-pending body{visibility:hidden}html.page-enter-pending body{opacity:0}</style>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="%BASE_URL%favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content=""
+      data-i18n="page.donationLectures.description"
+    />
+    <meta name="theme-color" content="#e85d04" />
+    <title data-i18n="page.donationLectures.title">—</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="/src/css/style.css" />
+  </head>
+  <body
+    class="font-sans text-base font-normal leading-normal text-gray-800 antialiased bg-white"
+  >
+    <div
+      id="app"
+      class="flex min-h-screen flex-col bg-white"
+    >
+      <header
+        id="site-header"
+        class="min-h-[4.25rem] md:min-h-20 bg-footer-cream/75 backdrop-blur-lg backdrop-saturate-150"
+        data-site-header
+      ></header>
+      <div class="flex min-w-0 flex-1 flex-col">
+        <main class="py-5 md:py-12">
+          <div class="mx-auto w-full max-w-md px-4 sm:px-6">
+            <p class="mb-6">
+              <a
+                href="donations.html"
+                class="text-sm font-medium text-brand transition hover:underline"
+                data-i18n="content.donationCommon.backToList"
+                >←</a
+              >
+            </p>
+            <h1
+              class="text-2xl font-semibold leading-tight text-gray-900 md:text-3xl"
+              data-i18n="content.donationLectures.h1"
+            >
+              —
+            </h1>
+            <p
+              class="mt-3 text-sm leading-relaxed text-gray-600"
+              data-i18n="content.donationLectures.intro"
+            >
+              …
+            </p>
+
+            <form
+              id="donation-form"
+              data-donation-form
+              class="mt-8 space-y-5"
+              novalidate
+            >
+              <div>
+                <label
+                  class="mb-1.5 block text-sm font-medium text-gray-900"
+                  for="donation-amount"
+                  data-i18n="content.donationForm.amountLabel"
+                ></label>
+                <input
+                  id="donation-amount"
+                  name="amount"
+                  type="number"
+                  min="1"
+                  step="1"
+                  value="500"
+                  inputmode="numeric"
+                  autocomplete="transaction-amount"
+                  class="w-full rounded-lg border border-gray-300 bg-white px-3 py-2.5 text-base text-gray-900 shadow-sm placeholder:text-gray-400 focus:border-brand focus:outline-none focus:ring-2 focus:ring-brand/25"
+                  placeholder=" "
+                  data-i18n="content.donationForm.amountPlaceholder"
+                />
+                <div class="mt-2.5 flex flex-wrap gap-2" aria-hidden="false">
+                  <button
+                    type="button"
+                    data-amount-preset="200"
+                    class="min-w-[3.5rem] rounded-md border border-gray-200 bg-white px-2.5 py-1.5 text-sm font-medium text-gray-800 shadow-sm transition hover:border-gray-400 hover:bg-gray-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-400"
+                  >
+                    200
+                  </button>
+                  <button
+                    type="button"
+                    data-amount-preset="500"
+                    class="min-w-[3.5rem] rounded-md border border-gray-200 bg-white px-2.5 py-1.5 text-sm font-medium text-gray-800 shadow-sm transition hover:border-gray-400 hover:bg-gray-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-400"
+                  >
+                    500
+                  </button>
+                  <button
+                    type="button"
+                    data-amount-preset="1000"
+                    class="min-w-[3.5rem] rounded-md border border-gray-200 bg-white px-2.5 py-1.5 text-sm font-medium text-gray-800 shadow-sm transition hover:border-gray-400 hover:bg-gray-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-400"
+                  >
+                    1 000
+                  </button>
+                  <button
+                    type="button"
+                    data-amount-preset="2000"
+                    class="min-w-[3.5rem] rounded-md border border-gray-200 bg-white px-2.5 py-1.5 text-sm font-medium text-gray-800 shadow-sm transition hover:border-gray-400 hover:bg-gray-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-400"
+                  >
+                    2 000
+                  </button>
+                </div>
+              </div>
+
+              <div>
+                <div
+                  class="mb-1.5 text-sm font-medium text-gray-900"
+                  data-i18n="content.donationForm.destinationLabel"
+                ></div>
+                <div
+                  class="w-full rounded-lg border border-gray-300 bg-gray-50 px-3 py-2.5 text-sm text-gray-900"
+                  data-i18n="content.donationLectures.destinationName"
+                ></div>
+              </div>
+
+              <div>
+                <label
+                  class="mb-1.5 block text-sm font-medium text-gray-900"
+                  for="donation-name"
+                  data-i18n="content.donationForm.nameLabel"
+                ></label>
+                <input
+                  id="donation-name"
+                  name="name"
+                  type="text"
+                  autocomplete="name"
+                  class="w-full rounded-lg border border-gray-300 bg-white px-3 py-2.5 text-sm text-gray-900 shadow-sm focus:border-brand focus:outline-none focus:ring-2 focus:ring-brand/25"
+                  data-i18n="content.donationForm.namePlaceholder"
+                />
+              </div>
+
+              <div>
+                <label
+                  class="mb-1.5 block text-sm font-medium text-gray-900"
+                  for="donation-phone"
+                  data-i18n="content.donationForm.phoneLabel"
+                ></label>
+                <input
+                  id="donation-phone"
+                  name="phone"
+                  type="tel"
+                  autocomplete="tel"
+                  class="w-full rounded-lg border border-gray-300 bg-white px-3 py-2.5 text-sm text-gray-900 shadow-sm focus:border-brand focus:outline-none focus:ring-2 focus:ring-brand/25"
+                  data-i18n="content.donationForm.phonePlaceholder"
+                />
+              </div>
+
+              <div
+                class="rounded-lg border border-emerald-200/90 bg-emerald-50/90 px-3 py-2.5 text-sm leading-relaxed text-emerald-900"
+                data-i18n-html="content.donationForm.supportBoxHtml"
+              ></div>
+
+              <p
+                class="text-sm leading-relaxed text-gray-600"
+                data-i18n="content.donationForm.infoP1"
+              ></p>
+              <p
+                class="text-sm leading-relaxed text-gray-600"
+                data-i18n="content.donationForm.infoP2"
+              ></p>
+
+              <div class="flex items-start gap-2.5 pt-0.5">
+                <input
+                  id="donation-terms"
+                  name="terms"
+                  type="checkbox"
+                  required
+                  class="mt-0.5 h-4 w-4 shrink-0 rounded border-gray-300 text-brand focus:ring-brand/40"
+                />
+                <label
+                  for="donation-terms"
+                  class="text-sm leading-snug text-gray-700"
+                  data-i18n-html="content.donationForm.termsHtml"
+                ></label>
+              </div>
+
+              <button
+                type="submit"
+                class="w-full rounded-lg bg-gray-900 py-3 text-sm font-semibold text-white shadow-md transition hover:bg-gray-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-900"
+                data-i18n="content.donationForm.submit"
+              ></button>
+              <p class="mt-5 text-center text-sm" id="donation-bank-cta">
+                <a
+                  href="donate.html"
+                  class="font-medium text-brand underline-offset-2 hover:underline"
+                  data-i18n="content.donationForm.bankRequisitesCta"
+                ></a>
+              </p>
+            </form>
+          </div>
+        </main>
+      </div>
+      <footer id="site-footer" data-site-footer></footer>
+    </div>
+    <script type="module" src="/src/js/main.js"></script>
+  </body>
+</html>

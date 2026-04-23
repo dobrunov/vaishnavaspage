@@ -107,10 +107,522 @@
         </div>
       </section>
 
+      <!-- Festivals & community lists (no blogs) -->
+      <section
+        id="home-event-lists"
+        class="scroll-mt-24 border-t border-stone-100/80 bg-[#FFFBF6] py-10 sm:py-12 md:py-14"
+        data-reveal
+        aria-labelledby="home-event-lists-heading"
+      >
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <h2
+            id="home-event-lists-heading"
+            class="mb-6 text-center text-2xl font-extrabold tracking-tight text-slate-900 sm:mb-8 sm:text-3xl"
+            data-i18n="home.eventLists.sectionTitle"
+          ></h2>
+          <div
+            class="grid grid-cols-1 gap-6 lg:grid-cols-2 lg:gap-8"
+          >
+            <div
+              class="overflow-hidden rounded-xl border border-stone-200/35 bg-white shadow-sm"
+            >
+              <div
+                class="flex items-center justify-between gap-3 border-b border-stone-100/90 px-4 py-3.5 sm:px-5"
+              >
+                <div class="flex min-w-0 items-center gap-2.5">
+                  <span
+                    class="h-7 w-1 shrink-0 rounded-full bg-brand"
+                    aria-hidden="true"
+                  ></span>
+                  <h3
+                    class="text-base font-bold text-slate-900 sm:text-lg"
+                    data-i18n="home.eventLists.festivalsTitle"
+                  ></h3>
+                </div>
+                <a
+                  href="events.html"
+                  class="shrink-0 text-sm font-semibold text-brand transition hover:underline"
+                  data-i18n="home.eventLists.viewAll"
+                ></a>
+              </div>
+              <ul class="divide-y divide-stone-100/90" role="list">
+                <li>
+                  <a
+                    href="donation-mohini-ekadashi.html"
+                    class="flex gap-3 px-4 py-3.5 transition hover:bg-stone-50/80 sm:px-5"
+                  >
+                    <div class="min-w-0 flex-1">
+                      <p
+                        class="font-bold text-slate-900"
+                        data-i18n="home.eventLists.f1Title"
+                      ></p>
+                      <p
+                        class="mt-1 flex items-center gap-1.5 text-sm text-slate-600"
+                      >
+                        <i
+                          class="fa-solid fa-calendar-check text-[0.9em] text-brand"
+                          aria-hidden="true"
+                        ></i>
+                        <span data-i18n="home.eventLists.f1Date"></span>
+                      </p>
+                      <p
+                        class="mt-1.5 line-clamp-2 text-sm leading-relaxed text-slate-500"
+                        data-i18n="home.eventLists.f1Desc"
+                      ></p>
+                    </div>
+                    <div
+                      class="h-16 w-16 shrink-0 overflow-hidden rounded-lg bg-stone-100 sm:h-20 sm:w-20"
+                    >
+                      <img
+                        src="%BASE_URL%images/holiday-card.png"
+                        alt=""
+                        class="h-full w-full object-cover"
+                        width="80"
+                        height="80"
+                        loading="lazy"
+                        decoding="async"
+                        data-i18n-alt="home.eventLists.f1ImageAlt"
+                      />
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="donation-narasimha.html"
+                    class="flex gap-3 px-4 py-3.5 transition hover:bg-stone-50/80 sm:px-5"
+                  >
+                    <div class="min-w-0 flex-1">
+                      <p
+                        class="font-bold text-slate-900"
+                        data-i18n="home.eventLists.f2Title"
+                      ></p>
+                      <p
+                        class="mt-1 flex items-center gap-1.5 text-sm text-slate-600"
+                      >
+                        <i
+                          class="fa-solid fa-calendar-check text-[0.9em] text-brand"
+                          aria-hidden="true"
+                        ></i>
+                        <span data-i18n="home.eventLists.f2Date"></span>
+                      </p>
+                      <p
+                        class="mt-1.5 line-clamp-2 text-sm leading-relaxed text-slate-500"
+                        data-i18n="home.eventLists.f2Desc"
+                      ></p>
+                    </div>
+                    <div
+                      class="h-16 w-16 shrink-0 overflow-hidden rounded-lg bg-stone-100 sm:h-20 sm:w-20"
+                    >
+                      <img
+                        src="%BASE_URL%images/darshan-deities.png"
+                        alt=""
+                        class="h-full w-full object-cover"
+                        width="80"
+                        height="80"
+                        loading="lazy"
+                        decoding="async"
+                        data-i18n-alt="home.eventLists.f2ImageAlt"
+                      />
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <div
+              class="overflow-hidden rounded-xl border border-stone-200/35 bg-white shadow-sm"
+            >
+              <div
+                class="flex items-center justify-between gap-3 border-b border-stone-100/90 px-4 py-3.5 sm:px-5"
+              >
+                <div class="flex min-w-0 items-center gap-2.5">
+                  <span
+                    class="h-7 w-1 shrink-0 rounded-full bg-brand"
+                    aria-hidden="true"
+                  ></span>
+                  <h3
+                    class="text-base font-bold text-slate-900 sm:text-lg"
+                    data-i18n="home.eventLists.communityTitle"
+                  ></h3>
+                </div>
+                <a
+                  href="events.html"
+                  class="shrink-0 text-sm font-semibold text-brand transition hover:underline"
+                  data-i18n="home.eventLists.viewAll"
+                ></a>
+              </div>
+              <ul class="divide-y divide-stone-100/90" role="list">
+                <li>
+                  <a
+                    href="harinamy-u-misti.html"
+                    class="flex gap-3 px-4 py-3.5 transition hover:bg-stone-50/80 sm:px-5"
+                  >
+                    <div class="min-w-0 flex-1">
+                      <p
+                        class="font-bold text-slate-900"
+                        data-i18n="home.eventLists.c1Title"
+                      ></p>
+                      <p
+                        class="mt-1 flex items-center gap-1.5 text-sm text-slate-600"
+                      >
+                        <i
+                          class="fa-solid fa-calendar-check text-[0.9em] text-brand"
+                          aria-hidden="true"
+                        ></i>
+                        <span data-i18n="home.eventLists.c1Date"></span>
+                      </p>
+                      <p
+                        class="mt-1.5 line-clamp-2 text-sm leading-relaxed text-slate-500"
+                        data-i18n="home.eventLists.c1Desc"
+                      ></p>
+                    </div>
+                    <div
+                      class="h-16 w-16 shrink-0 overflow-hidden rounded-lg bg-stone-100 sm:h-20 sm:w-20"
+                    >
+                      <img
+                        src="%BASE_URL%images/gallery-harinami.png"
+                        alt=""
+                        class="h-full w-full object-cover"
+                        width="80"
+                        height="80"
+                        loading="lazy"
+                        decoding="async"
+                        data-i18n-alt="home.eventLists.c1ImageAlt"
+                      />
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="kirtan-vaishnavi.html"
+                    class="flex gap-3 px-4 py-3.5 transition hover:bg-stone-50/80 sm:px-5"
+                  >
+                    <div class="min-w-0 flex-1">
+                      <p
+                        class="font-bold text-slate-900"
+                        data-i18n="home.eventLists.c2Title"
+                      ></p>
+                      <p
+                        class="mt-1 flex items-center gap-1.5 text-sm text-slate-600"
+                      >
+                        <i
+                          class="fa-solid fa-calendar-check text-[0.9em] text-brand"
+                          aria-hidden="true"
+                        ></i>
+                        <span data-i18n="home.eventLists.c2Date"></span>
+                      </p>
+                      <p
+                        class="mt-1.5 line-clamp-2 text-sm leading-relaxed text-slate-500"
+                        data-i18n="home.eventLists.c2Desc"
+                      ></p>
+                    </div>
+                    <div
+                      class="h-16 w-16 shrink-0 overflow-hidden rounded-lg bg-stone-100 sm:h-20 sm:w-20"
+                    >
+                      <img
+                        src="%BASE_URL%images/gallery-kirtan-vaishnavi.png"
+                        alt=""
+                        class="h-full w-full object-cover"
+                        width="80"
+                        height="80"
+                        loading="lazy"
+                        decoding="async"
+                        data-i18n-alt="home.eventLists.c2ImageAlt"
+                      />
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="krishna-katha.html"
+                    class="flex gap-3 px-4 py-3.5 transition hover:bg-stone-50/80 sm:px-5"
+                  >
+                    <div class="min-w-0 flex-1">
+                      <p
+                        class="font-bold text-slate-900"
+                        data-i18n="home.eventLists.c3Title"
+                      ></p>
+                      <p
+                        class="mt-1 flex items-center gap-1.5 text-sm text-slate-600"
+                      >
+                        <i
+                          class="fa-solid fa-calendar-check text-[0.9em] text-brand"
+                          aria-hidden="true"
+                        ></i>
+                        <span data-i18n="home.eventLists.c3Date"></span>
+                      </p>
+                      <p
+                        class="mt-1.5 line-clamp-2 text-sm leading-relaxed text-slate-500"
+                        data-i18n="home.eventLists.c3Desc"
+                      ></p>
+                    </div>
+                    <div
+                      class="h-16 w-16 shrink-0 overflow-hidden rounded-lg bg-stone-100 sm:h-20 sm:w-20"
+                    >
+                      <img
+                        src="%BASE_URL%images/krishna-katha.png"
+                        alt=""
+                        class="h-full w-full object-cover"
+                        width="80"
+                        height="80"
+                        loading="lazy"
+                        decoding="async"
+                        data-i18n-alt="home.eventLists.c3ImageAlt"
+                      />
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Events grid (Vrindavan-style explore) -->
+      <section
+        id="home-events"
+        class="scroll-mt-24 border-t border-stone-100/80 bg-white py-10 sm:py-12 md:py-14"
+        data-reveal
+        aria-labelledby="home-events-heading"
+      >
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div
+            class="mb-8 flex flex-col items-stretch justify-between gap-5 sm:mb-10 sm:flex-row sm:items-end"
+          >
+            <div class="min-w-0 text-center sm:text-left">
+              <p
+                class="text-sm font-semibold uppercase tracking-[0.2em] text-brand"
+                data-i18n="home.events.kicker"
+              ></p>
+              <h2
+                id="home-events-heading"
+                class="mt-2 text-2xl font-extrabold tracking-tight text-slate-900 sm:text-3xl"
+                data-i18n="home.events.title"
+              ></h2>
+              <p
+                class="mt-2 max-w-2xl text-pretty text-base leading-relaxed text-slate-600"
+                data-i18n="home.events.subtitle"
+              ></p>
+            </div>
+            <a
+              href="events.html"
+              class="inline-flex flex-shrink-0 items-center justify-center self-center rounded-lg border border-stone-200 bg-white px-4 py-2 text-sm font-semibold text-brand shadow-sm transition hover:border-brand/40 hover:bg-brand/5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand sm:self-auto"
+              data-i18n="home.events.viewAll"
+            ></a>
+          </div>
+
+          <ul
+            class="grid list-none grid-cols-2 gap-x-3 gap-y-7 sm:gap-x-4 sm:gap-y-8 md:grid-cols-3 md:gap-x-6"
+            role="list"
+          >
+            <li class="min-w-0">
+              <a
+                href="schedule.html"
+                class="group flex h-full w-full min-w-0 flex-col items-center rounded-2xl border border-stone-200/35 bg-white px-2 py-4 text-center shadow-sm transition hover:border-stone-200/55 hover:shadow-md focus-visible:outline focus-visible:ring-2 focus-visible:ring-brand sm:px-2.5 sm:py-5"
+              >
+                <div
+                  class="relative aspect-square w-full max-w-full overflow-hidden rounded-full bg-stone-100 shadow-[0_8px_22px_-8px_rgba(0,0,0,0.32)] ring-2 ring-white sm:ring-[3px]"
+                >
+                  <img
+                    src="%BASE_URL%images/gallery-lectures-schedule.png"
+                    alt=""
+                    width="400"
+                    height="400"
+                    class="h-full w-full object-cover transition duration-500 will-change-transform group-hover:scale-105"
+                    loading="lazy"
+                    decoding="async"
+                    data-i18n-alt="home.events.card1.imageAlt"
+                  />
+                </div>
+                <h3
+                  class="mt-3 min-h-8 text-balance text-sm font-bold leading-snug text-slate-900"
+                  data-i18n="home.events.card1.title"
+                ></h3>
+              </a>
+            </li>
+            <li class="min-w-0">
+              <a
+                href="events.html"
+                class="group flex h-full w-full min-w-0 flex-col items-center rounded-2xl border border-stone-200/35 bg-white px-2 py-4 text-center shadow-sm transition hover:border-stone-200/55 hover:shadow-md focus-visible:outline focus-visible:ring-2 focus-visible:ring-brand sm:px-2.5 sm:py-5"
+              >
+                <div
+                  class="relative aspect-square w-full max-w-full overflow-hidden rounded-full bg-stone-100 shadow-[0_8px_22px_-8px_rgba(0,0,0,0.32)] ring-2 ring-white sm:ring-[3px]"
+                >
+                  <img
+                    src="%BASE_URL%images/holiday-card.png"
+                    alt=""
+                    width="400"
+                    height="400"
+                    class="h-full w-full object-cover transition duration-500 will-change-transform group-hover:scale-105"
+                    loading="lazy"
+                    decoding="async"
+                    data-i18n-alt="home.events.card2.imageAlt"
+                  />
+                </div>
+                <h3
+                  class="mt-3 min-h-8 text-balance text-sm font-bold leading-snug text-slate-900"
+                  data-i18n="home.events.card2.title"
+                ></h3>
+              </a>
+            </li>
+            <li class="min-w-0">
+              <a
+                href="broadcast.html"
+                class="group flex h-full w-full min-w-0 flex-col items-center rounded-2xl border border-stone-200/35 bg-white px-2 py-4 text-center shadow-sm transition hover:border-stone-200/55 hover:shadow-md focus-visible:outline focus-visible:ring-2 focus-visible:ring-brand sm:px-2.5 sm:py-5"
+              >
+                <div
+                  class="relative aspect-square w-full max-w-full overflow-hidden rounded-full bg-stone-100 shadow-[0_8px_22px_-8px_rgba(0,0,0,0.32)] ring-2 ring-white sm:ring-[3px]"
+                >
+                  <img
+                    src="%BASE_URL%images/bhagavatam-lectures-poster.png"
+                    alt=""
+                    width="400"
+                    height="400"
+                    class="h-full w-full object-cover transition duration-500 will-change-transform group-hover:scale-105"
+                    loading="lazy"
+                    decoding="async"
+                    data-i18n-alt="home.events.card3.imageAlt"
+                  />
+                </div>
+                <h3
+                  class="mt-3 min-h-8 text-balance text-sm font-bold leading-snug text-slate-900"
+                  data-i18n="home.events.card3.title"
+                ></h3>
+              </a>
+            </li>
+            <li class="min-w-0">
+              <a
+                href="darshan.html"
+                class="group flex h-full w-full min-w-0 flex-col items-center rounded-2xl border border-stone-200/35 bg-white px-2 py-4 text-center shadow-sm transition hover:border-stone-200/55 hover:shadow-md focus-visible:outline focus-visible:ring-2 focus-visible:ring-brand sm:px-2.5 sm:py-5"
+              >
+                <div
+                  class="relative aspect-square w-full max-w-full overflow-hidden rounded-full bg-stone-100 shadow-[0_8px_22px_-8px_rgba(0,0,0,0.32)] ring-2 ring-white sm:ring-[3px]"
+                >
+                  <img
+                    src="%BASE_URL%images/darshan-deities.png"
+                    alt=""
+                    width="400"
+                    height="400"
+                    class="h-full w-full object-cover transition duration-500 will-change-transform group-hover:scale-105"
+                    loading="lazy"
+                    decoding="async"
+                    data-i18n-alt="home.events.card4.imageAlt"
+                  />
+                </div>
+                <h3
+                  class="mt-3 min-h-8 text-balance text-sm font-bold leading-snug text-slate-900"
+                  data-i18n="home.events.card4.title"
+                ></h3>
+              </a>
+            </li>
+            <li class="min-w-0">
+              <a
+                href="education.html"
+                class="group flex h-full w-full min-w-0 flex-col items-center rounded-2xl border border-stone-200/35 bg-white px-2 py-4 text-center shadow-sm transition hover:border-stone-200/55 hover:shadow-md focus-visible:outline focus-visible:ring-2 focus-visible:ring-brand sm:px-2.5 sm:py-5"
+              >
+                <div
+                  class="relative aspect-square w-full max-w-full overflow-hidden rounded-full bg-stone-100 shadow-[0_8px_22px_-8px_rgba(0,0,0,0.32)] ring-2 ring-white sm:ring-[3px]"
+                >
+                  <img
+                    src="%BASE_URL%images/education-bhagavad-gita.png"
+                    alt=""
+                    width="400"
+                    height="400"
+                    class="h-full w-full object-cover transition duration-500 will-change-transform group-hover:scale-105"
+                    loading="lazy"
+                    decoding="async"
+                    data-i18n-alt="home.events.card5.imageAlt"
+                  />
+                </div>
+                <h3
+                  class="mt-3 min-h-8 text-balance text-sm font-bold leading-snug text-slate-900"
+                  data-i18n="home.events.card5.title"
+                ></h3>
+              </a>
+            </li>
+            <li class="min-w-0">
+              <a
+                href="krishna-katha.html"
+                class="group flex h-full w-full min-w-0 flex-col items-center rounded-2xl border border-stone-200/35 bg-white px-2 py-4 text-center shadow-sm transition hover:border-stone-200/55 hover:shadow-md focus-visible:outline focus-visible:ring-2 focus-visible:ring-brand sm:px-2.5 sm:py-5"
+              >
+                <div
+                  class="relative aspect-square w-full max-w-full overflow-hidden rounded-full bg-stone-100 shadow-[0_8px_22px_-8px_rgba(0,0,0,0.32)] ring-2 ring-white sm:ring-[3px]"
+                >
+                  <img
+                    src="%BASE_URL%images/krishna-katha.png"
+                    alt=""
+                    width="400"
+                    height="400"
+                    class="h-full w-full object-cover transition duration-500 will-change-transform group-hover:scale-105"
+                    loading="lazy"
+                    decoding="async"
+                    data-i18n-alt="home.events.card6.imageAlt"
+                  />
+                </div>
+                <h3
+                  class="mt-3 min-h-8 text-balance text-sm font-bold leading-snug text-slate-900"
+                  data-i18n="home.events.card6.title"
+                ></h3>
+              </a>
+            </li>
+            <li class="min-w-0">
+              <a
+                href="harinamy-u-misti.html"
+                class="group flex h-full w-full min-w-0 flex-col items-center rounded-2xl border border-stone-200/35 bg-white px-2 py-4 text-center shadow-sm transition hover:border-stone-200/55 hover:shadow-md focus-visible:outline focus-visible:ring-2 focus-visible:ring-brand sm:px-2.5 sm:py-5"
+              >
+                <div
+                  class="relative aspect-square w-full max-w-full overflow-hidden rounded-full bg-stone-100 shadow-[0_8px_22px_-8px_rgba(0,0,0,0.32)] ring-2 ring-white sm:ring-[3px]"
+                >
+                  <img
+                    src="%BASE_URL%images/gallery-harinami.png"
+                    alt=""
+                    width="400"
+                    height="400"
+                    class="h-full w-full object-cover transition duration-500 will-change-transform group-hover:scale-105"
+                    loading="lazy"
+                    decoding="async"
+                    data-i18n-alt="home.events.card7.imageAlt"
+                  />
+                </div>
+                <h3
+                  class="mt-3 min-h-8 text-balance text-sm font-bold leading-snug text-slate-900"
+                  data-i18n="home.events.card7.title"
+                ></h3>
+              </a>
+            </li>
+            <li class="min-w-0">
+              <a
+                href="kirtan-vaishnavi.html"
+                class="group flex h-full w-full min-w-0 flex-col items-center rounded-2xl border border-stone-200/35 bg-white px-2 py-4 text-center shadow-sm transition hover:border-stone-200/55 hover:shadow-md focus-visible:outline focus-visible:ring-2 focus-visible:ring-brand sm:px-2.5 sm:py-5"
+              >
+                <div
+                  class="relative aspect-square w-full max-w-full overflow-hidden rounded-full bg-stone-100 shadow-[0_8px_22px_-8px_rgba(0,0,0,0.32)] ring-2 ring-white sm:ring-[3px]"
+                >
+                  <img
+                    src="%BASE_URL%images/gallery-kirtan-vaishnavi.png"
+                    alt=""
+                    width="400"
+                    height="400"
+                    class="h-full w-full object-cover transition duration-500 will-change-transform group-hover:scale-105"
+                    loading="lazy"
+                    decoding="async"
+                    data-i18n-alt="home.events.card8.imageAlt"
+                  />
+                </div>
+                <h3
+                  class="mt-3 min-h-8 text-balance text-sm font-bold leading-snug text-slate-900"
+                  data-i18n="home.events.card8.title"
+                ></h3>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+
       <!-- Donation campaigns (reference layout) -->
       <section
         id="donations"
-        class="scroll-mt-24 bg-[#FFFBF6] py-8 md:py-10"
+        class="scroll-mt-24 bg-white py-8 md:py-10"
         data-reveal
         aria-labelledby="home-donations-heading"
       >
@@ -126,7 +638,7 @@
                 class="text-center text-xl font-bold tracking-tight text-slate-900 sm:text-left sm:text-2xl"
                 data-i18n="home.donations.title"
               >
-                Наші пожертви
+                Підтримка
               </h2>
               <a
                 href="donations.html"
@@ -141,8 +653,12 @@
               class="grid list-none grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4"
               role="list"
             >
-              <li class="flex flex-col overflow-hidden rounded-xl border border-stone-100 bg-white shadow-sm">
-                <div class="relative aspect-video w-full overflow-hidden bg-stone-100">
+              <li
+                class="flex flex-col overflow-hidden rounded-xl border border-stone-100 bg-white shadow-sm"
+              >
+                <div
+                  class="relative aspect-video w-full overflow-hidden bg-stone-100"
+                >
                   <img
                     src="%BASE_URL%images/darshan-deities.png"
                     alt=""
@@ -153,25 +669,10 @@
                     loading="lazy"
                     decoding="async"
                   />
-                  <div
-                    class="absolute left-2 top-2 flex items-center gap-1.5 rounded bg-white/95 py-0.5 pl-1 pr-1.5 shadow-sm ring-1 ring-black/5"
-                    aria-hidden="true"
-                  >
-                    <img
-                      src="%BASE_URL%images/iskcon-kharkiv-logo.png"
-                      alt=""
-                      class="h-5 w-auto"
-                      width="32"
-                      height="40"
-                      loading="lazy"
-                    />
-                    <span
-                      class="max-w-[5.5rem] truncate text-[0.5rem] font-extrabold uppercase leading-tight text-stone-800 sm:max-w-none sm:text-[0.5625rem] sm:leading-none"
-                      data-i18n="home.donations.badge"
-                    ></span>
-                  </div>
                 </div>
-                <div class="flex flex-1 flex-col px-3 pb-4 pt-3 text-center sm:px-4">
+                <div
+                  class="flex flex-1 flex-col px-3 pb-4 pt-3 text-center sm:px-4"
+                >
                   <h3
                     class="text-sm font-bold text-slate-900 sm:text-base"
                     data-i18n="home.donations.card1.title"
@@ -185,16 +686,47 @@
                     ></i>
                     <span data-i18n="home.donations.card1.date"></span>
                   </p>
+                  <div
+                    class="mt-2 w-full"
+                    role="progressbar"
+                    aria-valuemin="0"
+                    aria-valuemax="25000"
+                    aria-valuenow="17000"
+                    data-i18n-aria-label="home.donations.card1.progressAria"
+                  >
+                    <div
+                      class="mb-1 flex flex-wrap items-baseline justify-between gap-x-2 gap-y-0.5 text-xs text-slate-600"
+                    >
+                      <span data-i18n="home.donations.progressLabel"></span>
+                      <span
+                        class="max-w-full text-right font-medium tabular-nums text-slate-800"
+                        data-i18n="home.donations.card1.progressValue"
+                      ></span>
+                    </div>
+                    <div
+                      class="h-1.5 w-full overflow-hidden rounded-full bg-stone-200"
+                      aria-hidden="true"
+                    >
+                      <div
+                        class="h-full rounded-full bg-brand"
+                        style="width: 68%"
+                      ></div>
+                    </div>
+                  </div>
                   <a
-                    href="donate.html"
+                    href="donation-mohini-ekadashi.html"
                     class="mt-4 inline-flex w-full items-center justify-center rounded-md border border-gray-300 bg-white px-3 py-2 text-center text-sm font-medium text-slate-700 transition hover:bg-slate-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-400"
                     data-i18n="home.donations.donateNow"
                   ></a>
                 </div>
               </li>
 
-              <li class="flex flex-col overflow-hidden rounded-xl border border-stone-100 bg-white shadow-sm">
-                <div class="relative aspect-video w-full overflow-hidden bg-stone-100">
+              <li
+                class="flex flex-col overflow-hidden rounded-xl border border-stone-100 bg-white shadow-sm"
+              >
+                <div
+                  class="relative aspect-video w-full overflow-hidden bg-stone-100"
+                >
                   <img
                     src="%BASE_URL%images/holiday-card.png"
                     alt=""
@@ -205,25 +737,10 @@
                     loading="lazy"
                     decoding="async"
                   />
-                  <div
-                    class="absolute left-2 top-2 flex items-center gap-1.5 rounded bg-white/95 py-0.5 pl-1 pr-1.5 shadow-sm ring-1 ring-black/5"
-                    aria-hidden="true"
-                  >
-                    <img
-                      src="%BASE_URL%images/iskcon-kharkiv-logo.png"
-                      alt=""
-                      class="h-5 w-auto"
-                      width="32"
-                      height="40"
-                      loading="lazy"
-                    />
-                    <span
-                      class="max-w-[5.5rem] truncate text-[0.5rem] font-extrabold uppercase leading-tight text-stone-800 sm:max-w-none sm:text-[0.5625rem] sm:leading-none"
-                      data-i18n="home.donations.badge"
-                    ></span>
-                  </div>
                 </div>
-                <div class="flex flex-1 flex-col px-3 pb-4 pt-3 text-center sm:px-4">
+                <div
+                  class="flex flex-1 flex-col px-3 pb-4 pt-3 text-center sm:px-4"
+                >
                   <h3
                     class="text-sm font-bold text-slate-900 sm:text-base"
                     data-i18n="home.donations.card2.title"
@@ -237,16 +754,47 @@
                     ></i>
                     <span data-i18n="home.donations.card2.date"></span>
                   </p>
+                  <div
+                    class="mt-2 w-full"
+                    role="progressbar"
+                    aria-valuemin="0"
+                    aria-valuemax="20000"
+                    aria-valuenow="9000"
+                    data-i18n-aria-label="home.donations.card2.progressAria"
+                  >
+                    <div
+                      class="mb-1 flex flex-wrap items-baseline justify-between gap-x-2 gap-y-0.5 text-xs text-slate-600"
+                    >
+                      <span data-i18n="home.donations.progressLabel"></span>
+                      <span
+                        class="max-w-full text-right font-medium tabular-nums text-slate-800"
+                        data-i18n="home.donations.card2.progressValue"
+                      ></span>
+                    </div>
+                    <div
+                      class="h-1.5 w-full overflow-hidden rounded-full bg-stone-200"
+                      aria-hidden="true"
+                    >
+                      <div
+                        class="h-full rounded-full bg-brand"
+                        style="width: 45%"
+                      ></div>
+                    </div>
+                  </div>
                   <a
-                    href="donate.html"
+                    href="donation-narasimha.html"
                     class="mt-4 inline-flex w-full items-center justify-center rounded-md border border-gray-300 bg-white px-3 py-2 text-center text-sm font-medium text-slate-700 transition hover:bg-slate-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-400"
                     data-i18n="home.donations.donateNow"
                   ></a>
                 </div>
               </li>
 
-              <li class="flex flex-col overflow-hidden rounded-xl border border-stone-100 bg-white shadow-sm">
-                <div class="relative aspect-video w-full overflow-hidden bg-stone-100">
+              <li
+                class="flex flex-col overflow-hidden rounded-xl border border-stone-100 bg-white shadow-sm"
+              >
+                <div
+                  class="relative aspect-video w-full overflow-hidden bg-stone-100"
+                >
                   <img
                     src="%BASE_URL%images/food-for-life-kharkiv.png"
                     alt=""
@@ -257,25 +805,10 @@
                     loading="lazy"
                     decoding="async"
                   />
-                  <div
-                    class="absolute left-2 top-2 flex items-center gap-1.5 rounded bg-white/95 py-0.5 pl-1 pr-1.5 shadow-sm ring-1 ring-black/5"
-                    aria-hidden="true"
-                  >
-                    <img
-                      src="%BASE_URL%images/iskcon-kharkiv-logo.png"
-                      alt=""
-                      class="h-5 w-auto"
-                      width="32"
-                      height="40"
-                      loading="lazy"
-                    />
-                    <span
-                      class="max-w-[5.5rem] truncate text-[0.5rem] font-extrabold uppercase leading-tight text-stone-800 sm:max-w-none sm:text-[0.5625rem] sm:leading-none"
-                      data-i18n="home.donations.badge"
-                    ></span>
-                  </div>
                 </div>
-                <div class="flex flex-1 flex-col px-3 pb-4 pt-3 text-center sm:px-4">
+                <div
+                  class="flex flex-1 flex-col px-3 pb-4 pt-3 text-center sm:px-4"
+                >
                   <h3
                     class="text-sm font-bold text-slate-900 sm:text-base"
                     data-i18n="home.donations.card3.title"
@@ -290,15 +823,19 @@
                     <span data-i18n="home.donations.allTime"></span>
                   </p>
                   <a
-                    href="donate.html"
+                    href="donation-annadan.html"
                     class="mt-4 inline-flex w-full items-center justify-center rounded-md border border-gray-300 bg-white px-3 py-2 text-center text-sm font-medium text-slate-700 transition hover:bg-slate-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-400"
                     data-i18n="home.donations.donateNow"
                   ></a>
                 </div>
               </li>
 
-              <li class="flex flex-col overflow-hidden rounded-xl border border-stone-100 bg-white shadow-sm">
-                <div class="relative aspect-video w-full overflow-hidden bg-stone-100">
+              <li
+                class="flex flex-col overflow-hidden rounded-xl border border-stone-100 bg-white shadow-sm"
+              >
+                <div
+                  class="relative aspect-video w-full overflow-hidden bg-stone-100"
+                >
                   <img
                     src="%BASE_URL%images/donation-cow-seva.jpg"
                     alt=""
@@ -309,25 +846,10 @@
                     loading="lazy"
                     decoding="async"
                   />
-                  <div
-                    class="absolute left-2 top-2 flex items-center gap-1.5 rounded bg-white/95 py-0.5 pl-1 pr-1.5 shadow-sm ring-1 ring-black/5"
-                    aria-hidden="true"
-                  >
-                    <img
-                      src="%BASE_URL%images/iskcon-kharkiv-logo.png"
-                      alt=""
-                      class="h-5 w-auto"
-                      width="32"
-                      height="40"
-                      loading="lazy"
-                    />
-                    <span
-                      class="max-w-[5.5rem] truncate text-[0.5rem] font-extrabold uppercase leading-tight text-stone-800 sm:max-w-none sm:text-[0.5625rem] sm:leading-none"
-                      data-i18n="home.donations.badge"
-                    ></span>
-                  </div>
                 </div>
-                <div class="flex flex-1 flex-col px-3 pb-4 pt-3 text-center sm:px-4">
+                <div
+                  class="flex flex-1 flex-col px-3 pb-4 pt-3 text-center sm:px-4"
+                >
                   <h3
                     class="text-sm font-bold text-slate-900 sm:text-base"
                     data-i18n="home.donations.card4.title"
@@ -342,7 +864,7 @@
                     <span data-i18n="home.donations.allTime"></span>
                   </p>
                   <a
-                    href="donate.html"
+                    href="donation-cow-seva.html"
                     class="mt-4 inline-flex w-full items-center justify-center rounded-md border border-gray-300 bg-white px-3 py-2 text-center text-sm font-medium text-slate-700 transition hover:bg-slate-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-400"
                     data-i18n="home.donations.donateNow"
                   ></a>

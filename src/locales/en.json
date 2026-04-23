@@ -1,7 +1,7 @@
 {
   "lang": {
     "groupLabel": "Site language",
-    "uk": "UA",
+    "uk": "УКР",
     "en": "EN"
   },
   "nav": {
@@ -69,12 +69,48 @@
       "description": "Temple events and activities in Kharkiv — harināma, kirtan, lectures."
     },
     "donate": {
-      "title": "Donate — Hare Krishna Temple in Kharkiv",
+      "title": "Donation details — Hare Krishna Temple in Kharkiv",
       "description": "Donation details — Hare Krishna temple (ISKCON), Kharkiv."
     },
+    "donationTerms": {
+      "title": "Donation terms — Hare Krishna Temple in Kharkiv",
+      "description": "Terms and conditions for donations to the Hare Krishna temple (ISKCON) in Kharkiv."
+    },
     "donations": {
-      "title": "Donation destinations — ISKCON Kharkiv",
-      "description": "Donation destinations for the Hare Krishna temple (ISKCON) in Kharkiv — choose what to support."
+      "title": "Support — ISKCON Kharkiv",
+      "description": "Support the Hare Krishna temple (ISKCON) in Kharkiv — choose a direction."
+    },
+    "donationMohini": {
+      "title": "Donation: Mohini Ekadashi — ISKCON Kharkiv",
+      "description": "Support Mohini Ekadashi programmes at the Hare Krishna temple, Kharkiv."
+    },
+    "donationNarasimha": {
+      "title": "Donation: Narasimha Chaturdashi — ISKCON Kharkiv",
+      "description": "Support Narasimha Chaturdashi programmes at the Hare Krishna temple, Kharkiv."
+    },
+    "donationAnnadan": {
+      "title": "Donation: annadān (food) — ISKCON Kharkiv",
+      "description": "Support vegetarian food distribution and outreach — Kharkiv."
+    },
+    "donationCow": {
+      "title": "Donation: cow care — ISKCON Kharkiv",
+      "description": "Support cow care, feeding, and related seva — ISKCON Kharkiv, Kharkiv."
+    },
+    "donationLectures": {
+      "title": "Donation: lectures & broadcast — ISKCON Kharkiv",
+      "description": "Support Śrīmad Bhāgavatam lectures and online broadcasts — Kharkiv."
+    },
+    "donationEducation": {
+      "title": "Donation: education — ISKCON Kharkiv",
+      "description": "Support study groups and Bhagavad-gītā programmes — Kharkiv."
+    },
+    "donationKirtan": {
+      "title": "Donation: kirtan & events — ISKCON Kharkiv",
+      "description": "Support kirtan programmes and temple events — Kharkiv."
+    },
+    "donationPrasadam": {
+      "title": "Donation: prasādam & hospitality — ISKCON Kharkiv",
+      "description": "Support prasādam preparation and hospitality for guests — Kharkiv."
     },
     "howToGet": {
       "title": "How to get here — Hare Krishna Temple in Kharkiv",
@@ -116,21 +152,65 @@
       "imageAltBack": "Deity darshan at the temple",
       "imageAltFront": "Temple programme banner"
     },
+    "events": {
+      "kicker": "Temple life",
+      "title": "Events & programmes",
+      "subtitle": "What is happening at ISKCON Kharkiv: schedule, festivals, lectures and the community—pick a path and go deeper.",
+      "viewAll": "View all",
+      "card1": { "title": "Schedule & ārati", "imageAlt": "Temple schedule and lecture poster" },
+      "card2": { "title": "Event calendar", "imageAlt": "Temple festival — decorations" },
+      "card3": { "title": "Broadcasts", "imageAlt": "Śrīmad Bhāgavatam lectures poster" },
+      "card4": { "title": "Deity darshan", "imageAlt": "Deities at the altar" },
+      "card5": { "title": "Classes", "imageAlt": "Bhagavad-gītā study" },
+      "card6": { "title": "Kṛṣṇa-kathā", "imageAlt": "Kṛṣṇa-kathā gathering" },
+      "card7": { "title": "Harināma in the city", "imageAlt": "Harināma in the city" },
+      "card8": { "title": "Kīrtan (women)", "imageAlt": "Women’s kīrtan" }
+    },
+    "eventLists": {
+      "sectionTitle": "Festivals & gatherings",
+      "viewAll": "View all",
+      "festivalsTitle": "Upcoming festivals",
+      "communityTitle": "Community events",
+      "f1Title": "Mohini Ekadashi",
+      "f1Date": "27 April, 2026",
+      "f1Desc": "Preparing the programme, flowers and a welcoming mood in the temple. Thank you for sharing this mercy…",
+      "f1ImageAlt": "Festival visual — Mohini Ekadashi",
+      "f2Title": "Narasimha Chaturdashi",
+      "f2Date": "30 April, 2026",
+      "f2Desc": "Celebrating Lord Narasimha’s day: decorations, programme and shared prayer. Every gift is part of the seva…",
+      "f2ImageAlt": "Festival visual — Narasimha Chaturdashi",
+      "c1Title": "Harināma in the city",
+      "c1Date": "Saturdays at 11:00",
+      "c1Desc": "Singing the holy names downtown — music, mantra and a friendly mood for passers-by…",
+      "c1ImageAlt": "Harināma in the city",
+      "c2Title": "Kīrtan vaiṣṇavī",
+      "c2Date": "See the schedule",
+      "c2Desc": "Focused chanting and prayer in a warm women’s gathering at the temple…",
+      "c2ImageAlt": "Kīrtan vaiṣṇavī",
+      "c3Title": "Kṛṣṇa kathā",
+      "c3Date": "Meetings at the temple",
+      "c3Desc": "Hearing stories of Krishna, discussion and inspiration for your practice…",
+      "c3ImageAlt": "Kṛṣṇa kathā"
+    },
     "donations": {
-      "title": "Our Donations",
+      "title": "Support",
       "viewAll": "View all",
       "donateNow": "Donate now",
       "allTime": "All time donation",
-      "badge": "ISKCON Kharkiv",
+      "progressLabel": "Raised",
       "card1": {
         "title": "Mohini Ekadashi",
         "date": "27 April, 2026",
-        "imageAlt": "Deities: Mohini Ekadashi"
+        "imageAlt": "Deities: Mohini Ekadashi",
+        "progressValue": "17,000 ₴ of 25,000 ₴",
+        "progressAria": "17,000 hryvnias raised of 25,000 hryvnias goal"
       },
       "card2": {
         "title": "Narasimha Chaturdashi",
         "date": "30 April, 2026",
-        "imageAlt": "Festival visual — Narasimha Chaturdashi"
+        "imageAlt": "Festival visual — Narasimha Chaturdashi",
+        "progressValue": "9,000 ₴ of 20,000 ₴",
+        "progressAria": "9,000 hryvnias raised of 20,000 hryvnias goal"
       },
       "card3": {
         "title": "Annadan seva",
@@ -143,13 +223,26 @@
     }
   },
   "donationsPage": {
-    "heading": "Donation destinations",
-    "intro": "Choose what to support. “Donate now” takes you to the donation details page.",
+    "heading": "Support",
+    "intro": "Choose a direction to support. “Donate now” opens the page with details of the selected fundraiser. If you are not sure which button to use — go to “Donation details” : )",
     "toDetails": "Donation details",
     "donateNow": "Donate now",
+    "progressLabel": "Raised",
     "cards": {
-      "card1": { "title": "Mohini Ekadashi", "meta": "27 April, 2026", "imageAlt": "Deities: Mohini Ekadashi" },
-      "card2": { "title": "Narasimha Chaturdashi", "meta": "30 April, 2026", "imageAlt": "Festival visual — Narasimha Chaturdashi" },
+      "card1": {
+        "title": "Mohini Ekadashi",
+        "meta": "27 April, 2026",
+        "imageAlt": "Deities: Mohini Ekadashi",
+        "progressValue": "17,000 ₴ of 25,000 ₴",
+        "progressAria": "17,000 hryvnias raised of 25,000 hryvnias goal"
+      },
+      "card2": {
+        "title": "Narasimha Chaturdashi",
+        "meta": "30 April, 2026",
+        "imageAlt": "Festival visual — Narasimha Chaturdashi",
+        "progressValue": "9,000 ₴ of 20,000 ₴",
+        "progressAria": "9,000 hryvnias raised of 20,000 hryvnias goal"
+      },
       "card3": { "title": "Annadan seva", "meta": "All time donation", "imageAlt": "Food for Life distribution" },
       "card4": { "title": "Cow service", "meta": "All time donation", "imageAlt": "Cow service" },
       "card5": { "title": "Lectures & broadcast", "meta": "All time donation", "imageAlt": "Śrīmad Bhāgavatam lecture poster" },
@@ -217,12 +310,85 @@
       "imageAlt": "Deities at the Hare Krishna temple"
     },
     "donate": {
-      "h1": "Support",
+      "h1": "Donation details",
       "intro": "Care for the temple in Kharkiv, vegetarian food and our programmes are possible thanks to donations. Thank you sincerely for your support!",
+      "purposeNote": "In the payment purpose, state which programme or campaign you are supporting (for example, the name used on the “All support options” page).",
       "bankHeading": "Bank details",
       "recipientLabel": "Recipient",
       "recipientName": "Hare Krishna Temple, Kharkiv",
       "ibanLabel": "IBAN"
+    },
+    "donationTerms": {
+      "h1": "Donation terms",
+      "lead": "Below is a short summary of what you agree to when you leave a gift for the community or make a bank transfer.",
+      "bodyHtml": "<h2 class=\"mb-2 text-sm font-semibold uppercase tracking-wide text-gray-800\">1. Voluntary gift and purpose</h2><p class=\"mb-4 text-sm leading-relaxed text-gray-700\">Your donation is a voluntary financial contribution to the Religious Community “Hare Krishna Temple” (ISKCON) in Kharkiv. You choose the amount; in the payment details it helps to name the programme or fund you wish to support (see the <a href=\"donations.html\" class=\"text-brand underline underline-offset-2 hover:no-underline\">full list of options</a>).</p><h2 class=\"mb-2 text-sm font-semibold uppercase tracking-wide text-gray-800\">2. Use of funds</h2><p class=\"mb-4 text-sm leading-relaxed text-gray-700\">Donations are used for the religious and social mission of the community: temple programmes, outreach, premises, and equipment, according to the community’s current plans and priorities.</p><h2 class=\"mb-2 text-sm font-semibold uppercase tracking-wide text-gray-800\">3. Personal data</h2><p class=\"mb-4 text-sm leading-relaxed text-gray-700\">Contact details you provide may be used to thank you, to follow up about your gift, and for occasional community news—without spam. We do not sell or hand them to third parties for external marketing. For any question about data processing, use the <a href=\"contacts.html\" class=\"text-brand underline underline-offset-2 hover:no-underline\">temple contact page</a>.</p><h2 class=\"mb-2 text-sm font-semibold uppercase tracking-wide text-gray-800\">4. Bank transfer</h2><p class=\"text-sm leading-relaxed text-gray-700\">Current account details are on the <a href=\"donate.html\" class=\"text-brand underline underline-offset-2 hover:no-underline\">Donation details</a> page. Please include a clear payment purpose so we can match your transfer.</p>"
+    },
+    "donationCommon": {
+      "backToList": "← All support options"
+    },
+    "donationForm": {
+      "amountLabel": "Amount (₴)",
+      "amountPlaceholder": "e.g. 500",
+      "destinationLabel": "Destination",
+      "nameLabel": "Name",
+      "namePlaceholder": "Alex Krishnadas",
+      "phoneLabel": "Phone",
+      "phonePlaceholder": "+380 67 000 00 00",
+      "supportBoxHtml": "Something went wrong? <a href=\"contacts.html\" class=\"font-medium text-emerald-900 underline decoration-emerald-600/40 underline-offset-2 transition hover:decoration-emerald-800\">Contact us</a>.",
+      "infoP1": "If you leave your contact details, we can send a thank-you from the Deities — mahā-prasādam. We’ll only send helpful updates, no spam.",
+      "infoP2": "You can also donate anonymously — a little faster, but without that warm follow-up after your gift.",
+      "termsHtml": "I accept the <a href=\"donation-terms.html\" class=\"text-brand underline underline-offset-2 hover:no-underline\">donation terms</a> and consent to the processing of my personal data.",
+      "submit": "Make donation",
+      "bankSectionTitle": "Or bank transfer",
+      "bankRequisitesCta": "Donate by bank transfer — details"
+    },
+    "donationMohini": {
+      "h1": "Donation: Mohini Ekadashi",
+      "intro": "Your support helps us prepare for Mohini Ekadashi: service, flowers, a welcoming atmosphere, and a peaceful mood in the hall. Thank you for sharing this mercy with the community.",
+      "purposeNote": "In the payment details, include: “Mohini Ekadashi” (optionally the year).",
+      "destinationName": "Mohini Ekadashi"
+    },
+    "donationNarasimha": {
+      "h1": "Donation: Narasimha Chaturdashi",
+      "intro": "Support the celebration of Lord Narasimha’s day: the programme, decorations, and the community’s prayer together. Every contribution is part of a shared offering.",
+      "purposeNote": "In the payment details, include: “Narasimha Chaturdashi”.",
+      "destinationName": "Narasimha Chaturdashi"
+    },
+    "donationAnnadan": {
+      "h1": "Donation: annadān (food)",
+      "intro": "Donations for vegetarian food distribution and charity outreach. Together we share prasādam and warmth with more people.",
+      "purposeNote": "In the payment details, include: “Annadān”.",
+      "destinationName": "Annadān (food distribution)"
+    },
+    "donationCow": {
+      "h1": "Donation: cow care",
+      "intro": "Support feed, care, and veterinary needs — cow seva is a meaningful part of the community’s life.",
+      "purposeNote": "In the payment details, include: “Cow care”.",
+      "destinationName": "Cow care"
+    },
+    "donationLectures": {
+      "h1": "Donation: lectures & broadcast",
+      "intro": "Your help keeps daily Śrīmad Bhāgavatam sessions going and makes lectures available online, wherever you are.",
+      "purposeNote": "In the payment details, include: “Lectures / broadcast”.",
+      "destinationName": "Lectures & broadcast"
+    },
+    "donationEducation": {
+      "h1": "Donation: education",
+      "intro": "Donations go toward materials, welcome meetings for newcomers, Bhagavad-gītā study, and a space to ask questions about bhakti.",
+      "purposeNote": "In the payment details, include: “Education”.",
+      "destinationName": "Education programmes"
+    },
+    "donationKirtan": {
+      "h1": "Donation: kirtan & events",
+      "intro": "Support kirtan, temple events, and special gatherings: sound, logistics, and hospitality for those who come to chant.",
+      "purposeNote": "In the payment details, include: “Kirtan / events”.",
+      "destinationName": "Kirtan & events"
+    },
+    "donationPrasadam": {
+      "h1": "Donation: prasādam & hospitality",
+      "intro": "Help with prasādam preparation, tea, and a restful area after the programme — hospitality is a shared service.",
+      "purposeNote": "In the payment details, include: “Prasādam / hospitality”.",
+      "destinationName": "Prasādam & hospitality"
     },
     "broadcast": {
       "h1": "Lecture broadcast",
@@ -294,6 +460,10 @@
       "p2": "This page can later be filled with the next festival announcement, programme, starting time and other important details."
     },
     "education": {
+      "h1": "Learning",
+      "p1": "At the Hare Krishna temple in Kharkiv we host Śrīmad Bhāgavatam lectures, Bhagavad-gītā study circles, newcomers’ meetings and the step-by-step School of bhakti — an introduction to devotional service and Vedic culture.",
+      "p2Html": "For up-to-date times and topics, see the <a href=\"schedule.html\" class=\"text-brand underline-offset-2 hover:underline\">schedule</a>. Some lectures are streamed online — see <a href=\"broadcast.html\" class=\"text-brand underline-offset-2 hover:underline\">Broadcast</a>. If you are new, the Sunday programme is a good start, together with the <a href=\"shkola-bhakti.html\" class=\"text-brand underline-offset-2 hover:underline\">School of bhakti</a> page. You can reach us via <a href=\"contacts.html\" class=\"text-brand underline-offset-2 hover:underline\">Contacts</a>.",
+      "p3": "We are happy to talk about mantra, vegetarian food and the basics of Gauḍīya Vaiṣṇavism — after the programme in the hall or by message.",
       "imageAlt": "Bhagavad-gītā, glasses and japa beads"
     }
   }

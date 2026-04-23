@@ -1,5 +1,6 @@
 import { initI18n, t } from './i18n.js';
 import { installSiteChrome } from './site-chrome.js';
+import { initDonationForm } from './donation-form.js';
 
 function initTempleNav() {
   document.querySelectorAll('[data-temple-nav]').forEach((root) => {
@@ -413,6 +414,7 @@ function initEventReturnLink() {
 function initShell() {
   installSiteChrome();
   initI18n();
+  initDonationForm();
   initTempleNav();
   initMobileMenu();
   initEventCards();

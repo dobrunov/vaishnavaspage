@@ -9,7 +9,7 @@ const PRIMARY_NAV = [
   { href: 'broadcast.html', key: 'nav.broadcast' },
   { href: 'education.html', key: 'nav.education' },
   { href: 'events.html', key: 'nav.events' },
-  { href: 'donate.html', key: 'nav.donate' },
+  { href: 'donations.html', key: 'nav.donate' },
   { href: 'contacts.html', key: 'nav.contacts' },
 ];
 
@@ -122,7 +122,7 @@ function buildHeaderHtml() {
           class="site-header__lang-btn rounded-full px-2 py-1 text-[15px] font-medium text-stone-600 transition hover:text-brand focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
           data-set-lang="uk"
           data-i18n="lang.uk"
-        >УК</button>
+        >УКР</button>
         <span class="text-stone-200" aria-hidden="true">|</span>
         <button
           type="button"
@@ -174,7 +174,16 @@ function buildHeaderHtml() {
  * @param {string} currentFile
  */
 function isCurrentPage(targetFile, currentFile) {
-  return currentFile === targetFile;
+  if (currentFile === targetFile) return true;
+  // Support: keep "Підтримка" active on all campaign subpages
+  if (
+    targetFile === 'donations.html' &&
+    currentFile.startsWith('donation-') &&
+    currentFile.endsWith('.html')
+  ) {
+    return true;
+  }
+  return false;
 }
 
 function buildFooterHtml() {
