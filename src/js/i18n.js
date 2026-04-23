@@ -84,9 +84,12 @@ function applyTranslations() {
   document.querySelectorAll('[data-set-lang]').forEach((btn) => {
     const lang = btn.getAttribute('data-set-lang');
     const active = lang === locale;
-    btn.classList.toggle('text-brand', active);
-    btn.classList.toggle('font-semibold', active);
     btn.setAttribute('aria-pressed', active ? 'true' : 'false');
+    if (active) {
+      btn.setAttribute('aria-current', 'true');
+    } else {
+      btn.removeAttribute('aria-current');
+    }
   });
 
   document.documentElement.lang = locale;

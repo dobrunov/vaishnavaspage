@@ -1,7 +1,7 @@
 {
   "lang": {
     "groupLabel": "Site language",
-    "uk": "UK",
+    "uk": "UA",
     "en": "EN"
   },
   "nav": {
@@ -11,7 +11,27 @@
     "education": "Learning",
     "events": "Events",
     "donate": "Support",
-    "contacts": "Contact"
+    "contacts": "Contact",
+    "howToGet": "How to get here"
+  },
+  "header": {
+    "logoAlt": "ISKCON Kharkiv",
+    "logoAria": "Home — ISKCON Kharkiv",
+    "donateCta": "Support the temple"
+  },
+  "footer": {
+    "mission": "Hare Krishna temple in Kharkiv — kirtan, study and a welcoming bhakti community.",
+    "headingPlan": "Plan your visit",
+    "headingConnect": "Stay in touch",
+    "headingAddress": "Location",
+    "writeUs": "Contact the community",
+    "legal": "© 2024–2026 ISKCON Kharkiv. You may share material with an attribution link.",
+    "credit": "Official page of the Kharkiv congregation.",
+    "socialGroup": "Social media",
+    "socialTelegram": "Telegram",
+    "socialFacebook": "Facebook",
+    "socialYoutube": "YouTube",
+    "socialInstagram": "Instagram"
   },
   "aside": {
     "siteNav": "Site navigation",
@@ -87,7 +107,32 @@
     "aboutHeading": "Welcome to the centre of bhakti-yoga in Kharkiv",
     "aboutP1": "In Kharkiv, on Kholodna Hora, we invite you to discover bhakti-yoga — the path of devotion where sound, community and inspiration come together.",
     "aboutP2": "Our temple is a home with open doors: you can join Maṅgala-ārati, sing kirtan, find stillness in a meditation circle, or simply stay in the hall for a quiet moment.",
-    "aboutP3": "Whether it is your first visit or you already have experience — we are glad to welcome you and explore questions about mantra, vegetarian life and the Vedas together."
+    "aboutP3": "Whether it is your first visit or you already have experience — we are glad to welcome you and explore questions about mantra, vegetarian life and the Vedas together.",
+    "donations": {
+      "title": "Our Donations",
+      "viewAll": "View all",
+      "donateNow": "Donate now",
+      "allTime": "All time donation",
+      "badge": "ISKCON Kharkiv",
+      "card1": {
+        "title": "Mohini Ekadashi",
+        "date": "27 April, 2026",
+        "imageAlt": "Deities: Mohini Ekadashi"
+      },
+      "card2": {
+        "title": "Narasimha Chaturdashi",
+        "date": "30 April, 2026",
+        "imageAlt": "Festival visual — Narasimha Chaturdashi"
+      },
+      "card3": {
+        "title": "Annadan seva",
+        "imageAlt": "Food for Life distribution"
+      },
+      "card4": {
+        "title": "Cow service",
+        "imageAlt": "Cow service"
+      }
+    }
   },
   "events": {
     "returnToList": "BACK TO EVENTS",

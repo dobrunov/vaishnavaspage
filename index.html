@@ -26,7 +26,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
     <link
@@ -38,207 +38,16 @@
     <link rel="stylesheet" href="/src/css/style.css" />
   </head>
   <body
-    class="font-sans text-sm font-normal leading-normal text-gray-800 antialiased bg-white"
+    class="font-sans text-base font-normal leading-normal text-gray-800 antialiased bg-white"
   >
     <div
       id="app"
-      class="flex min-h-screen flex-col bg-white lg:flex-row"
+      class="flex min-h-screen flex-col bg-white"
     >
-      <!-- Left column nav (like krishna.ua: logo + vertical list) -->
-      <aside
-        class="z-40 shrink-0 border-b border-gray-200 bg-white lg:sticky lg:top-0 lg:flex lg:h-screen lg:w-[17.5rem] lg:flex-col lg:overflow-y-auto lg:border-b-0 lg:border-r lg:border-gray-200 lg:px-6 lg:py-10"
-        aria-label="Навігація сайту" data-i18n-aria-label="aside.siteNav"
-      >
-        <div
-          class="relative flex items-center justify-center px-4 py-3 lg:flex-col lg:items-stretch lg:gap-8 lg:px-0 lg:py-0"
-        >
-          <a
-            href="#home"
-            class="block shrink-0 lg:mx-auto lg:w-full lg:text-center"
-          >
-            <img
-              src="%BASE_URL%images/iskcon-kharkiv-logo.png"
-              alt="ISKCON Kharkiv"
-              class="mx-auto h-[8.25rem] w-auto lg:h-[11.25rem]"
-              width="216"
-              height="270"
-              decoding="async"
-            />
-          </a>
-          <details class="absolute left-4 top-1/2 -translate-y-1/2 lg:hidden">
-            <summary
-              class="list-none cursor-pointer rounded-md p-2 text-gray-700 transition hover:bg-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand [&::-webkit-details-marker]:hidden"
-              aria-label="Меню" data-i18n-aria-label="aside.menu"
-            >
-              <svg
-                class="h-7 w-7"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                aria-hidden="true"
-              >
-                <path d="M4 7h16" />
-                <path d="M4 12h16" />
-                <path d="M4 17h16" />
-              </svg>
-            </summary>
-            <nav
-              class="absolute left-0 top-full z-50 mt-2 flex min-w-[14.5rem] flex-col rounded-xl bg-white px-2 py-1.5 text-[16px] text-gray-700 shadow-lg"
-              aria-label="Основна навігація" data-i18n-aria-label="aside.mainNav"
-            >
-              <a
-                href="darshan.html"
-                class="rounded-xl px-3 py-2 font-semibold transition-colors hover:text-brand" data-i18n="nav.darshan"
-                >Даршан Божеств</a
-              >
-              <a
-                href="schedule.html"
-                class="rounded-xl px-3 py-2 font-semibold transition-colors hover:text-brand" data-i18n="nav.schedule"
-                >Розклад</a
-              >
-              <a
-                href="broadcast.html"
-                class="rounded-xl px-3 py-2 font-semibold transition-colors hover:text-brand" data-i18n="nav.broadcast"
-                >Трансляція</a
-              >
-              <a
-                href="education.html"
-                class="rounded-xl px-3 py-2 font-semibold transition-colors hover:text-brand" data-i18n="nav.education"
-                >Навчання</a
-              >
-              <a
-                href="events.html"
-                class="rounded-xl px-3 py-2 font-semibold transition-colors hover:text-brand" data-i18n="nav.events"
-                >Події</a
-              >
-              <a
-                href="donate.html"
-                class="rounded-xl px-3 py-2 font-semibold transition-colors hover:text-brand" data-i18n="nav.donate"
-                >Підтримати</a
-              >
-              <a
-                href="contacts.html"
-                class="rounded-xl px-3 py-2 font-semibold transition-colors hover:text-brand" data-i18n="nav.contacts"
-                >Контакти</a
-              >
-            </nav>
-          </details>
-        </div>
-        <nav
-          class="hidden flex-col rounded-2xl bg-white px-2 py-1.5 text-[16px] font-normal text-gray-700 shadow-sm lg:mt-4 lg:flex lg:border-t lg:border-gray-100 lg:px-2 lg:py-2 lg:pt-2.5"
-          aria-label="Основна навігація" data-i18n-aria-label="aside.mainNav"
-        >
-          <a
-            href="darshan.html"
-            class="rounded-xl px-3 py-2 font-semibold transition-colors hover:text-brand" data-i18n="nav.darshan"
-            >Даршан Божеств</a
-          >
-          <a
-            href="schedule.html"
-            class="rounded-xl px-3 py-2 font-semibold transition-colors hover:text-brand" data-i18n="nav.schedule"
-            >Розклад</a
-          >
-          <a
-            href="broadcast.html"
-            class="rounded-xl px-3 py-2 font-semibold transition-colors hover:text-brand" data-i18n="nav.broadcast"
-            >Трансляція</a
-          >
-          <a
-            href="education.html"
-            class="rounded-xl px-3 py-2 font-semibold transition-colors hover:text-brand" data-i18n="nav.education"
-            >Навчання</a
-          >
-          <a
-            href="events.html"
-            class="rounded-xl px-3 py-2 font-semibold transition-colors hover:text-brand" data-i18n="nav.events"
-            >Події</a
-          >
-          <a
-            href="donate.html"
-            class="rounded-xl px-3 py-2 font-semibold transition-colors hover:text-brand" data-i18n="nav.donate"
-            >Підтримати</a
-          >
-          <a
-            href="contacts.html"
-            class="rounded-xl px-3 py-2 font-semibold transition-colors hover:text-brand" data-i18n="nav.contacts"
-            >Контакти</a
-          >
-        </nav>
-        <div
-          class="flex flex-wrap justify-center gap-1.5 border-t border-gray-100 px-4 pb-3 pt-[1.125rem] lg:mt-6 lg:justify-start lg:border-t-0 lg:px-0 lg:pt-0"
-        >
-          <a
-            href="https://t.me/iskcon_kh"
-            class="flex h-9 w-9 items-center justify-center rounded-full bg-[#34A9DB] text-white shadow-sm transition hover:brightness-110 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#34A9DB]"
-            aria-label="Telegram"
-            rel="noopener noreferrer"
-            target="_blank"
-            ><i class="fab fa-telegram text-[1.05rem] leading-none" aria-hidden="true"></i></a
-          >
-          <a
-            href="https://www.facebook.com/hare.krishna.kharkov/"
-            class="flex h-9 w-9 items-center justify-center rounded-full bg-[#3B5998] text-white shadow-sm transition hover:brightness-110 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#3B5998]"
-            aria-label="Facebook"
-            rel="noopener noreferrer"
-            target="_blank"
-            ><i class="fab fa-facebook-f text-[1rem] leading-none" aria-hidden="true"></i></a
-          >
-          <a
-            href="https://www.youtube.com/channel/UC6aTIMPbCOMH9yk6WRukj-A"
-            class="flex h-9 w-9 items-center justify-center rounded-full bg-[#F70000] text-white shadow-sm transition hover:brightness-110 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-600"
-            aria-label="YouTube"
-            rel="noopener noreferrer"
-            target="_blank"
-            ><i class="fab fa-youtube text-[1rem] leading-none" aria-hidden="true"></i></a
-          >
-          <a
-            href="https://www.instagram.com/iskconkharkiv/"
-            class="flex h-9 w-9 items-center justify-center rounded-full bg-[#FF546B] text-white shadow-sm transition hover:brightness-110 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#FF546B]"
-            aria-label="Instagram"
-            rel="noopener noreferrer"
-            target="_blank"
-            ><i class="fab fa-instagram text-[1.05rem] leading-none" aria-hidden="true"></i></a
-          >
-        </div>
-        <div
-          class="flex flex-wrap justify-center gap-2 border-t border-gray-100 px-4 pb-2 pt-3 lg:justify-start lg:border-t-0 lg:px-0 lg:pt-2"
-          role="group"
-          data-i18n-aria-label="lang.groupLabel"
-        >
-          <button
-            type="button"
-            class="rounded-md px-2 py-1 text-sm text-gray-600 transition hover:text-brand focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
-            data-set-lang="uk"
-            data-i18n="lang.uk"
-          >
-            УК
-          </button>
-          <span class="text-gray-300" aria-hidden="true">|</span>
-          <button
-            type="button"
-            class="rounded-md px-2 py-1 text-sm text-gray-600 transition hover:text-brand focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
-            data-set-lang="en"
-            data-i18n="lang.en"
-          >
-            EN
-          </button>
-        </div>
-
-        <p
-          class="mx-auto mt-2 max-w-[30rem] border-t border-gray-100 px-4 pb-3 pt-2.5 text-center text-[1rem] leading-snug text-gray-500 lg:mx-0 lg:mt-6 lg:max-w-none lg:px-0 lg:text-left" data-i18n-html="aside.footer"
-        >
-          Міжнародне товариство свідомості Крішни.<br />
-          Засновник-ачарʼя Його Божественна Милість А. Ч. Бгактіведанта Свамі
-          Прабгупада.
-        </p>
-      </aside>
-
-      <div class="flex min-h-screen min-w-0 flex-1 flex-col">
+      <header id="site-header" class="min-h-[4.25rem] md:min-h-20 border-b border-footer-accent/35 bg-footer-cream" data-site-header></header>
+      <div class="flex min-w-0 flex-1 flex-col">
       <!-- Hero -->
-      <section id="home" class="w-full border-t border-gray-100 bg-white py-8 md:py-10" data-reveal>
+      <section id="home" class="scroll-mt-24 w-full border-t-0 border-gray-100 bg-white py-8 md:py-10" data-reveal>
         <div class="w-full max-w-none px-0" data-card-carousel-root>
           <div class="relative w-full">
             <button
@@ -304,7 +113,7 @@
             Щиро вітаємо вас у центрі бгакті-йоги в Харкові
           </h2>
           <div
-            class="space-y-5 rounded-2xl bg-[#FFFBF6] p-6 text-[calc(0.875rem+2px)] leading-relaxed text-gray-600 md:p-8"
+            class="space-y-5 rounded-2xl bg-[#FFFBF6] p-6 text-base leading-relaxed text-gray-600 md:p-8"
           >
             <p data-i18n="home.aboutP1">
               У Харкові, на Холодній Горі, ми запрошуємо вас відкрити для себе
@@ -324,7 +133,254 @@
         </div>
       </section>
 
+      <!-- Donation campaigns (reference layout) -->
+      <section
+        id="donations"
+        class="scroll-mt-24 bg-[#FFFBF6] py-8 md:py-10"
+        data-reveal
+        aria-labelledby="home-donations-heading"
+      >
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div
+            class="rounded-2xl border border-stone-100/80 bg-white p-6 shadow-[0_20px_25px_-5px_rgba(0,0,0,0.05),0_8px_10px_-6px_rgba(0,0,0,0.05)] sm:p-8 md:p-10"
+          >
+            <div
+              class="mb-6 flex flex-col items-stretch justify-between gap-4 sm:mb-8 sm:flex-row sm:items-center"
+            >
+              <h2
+                id="home-donations-heading"
+                class="text-center text-xl font-bold tracking-tight text-slate-900 sm:text-left sm:text-2xl"
+                data-i18n="home.donations.title"
+              >
+                Наші пожертви
+              </h2>
+              <a
+                href="donate.html"
+                class="self-center sm:self-auto inline-flex items-center justify-center rounded-md border border-brand bg-white px-3 py-1.5 text-sm font-medium text-brand shadow-sm transition hover:bg-brand/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
+                data-i18n="home.donations.viewAll"
+              >
+                Дивитись усі
+              </a>
+            </div>
+
+            <ul
+              class="grid list-none grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4"
+              role="list"
+            >
+              <li class="flex flex-col overflow-hidden rounded-xl border border-stone-100 bg-white shadow-sm">
+                <div class="relative aspect-video w-full overflow-hidden bg-stone-100">
+                  <img
+                    src="%BASE_URL%images/darshan-deities.png"
+                    alt=""
+                    width="800"
+                    height="450"
+                    class="h-full w-full object-cover"
+                    data-i18n-alt="home.donations.card1.imageAlt"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <div
+                    class="absolute left-2 top-2 flex items-center gap-1.5 rounded bg-white/95 py-0.5 pl-1 pr-1.5 shadow-sm ring-1 ring-black/5"
+                    aria-hidden="true"
+                  >
+                    <img
+                      src="%BASE_URL%images/iskcon-kharkiv-logo.png"
+                      alt=""
+                      class="h-5 w-auto"
+                      width="32"
+                      height="40"
+                      loading="lazy"
+                    />
+                    <span
+                      class="max-w-[5.5rem] truncate text-[0.5rem] font-extrabold uppercase leading-tight text-stone-800 sm:max-w-none sm:text-[0.5625rem] sm:leading-none"
+                      data-i18n="home.donations.badge"
+                    ></span>
+                  </div>
+                </div>
+                <div class="flex flex-1 flex-col px-3 pb-4 pt-3 text-center sm:px-4">
+                  <h3
+                    class="text-sm font-bold text-slate-900 sm:text-base"
+                    data-i18n="home.donations.card1.title"
+                  ></h3>
+                  <p
+                    class="mt-2 flex items-center justify-center gap-1.5 text-sm text-slate-600"
+                  >
+                    <i
+                      class="fa-solid fa-calendar-check text-brand"
+                      aria-hidden="true"
+                    ></i>
+                    <span data-i18n="home.donations.card1.date"></span>
+                  </p>
+                  <a
+                    href="donate.html"
+                    class="mt-4 inline-flex w-full items-center justify-center rounded-md border border-gray-300 bg-white px-3 py-2 text-center text-sm font-medium text-slate-700 transition hover:bg-slate-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-400"
+                    data-i18n="home.donations.donateNow"
+                  ></a>
+                </div>
+              </li>
+
+              <li class="flex flex-col overflow-hidden rounded-xl border border-stone-100 bg-white shadow-sm">
+                <div class="relative aspect-video w-full overflow-hidden bg-stone-100">
+                  <img
+                    src="%BASE_URL%images/holiday-card.png"
+                    alt=""
+                    width="800"
+                    height="450"
+                    class="h-full w-full object-cover"
+                    data-i18n-alt="home.donations.card2.imageAlt"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <div
+                    class="absolute left-2 top-2 flex items-center gap-1.5 rounded bg-white/95 py-0.5 pl-1 pr-1.5 shadow-sm ring-1 ring-black/5"
+                    aria-hidden="true"
+                  >
+                    <img
+                      src="%BASE_URL%images/iskcon-kharkiv-logo.png"
+                      alt=""
+                      class="h-5 w-auto"
+                      width="32"
+                      height="40"
+                      loading="lazy"
+                    />
+                    <span
+                      class="max-w-[5.5rem] truncate text-[0.5rem] font-extrabold uppercase leading-tight text-stone-800 sm:max-w-none sm:text-[0.5625rem] sm:leading-none"
+                      data-i18n="home.donations.badge"
+                    ></span>
+                  </div>
+                </div>
+                <div class="flex flex-1 flex-col px-3 pb-4 pt-3 text-center sm:px-4">
+                  <h3
+                    class="text-sm font-bold text-slate-900 sm:text-base"
+                    data-i18n="home.donations.card2.title"
+                  ></h3>
+                  <p
+                    class="mt-2 flex items-center justify-center gap-1.5 text-sm text-slate-600"
+                  >
+                    <i
+                      class="fa-solid fa-calendar-check text-brand"
+                      aria-hidden="true"
+                    ></i>
+                    <span data-i18n="home.donations.card2.date"></span>
+                  </p>
+                  <a
+                    href="donate.html"
+                    class="mt-4 inline-flex w-full items-center justify-center rounded-md border border-gray-300 bg-white px-3 py-2 text-center text-sm font-medium text-slate-700 transition hover:bg-slate-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-400"
+                    data-i18n="home.donations.donateNow"
+                  ></a>
+                </div>
+              </li>
+
+              <li class="flex flex-col overflow-hidden rounded-xl border border-stone-100 bg-white shadow-sm">
+                <div class="relative aspect-video w-full overflow-hidden bg-stone-100">
+                  <img
+                    src="%BASE_URL%images/food-for-life-kharkiv.png"
+                    alt=""
+                    width="800"
+                    height="450"
+                    class="h-full w-full object-cover"
+                    data-i18n-alt="home.donations.card3.imageAlt"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <div
+                    class="absolute left-2 top-2 flex items-center gap-1.5 rounded bg-white/95 py-0.5 pl-1 pr-1.5 shadow-sm ring-1 ring-black/5"
+                    aria-hidden="true"
+                  >
+                    <img
+                      src="%BASE_URL%images/iskcon-kharkiv-logo.png"
+                      alt=""
+                      class="h-5 w-auto"
+                      width="32"
+                      height="40"
+                      loading="lazy"
+                    />
+                    <span
+                      class="max-w-[5.5rem] truncate text-[0.5rem] font-extrabold uppercase leading-tight text-stone-800 sm:max-w-none sm:text-[0.5625rem] sm:leading-none"
+                      data-i18n="home.donations.badge"
+                    ></span>
+                  </div>
+                </div>
+                <div class="flex flex-1 flex-col px-3 pb-4 pt-3 text-center sm:px-4">
+                  <h3
+                    class="text-sm font-bold text-slate-900 sm:text-base"
+                    data-i18n="home.donations.card3.title"
+                  ></h3>
+                  <p
+                    class="mt-2 flex items-center justify-center gap-1.5 text-sm text-slate-600"
+                  >
+                    <i
+                      class="fa-solid fa-calendar-check text-brand"
+                      aria-hidden="true"
+                    ></i>
+                    <span data-i18n="home.donations.allTime"></span>
+                  </p>
+                  <a
+                    href="donate.html"
+                    class="mt-4 inline-flex w-full items-center justify-center rounded-md border border-gray-300 bg-white px-3 py-2 text-center text-sm font-medium text-slate-700 transition hover:bg-slate-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-400"
+                    data-i18n="home.donations.donateNow"
+                  ></a>
+                </div>
+              </li>
+
+              <li class="flex flex-col overflow-hidden rounded-xl border border-stone-100 bg-white shadow-sm">
+                <div class="relative aspect-video w-full overflow-hidden bg-stone-100">
+                  <img
+                    src="%BASE_URL%images/donation-cow-seva.jpg"
+                    alt=""
+                    width="800"
+                    height="450"
+                    class="h-full w-full object-cover"
+                    data-i18n-alt="home.donations.card4.imageAlt"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <div
+                    class="absolute left-2 top-2 flex items-center gap-1.5 rounded bg-white/95 py-0.5 pl-1 pr-1.5 shadow-sm ring-1 ring-black/5"
+                    aria-hidden="true"
+                  >
+                    <img
+                      src="%BASE_URL%images/iskcon-kharkiv-logo.png"
+                      alt=""
+                      class="h-5 w-auto"
+                      width="32"
+                      height="40"
+                      loading="lazy"
+                    />
+                    <span
+                      class="max-w-[5.5rem] truncate text-[0.5rem] font-extrabold uppercase leading-tight text-stone-800 sm:max-w-none sm:text-[0.5625rem] sm:leading-none"
+                      data-i18n="home.donations.badge"
+                    ></span>
+                  </div>
+                </div>
+                <div class="flex flex-1 flex-col px-3 pb-4 pt-3 text-center sm:px-4">
+                  <h3
+                    class="text-sm font-bold text-slate-900 sm:text-base"
+                    data-i18n="home.donations.card4.title"
+                  ></h3>
+                  <p
+                    class="mt-2 flex items-center justify-center gap-1.5 text-sm text-slate-600"
+                  >
+                    <i
+                      class="fa-solid fa-calendar-check text-brand"
+                      aria-hidden="true"
+                    ></i>
+                    <span data-i18n="home.donations.allTime"></span>
+                  </p>
+                  <a
+                    href="donate.html"
+                    class="mt-4 inline-flex w-full items-center justify-center rounded-md border border-gray-300 bg-white px-3 py-2 text-center text-sm font-medium text-slate-700 transition hover:bg-slate-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-400"
+                    data-i18n="home.donations.donateNow"
+                  ></a>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
       </div>
+      <footer id="site-footer" data-site-footer></footer>
     </div>
     <script type="module" src="/src/js/main.js"></script>
   </body>

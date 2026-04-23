@@ -1,4 +1,5 @@
 import { initI18n, t } from './i18n.js';
+import { installSiteChrome } from './site-chrome.js';
 
 function initTempleNav() {
   document.querySelectorAll('[data-temple-nav]').forEach((root) => {
@@ -72,7 +73,7 @@ function initTempleNav() {
 }
 
 function initMobileMenu() {
-  const mobileMenus = document.querySelectorAll('aside details');
+  const mobileMenus = document.querySelectorAll('details[data-site-mobile-menu]');
 
   if (!mobileMenus.length) return;
 
@@ -303,7 +304,7 @@ function createEventCardMarkup(card, view) {
   const extraClass = card.id && view === 'carousel' ? ' scroll-mt-4' : '';
   const subtitleMarkup = subtitle
     ? `
-                  <p class="font-sans ${view === 'carousel' ? 'text-base' : 'text-sm'} font-semibold text-white/90">
+                  <p class="font-sans text-base font-semibold text-white/90">
                     ${subtitle}
                   </p>`
     : '';
@@ -410,6 +411,7 @@ function initEventReturnLink() {
 }
 
 function initShell() {
+  installSiteChrome();
   initI18n();
   initTempleNav();
   initMobileMenu();

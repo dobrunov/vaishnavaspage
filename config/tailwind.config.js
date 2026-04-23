@@ -12,9 +12,17 @@ export default {
           dark: '#d45504',
           light: '#ff7b1c',
         },
+        /** Footer (logo ref: warm cream + #F26522) — used from site-chrome.js */
+        footer: {
+          cream: '#FDF0E0',
+          ink: '#5c4a3d',
+          muted: '#6b5c4d',
+          accent: '#F26522',
+          accentHover: '#d14a10',
+        },
       },
       fontFamily: {
-        sans: ['Roboto', 'system-ui', 'sans-serif'],
+        sans: ['Inter', 'system-ui', 'sans-serif'],
       },
     },
   },

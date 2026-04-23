@@ -17,7 +17,7 @@
 
   html {
     scroll-behavior: smooth;
-    @apply font-sans text-sm font-normal;
+    @apply font-sans text-base font-normal;
     background-color: #fff;
   }
 
@@ -79,11 +79,19 @@
   input,
   textarea,
   select {
-    @apply font-sans text-sm font-normal;
+    @apply font-sans text-base font-normal;
   }
 }
 
 @layer components {
+  /* Language switcher (header): current locale = UA / EN — driven by i18n.js aria-current */
+  .site-header [data-set-lang][aria-current='true'] {
+    @apply font-semibold bg-brand/20 text-brand;
+  }
+  .site-header [data-set-lang]:not([aria-current]) {
+    @apply font-medium bg-transparent text-stone-600;
+  }
+
   /* Open state: default height from CSS (no flash before JS). In/out animation still uses inline height in main.js */
   .temple-nav.is-open .temple-nav-panel {
     height: auto;
@@ -214,25 +222,24 @@
     will-change: transform;
   }
 
-  /* Premium nav + logo micro-interactions */
-  aside nav a {
+  /* Premium nav + logo micro-interactions (top bar — Vrindavan-style header) */
+  .site-header nav a.site-header__nav-link {
     position: relative;
     transition-property: color, background-color, transform, box-shadow;
     transition-duration: var(--dur-quick);
     transition-timing-function: var(--ease-quick);
   }
 
-  /* underline sweep */
-  aside nav a::after {
+  .site-header__nav-desktop a.site-header__nav-link::after {
     content: '';
     position: absolute;
-    left: 0.75rem;
-    right: 0.75rem;
-    bottom: 0.45rem;
+    left: 0.5rem;
+    right: 0.5rem;
+    bottom: 0.2rem;
     height: 1px;
     border-radius: 999px;
     background: currentColor;
-    opacity: 0.18;
+    opacity: 0.2;
     transform: scaleX(0);
     transform-origin: left;
     transition: transform var(--dur-nav-underline) var(--ease-nav-underline),
@@ -240,79 +247,60 @@
   }
 
   @media (hover: hover) and (pointer: fine) {
-    /* Desktop: subtle lift + pill highlight */
-    aside nav a:hover {
-      transform: translate3d(2px, 0, 0);
-      background-color: rgba(232, 93, 4, 0.08); /* brand tint */
+    .site-header__nav-desktop a.site-header__nav-link:hover {
+      transform: translate3d(0, 0, 0);
+      background-color: rgba(232, 93, 4, 0.08);
       box-shadow: 0 1px 0 rgba(0, 0, 0, 0.02);
     }
 
-    aside nav a:hover::after {
+    .site-header__nav-desktop a.site-header__nav-link:hover::after {
       transform: scaleX(1);
-      opacity: 0.35;
+      opacity: 0.4;
     }
 
-    aside nav a:active {
-      transform: translate3d(1px, 0, 0);
+    .site-header__nav-desktop a.site-header__nav-link:active {
+      transform: translate3d(0, 0, 0);
     }
 
-    /* Logo: calm, premium hover */
-    aside a[href="#home"] img,
-    aside a[href="index.html"] img {
+    .site-header a.site-header__logo img {
       transition: transform 380ms var(--ease-reveal),
         filter var(--dur-quick) var(--ease-quick);
       transform-origin: 50% 40%;
       will-change: transform;
     }
 
-    aside a[href="#home"]:hover img,
-    aside a[href="index.html"]:hover img {
-      transform: translate3d(0, -1px, 0) scale(1.015);
+    .site-header a.site-header__logo:hover img {
+      transform: translate3d(0, -1px, 0) scale(1.02);
       filter: saturate(1.03) contrast(1.03);
     }
   }
 
-  /* Mobile: tap-friendly highlight (no sideways motion) */
-  @media (max-width: 1023px) {
-    aside details nav a::after {
-      left: 0.85rem;
-      right: 0.85rem;
-      bottom: 0.55rem;
+  @media (max-width: 849px) {
+    .site-chrome-menu nav a.site-header__nav-link::after {
+      left: 0.75rem;
+      right: 0.75rem;
+      bottom: 0.4rem;
     }
 
-    aside details nav a:active {
+    .site-chrome-menu nav a.site-header__nav-link:active {
       background-color: rgba(232, 93, 4, 0.1);
-      transform: none;
     }
 
-    aside details nav a:active::after {
+    .site-chrome-menu nav a.site-header__nav-link:active::after {
       transform: scaleX(1);
-      opacity: 0.32;
+      opacity: 0.3;
     }
 
-    /* Logo: tiny press feedback on touch */
-    aside a[href="#home"]:active img,
-    aside a[href="index.html"]:active img {
+    .site-header a.site-header__logo:active img {
       transform: scale(0.99);
     }
   }
 
   @media (prefers-reduced-motion: reduce) {
-    aside nav a,
-    aside nav a::after,
-    aside a[href="#home"] img,
-    aside a[href="index.html"] img {
+    .site-header nav a.site-header__nav-link,
+    .site-header a.site-header__logo img,
+    .site-header__nav-desktop a.site-header__nav-link::after {
       transition-duration: 0.01ms !important;
     }
-  }
-
-  aside > div.border-t {
-    padding-bottom: 1.125rem;
-  }
-
-  aside > p.border-t {
-    margin-top: 0;
-    padding-top: 1.125rem;
-    padding-bottom: 1.125rem;
   }
 }
