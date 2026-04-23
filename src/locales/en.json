@@ -25,7 +25,7 @@
     "headingConnect": "Stay in touch",
     "headingAddress": "Location",
     "writeUs": "Contact the community",
-    "legal": "© 2024–2026 ISKCON Kharkiv. You may share material with an attribution link.",
+    "legal": "© 2026 ISKCON Kharkiv. You may share material with an attribution link.",
     "credit": "Official page of the Kharkiv congregation.",
     "socialGroup": "Social media",
     "socialTelegram": "Telegram",
@@ -72,6 +72,10 @@
       "title": "Donate — Hare Krishna Temple in Kharkiv",
       "description": "Donation details — Hare Krishna temple (ISKCON), Kharkiv."
     },
+    "donations": {
+      "title": "Donation destinations — ISKCON Kharkiv",
+      "description": "Donation destinations for the Hare Krishna temple (ISKCON) in Kharkiv — choose what to support."
+    },
     "howToGet": {
       "title": "How to get here — Hare Krishna Temple in Kharkiv",
       "description": "How to reach Hare Krishna temple Kharkiv — address on Kholodna Hora, public transport."
@@ -104,10 +108,14 @@
   "home": {
     "carouselPrev": "Previous cards",
     "carouselNext": "Next cards",
-    "aboutHeading": "Welcome to the centre of bhakti-yoga in Kharkiv",
-    "aboutP1": "In Kharkiv, on Kholodna Hora, we invite you to discover bhakti-yoga — the path of devotion where sound, community and inspiration come together.",
-    "aboutP2": "Our temple is a home with open doors: you can join Maṅgala-ārati, sing kirtan, find stillness in a meditation circle, or simply stay in the hall for a quiet moment.",
-    "aboutP3": "Whether it is your first visit or you already have experience — we are glad to welcome you and explore questions about mantra, vegetarian life and the Vedas together.",
+    "welcome": {
+      "kicker": "Welcome to ISKCON Kharkiv",
+      "title": "Where kirtan lives: a temple and a community of bhakti",
+      "p1": "The Hare Krishna temple in Kharkiv is a place of prayer, mantra and warm community. Join us for Sunday programmes, talks and festival days.",
+      "p2": "Come to experience devotion, hear Śrīmad Bhāgavatam, sing kirtan and share prasādam.",
+      "imageAltBack": "Deity darshan at the temple",
+      "imageAltFront": "Temple programme banner"
+    },
     "donations": {
       "title": "Our Donations",
       "viewAll": "View all",
@@ -132,6 +140,22 @@
         "title": "Cow service",
         "imageAlt": "Cow service"
       }
+    }
+  },
+  "donationsPage": {
+    "heading": "Donation destinations",
+    "intro": "Choose what to support. “Donate now” takes you to the donation details page.",
+    "toDetails": "Donation details",
+    "donateNow": "Donate now",
+    "cards": {
+      "card1": { "title": "Mohini Ekadashi", "meta": "27 April, 2026", "imageAlt": "Deities: Mohini Ekadashi" },
+      "card2": { "title": "Narasimha Chaturdashi", "meta": "30 April, 2026", "imageAlt": "Festival visual — Narasimha Chaturdashi" },
+      "card3": { "title": "Annadan seva", "meta": "All time donation", "imageAlt": "Food for Life distribution" },
+      "card4": { "title": "Cow service", "meta": "All time donation", "imageAlt": "Cow service" },
+      "card5": { "title": "Lectures & broadcast", "meta": "All time donation", "imageAlt": "Śrīmad Bhāgavatam lecture poster" },
+      "card6": { "title": "Education programmes", "meta": "All time donation", "imageAlt": "Bhagavad-gītā learning programme" },
+      "card7": { "title": "Kirtan & events", "meta": "All time donation", "imageAlt": "Kṛṣṇa kathā poster" },
+      "card8": { "title": "Prasādam & hospitality", "meta": "All time donation", "imageAlt": "Temple programme banner" }
     }
   },
   "events": {

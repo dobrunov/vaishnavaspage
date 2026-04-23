@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="uk" class="font-sans">
+  <head>
+    <script>
+      (function () {
+        try {
+          document.documentElement.classList.add('page-enter-pending');
+          if (localStorage.getItem('iskcon-lang') === 'en') {
+            document.documentElement.classList.add('i18n-pending');
+          }
+        } catch (_) {}
+      })();
+    </script>
+    <style>html.i18n-pending body{visibility:hidden}html.page-enter-pending body{opacity:0}</style>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="%BASE_URL%favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Цільові пожертви храму Харе Крішна (ISKCON) у Харкові — оберіть напрям підтримки."
+      data-i18n="page.donations.description"
+    />
+    <meta name="theme-color" content="#e85d04" />
+    <title data-i18n="page.donations.title">Цільові пожертви — ISKCON Kharkiv</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="/src/css/style.css" />
+  </head>
+  <body class="font-sans text-base font-normal leading-normal text-gray-800 antialiased bg-white">
+    <div id="app" class="flex min-h-screen flex-col bg-white">
+      <header id="site-header" class="min-h-[4.25rem] md:min-h-20 bg-footer-cream/75 backdrop-blur-lg backdrop-saturate-150" data-site-header></header>
+      <div class="flex min-w-0 flex-1 flex-col">
+        <main class="py-10 md:py-14">
+          <section
+            class="bg-[#FFFBF6] py-8 md:py-10"
+            aria-labelledby="donations-heading"
+          >
+            <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+              <div
+                class="rounded-2xl border border-stone-100/80 bg-white p-6 shadow-[0_20px_25px_-5px_rgba(0,0,0,0.05),0_8px_10px_-6px_rgba(0,0,0,0.05)] sm:p-8 md:p-10"
+              >
+                <div class="mb-8 flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+                  <div>
+                    <h1
+                      id="donations-heading"
+                      class="text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl"
+                      data-i18n="donationsPage.heading"
+                    >
+                      Цільові пожертви
+                    </h1>
+                    <p class="mt-2 max-w-2xl text-base leading-relaxed text-slate-600" data-i18n="donationsPage.intro">
+                      Оберіть напрям підтримки. Кнопка «Пожертвувати» веде на сторінку з реквізитами.
+                    </p>
+                  </div>
+                  <a
+                    href="donate.html"
+                    class="inline-flex items-center justify-center rounded-md border border-footer-accent bg-footer-accent px-3.5 py-2 text-sm font-semibold text-white shadow-sm transition hover:brightness-110 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
+                    data-i18n="donationsPage.toDetails"
+                  >
+                    Реквізити пожертви
+                  </a>
+                </div>
+
+                <ul class="grid list-none grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3" role="list">
+                  <!-- 1 -->
+                  <li class="flex flex-col overflow-hidden rounded-xl border border-stone-100 bg-white shadow-sm">
+                    <div class="relative aspect-video w-full overflow-hidden bg-stone-100">
+                      <img
+                        src="%BASE_URL%images/darshan-deities.png"
+                        alt=""
+                        width="800"
+                        height="450"
+                        class="h-full w-full object-cover"
+                        loading="lazy"
+                        decoding="async"
+                        data-i18n-alt="donationsPage.cards.card1.imageAlt"
+                      />
+                    </div>
+                    <div class="flex flex-1 flex-col px-4 pb-4 pt-4 text-center">
+                      <h2 class="text-base font-bold text-slate-900" data-i18n="donationsPage.cards.card1.title"></h2>
+                      <p class="mt-2 flex items-center justify-center gap-1.5 text-sm text-slate-600">
+                        <i class="fa-solid fa-calendar-check text-brand" aria-hidden="true"></i>
+                        <span data-i18n="donationsPage.cards.card1.meta"></span>
+                      </p>
+                      <a
+                        href="donate.html"
+                        class="mt-4 inline-flex w-full items-center justify-center rounded-md border border-gray-300 bg-white px-3 py-2 text-center text-sm font-medium text-slate-700 transition hover:bg-slate-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-400"
+                        data-i18n="donationsPage.donateNow"
+                      ></a>
+                    </div>
+                  </li>
+
+                  <!-- 2 -->
+                  <li class="flex flex-col overflow-hidden rounded-xl border border-stone-100 bg-white shadow-sm">
+                    <div class="relative aspect-video w-full overflow-hidden bg-stone-100">
+                      <img
+                        src="%BASE_URL%images/holiday-card.png"
+                        alt=""
+                        width="800"
+                        height="450"
+                        class="h-full w-full object-cover"
+                        loading="lazy"
+                        decoding="async"
+                        data-i18n-alt="donationsPage.cards.card2.imageAlt"
+                      />
+                    </div>
+                    <div class="flex flex-1 flex-col px-4 pb-4 pt-4 text-center">
+                      <h2 class="text-base font-bold text-slate-900" data-i18n="donationsPage.cards.card2.title"></h2>
+                      <p class="mt-2 flex items-center justify-center gap-1.5 text-sm text-slate-600">
+                        <i class="fa-solid fa-calendar-check text-brand" aria-hidden="true"></i>
+                        <span data-i18n="donationsPage.cards.card2.meta"></span>
+                      </p>
+                      <a
+                        href="donate.html"
+                        class="mt-4 inline-flex w-full items-center justify-center rounded-md border border-gray-300 bg-white px-3 py-2 text-center text-sm font-medium text-slate-700 transition hover:bg-slate-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-400"
+                        data-i18n="donationsPage.donateNow"
+                      ></a>
+                    </div>
+                  </li>
+
+                  <!-- 3 -->
+                  <li class="flex flex-col overflow-hidden rounded-xl border border-stone-100 bg-white shadow-sm">
+                    <div class="relative aspect-video w-full overflow-hidden bg-stone-100">
+                      <img
+                        src="%BASE_URL%images/food-for-life-kharkiv.png"
+                        alt=""
+                        width="800"
+                        height="450"
+                        class="h-full w-full object-cover"
+                        loading="lazy"
+                        decoding="async"
+                        data-i18n-alt="donationsPage.cards.card3.imageAlt"
+                      />
+                    </div>
+                    <div class="flex flex-1 flex-col px-4 pb-4 pt-4 text-center">
+                      <h2 class="text-base font-bold text-slate-900" data-i18n="donationsPage.cards.card3.title"></h2>
+                      <p class="mt-2 flex items-center justify-center gap-1.5 text-sm text-slate-600">
+                        <i class="fa-solid fa-calendar-check text-brand" aria-hidden="true"></i>
+                        <span data-i18n="donationsPage.cards.card3.meta"></span>
+                      </p>
+                      <a
+                        href="donate.html"
+                        class="mt-4 inline-flex w-full items-center justify-center rounded-md border border-gray-300 bg-white px-3 py-2 text-center text-sm font-medium text-slate-700 transition hover:bg-slate-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-400"
+                        data-i18n="donationsPage.donateNow"
+                      ></a>
+                    </div>
+                  </li>
+
+                  <!-- 4 -->
+                  <li class="flex flex-col overflow-hidden rounded-xl border border-stone-100 bg-white shadow-sm">
+                    <div class="relative aspect-video w-full overflow-hidden bg-stone-100">
+                      <img
+                        src="%BASE_URL%images/donation-cow-seva.jpg"
+                        alt=""
+                        width="800"
+                        height="450"
+                        class="h-full w-full object-cover"
+                        loading="lazy"
+                        decoding="async"
+                        data-i18n-alt="donationsPage.cards.card4.imageAlt"
+                      />
+                    </div>
+                    <div class="flex flex-1 flex-col px-4 pb-4 pt-4 text-center">
+                      <h2 class="text-base font-bold text-slate-900" data-i18n="donationsPage.cards.card4.title"></h2>
+                      <p class="mt-2 flex items-center justify-center gap-1.5 text-sm text-slate-600">
+                        <i class="fa-solid fa-calendar-check text-brand" aria-hidden="true"></i>
+                        <span data-i18n="donationsPage.cards.card4.meta"></span>
+                      </p>
+                      <a
+                        href="donate.html"
+                        class="mt-4 inline-flex w-full items-center justify-center rounded-md border border-gray-300 bg-white px-3 py-2 text-center text-sm font-medium text-slate-700 transition hover:bg-slate-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-400"
+                        data-i18n="donationsPage.donateNow"
+                      ></a>
+                    </div>
+                  </li>
+
+                  <!-- 5 -->
+                  <li class="flex flex-col overflow-hidden rounded-xl border border-stone-100 bg-white shadow-sm">
+                    <div class="relative aspect-video w-full overflow-hidden bg-stone-100">
+                      <img
+                        src="%BASE_URL%images/bhagavatam-lectures-poster.png"
+                        alt=""
+                        width="800"
+                        height="450"
+                        class="h-full w-full object-cover"
+                        loading="lazy"
+                        decoding="async"
+                        data-i18n-alt="donationsPage.cards.card5.imageAlt"
+                      />
+                    </div>
+                    <div class="flex flex-1 flex-col px-4 pb-4 pt-4 text-center">
+                      <h2 class="text-base font-bold text-slate-900" data-i18n="donationsPage.cards.card5.title"></h2>
+                      <p class="mt-2 flex items-center justify-center gap-1.5 text-sm text-slate-600">
+                        <i class="fa-solid fa-calendar-check text-brand" aria-hidden="true"></i>
+                        <span data-i18n="donationsPage.cards.card5.meta"></span>
+                      </p>
+                      <a
+                        href="donate.html"
+                        class="mt-4 inline-flex w-full items-center justify-center rounded-md border border-gray-300 bg-white px-3 py-2 text-center text-sm font-medium text-slate-700 transition hover:bg-slate-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-400"
+                        data-i18n="donationsPage.donateNow"
+                      ></a>
+                    </div>
+                  </li>
+
+                  <!-- 6 -->
+                  <li class="flex flex-col overflow-hidden rounded-xl border border-stone-100 bg-white shadow-sm">
+                    <div class="relative aspect-video w-full overflow-hidden bg-stone-100">
+                      <img
+                        src="%BASE_URL%images/education-bhagavad-gita.png"
+                        alt=""
+                        width="800"
+                        height="450"
+                        class="h-full w-full object-cover"
+                        loading="lazy"
+                        decoding="async"
+                        data-i18n-alt="donationsPage.cards.card6.imageAlt"
+                      />
+                    </div>
+                    <div class="flex flex-1 flex-col px-4 pb-4 pt-4 text-center">
+                      <h2 class="text-base font-bold text-slate-900" data-i18n="donationsPage.cards.card6.title"></h2>
+                      <p class="mt-2 flex items-center justify-center gap-1.5 text-sm text-slate-600">
+                        <i class="fa-solid fa-calendar-check text-brand" aria-hidden="true"></i>
+                        <span data-i18n="donationsPage.cards.card6.meta"></span>
+                      </p>
+                      <a
+                        href="donate.html"
+                        class="mt-4 inline-flex w-full items-center justify-center rounded-md border border-gray-300 bg-white px-3 py-2 text-center text-sm font-medium text-slate-700 transition hover:bg-slate-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-400"
+                        data-i18n="donationsPage.donateNow"
+                      ></a>
+                    </div>
+                  </li>
+
+                  <!-- 7 -->
+                  <li class="flex flex-col overflow-hidden rounded-xl border border-stone-100 bg-white shadow-sm">
+                    <div class="relative aspect-video w-full overflow-hidden bg-stone-100">
+                      <img
+                        src="%BASE_URL%images/krishna-katha.png"
+                        alt=""
+                        width="800"
+                        height="450"
+                        class="h-full w-full object-cover"
+                        loading="lazy"
+                        decoding="async"
+                        data-i18n-alt="donationsPage.cards.card7.imageAlt"
+                      />
+                    </div>
+                    <div class="flex flex-1 flex-col px-4 pb-4 pt-4 text-center">
+                      <h2 class="text-base font-bold text-slate-900" data-i18n="donationsPage.cards.card7.title"></h2>
+                      <p class="mt-2 flex items-center justify-center gap-1.5 text-sm text-slate-600">
+                        <i class="fa-solid fa-calendar-check text-brand" aria-hidden="true"></i>
+                        <span data-i18n="donationsPage.cards.card7.meta"></span>
+                      </p>
+                      <a
+                        href="donate.html"
+                        class="mt-4 inline-flex w-full items-center justify-center rounded-md border border-gray-300 bg-white px-3 py-2 text-center text-sm font-medium text-slate-700 transition hover:bg-slate-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-400"
+                        data-i18n="donationsPage.donateNow"
+                      ></a>
+                    </div>
+                  </li>
+
+                  <!-- 8 -->
+                  <li class="flex flex-col overflow-hidden rounded-xl border border-stone-100 bg-white shadow-sm">
+                    <div class="relative aspect-video w-full overflow-hidden bg-stone-100">
+                      <img
+                        src="%BASE_URL%images/hero-banner.png"
+                        alt=""
+                        width="800"
+                        height="450"
+                        class="h-full w-full object-cover"
+                        loading="lazy"
+                        decoding="async"
+                        data-i18n-alt="donationsPage.cards.card8.imageAlt"
+                      />
+                    </div>
+                    <div class="flex flex-1 flex-col px-4 pb-4 pt-4 text-center">
+                      <h2 class="text-base font-bold text-slate-900" data-i18n="donationsPage.cards.card8.title"></h2>
+                      <p class="mt-2 flex items-center justify-center gap-1.5 text-sm text-slate-600">
+                        <i class="fa-solid fa-calendar-check text-brand" aria-hidden="true"></i>
+                        <span data-i18n="donationsPage.cards.card8.meta"></span>
+                      </p>
+                      <a
+                        href="donate.html"
+                        class="mt-4 inline-flex w-full items-center justify-center rounded-md border border-gray-300 bg-white px-3 py-2 text-center text-sm font-medium text-slate-700 transition hover:bg-slate-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-400"
+                        data-i18n="donationsPage.donateNow"
+                      ></a>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </section>
+        </main>
+      </div>
+      <footer id="site-footer" data-site-footer></footer>
+    </div>
+    <script type="module" src="/src/js/main.js"></script>
+  </body>
+</html>

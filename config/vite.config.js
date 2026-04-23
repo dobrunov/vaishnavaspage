@@ -19,6 +19,7 @@ export default defineConfig({
       input: {
         main: resolve(root, 'index.html'),
         donate: resolve(root, 'donate.html'),
+        donations: resolve(root, 'donations.html'),
         darshan: resolve(root, 'darshan.html'),
         schedule: resolve(root, 'schedule.html'),
         broadcast: resolve(root, 'broadcast.html'),

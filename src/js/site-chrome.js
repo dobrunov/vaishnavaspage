@@ -83,7 +83,7 @@ function buildHeaderHtml() {
 
   return `<header
   id="site-header"
-  class="site-header min-h-[4.25rem] md:min-h-20 sticky top-0 z-50 border-b border-footer-accent/35 bg-footer-cream shadow-[0_1px_0_rgba(0,0,0,0.04)]"
+  class="site-header min-h-[4.25rem] md:min-h-20 sticky top-0 z-50 bg-footer-cream/75 shadow-[0_1px_0_rgba(0,0,0,0.04)] backdrop-blur-lg backdrop-saturate-150"
   data-site-header
   role="banner"
 >
@@ -113,7 +113,7 @@ function buildHeaderHtml() {
 
     <div class="ms-auto flex shrink-0 items-center gap-1 sm:gap-2 md:gap-3">
       <div
-        class="site-header__lang flex items-center gap-0.5 rounded-full border border-stone-200/90 bg-white/80 px-1 py-0.5"
+        class="site-header__lang flex items-center gap-0.5 rounded-full bg-white/80 px-1 py-0.5"
         role="group"
         data-i18n-aria-label="lang.groupLabel"
       >
@@ -131,13 +131,6 @@ function buildHeaderHtml() {
           data-i18n="lang.en"
         >EN</button>
       </div>
-
-      <a
-        href="donate.html"
-        class="site-header__cta hidden min-[500px]:inline-flex items-center justify-center rounded-md border border-footer-accent bg-footer-accent px-3 py-2.5 text-center text-[15px] font-semibold text-white shadow-sm transition hover:brightness-110 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
-        data-i18n="header.donateCta"
-      >
-      </a>
 
       <details class="site-chrome-menu relative min-[850px]:hidden" data-site-mobile-menu>
         <summary
@@ -163,11 +156,6 @@ function buildHeaderHtml() {
         <div
           class="absolute right-0 top-full z-50 mt-1 w-screen max-w-[20rem] rounded-xl border border-stone-200/90 bg-white p-2.5 text-stone-800 shadow-2xl ring-1 ring-black/5"
         >
-          <a
-            href="donate.html"
-            class="mb-1 inline-flex w-full items-center justify-center rounded-md border border-footer-accent bg-footer-accent px-3 py-2.5 text-center text-[15px] font-semibold text-white shadow-sm transition hover:brightness-110 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand sm:hidden"
-            data-i18n="header.donateCta"
-          ></a>
           <nav
             class="max-h-[min(70vh,28rem)] overflow-y-auto"
             data-i18n-aria-label="aside.mainNav"
@@ -193,7 +181,7 @@ function buildFooterHtml() {
   /* Palette: warm cream + logo orange (ISKCON Kharkiv logo ref) */
   return `<footer
   id="site-footer"
-  class="site-footer text-[14px] font-sans border-t border-footer-accent/35 bg-footer-cream text-footer-ink"
+  class="site-footer text-[14px] font-sans text-footer-ink bg-footer-cream bg-[radial-gradient(1200px_900px_at_15%_15%,rgba(232,93,4,0.10),transparent_55%),radial-gradient(900px_700px_at_85%_25%,rgba(242,101,34,0.10),transparent_58%),radial-gradient(900px_700px_at_25%_85%,rgba(242,101,34,0.08),transparent_60%),radial-gradient(1100px_800px_at_85%_85%,rgba(232,93,4,0.08),transparent_62%)]"
   data-site-footer
   role="contentinfo"
 >
@@ -225,28 +213,28 @@ function buildFooterHtml() {
       </div>
       <div>
         <h2
-          class="mb-3 font-bold uppercase tracking-[0.2em] text-footer-accent"
+          class="mb-3 font-bold uppercase tracking-[0.2em] text-footer-ink"
           data-i18n="footer.headingPlan"
         >
         </h2>
         <ul class="space-y-2.5 text-footer-ink">
           <li>
             <a
-              class="inline-flex border-b border-transparent text-footer-accent transition hover:border-footer-accent/70 hover:text-footer-accentHover"
+              class="footer-link inline-flex text-footer-accent transition hover:text-footer-accentHover"
               href="schedule.html"
               data-i18n="nav.schedule"
             ></a>
           </li>
           <li>
             <a
-              class="inline-flex border-b border-transparent text-footer-accent transition hover:border-footer-accent/70 hover:text-footer-accentHover"
+              class="footer-link inline-flex text-footer-accent transition hover:text-footer-accentHover"
               href="darshan.html"
               data-i18n="nav.darshan"
             ></a>
           </li>
           <li>
             <a
-              class="inline-flex border-b border-transparent text-footer-accent transition hover:border-footer-accent/70 hover:text-footer-accentHover"
+              class="footer-link inline-flex text-footer-accent transition hover:text-footer-accentHover"
               href="how-to-get.html"
               data-i18n="nav.howToGet"
             ></a>
@@ -255,28 +243,28 @@ function buildFooterHtml() {
       </div>
       <div>
         <h2
-          class="mb-3 font-bold uppercase tracking-[0.2em] text-footer-accent"
+          class="mb-3 font-bold uppercase tracking-[0.2em] text-footer-ink"
           data-i18n="footer.headingConnect"
         >
         </h2>
         <ul class="space-y-2.5 text-footer-ink">
           <li>
             <a
-              class="inline-flex border-b border-transparent text-footer-accent transition hover:border-footer-accent/70 hover:text-footer-accentHover"
+              class="footer-link inline-flex text-footer-accent transition hover:text-footer-accentHover"
               href="contacts.html"
               data-i18n="nav.contacts"
             ></a>
           </li>
           <li>
             <a
-              class="inline-flex border-b border-transparent text-footer-accent transition hover:border-footer-accent/70 hover:text-footer-accentHover"
+              class="footer-link inline-flex text-footer-accent transition hover:text-footer-accentHover"
               href="broadcast.html"
               data-i18n="nav.broadcast"
             ></a>
           </li>
           <li>
             <a
-              class="inline-flex border-b border-transparent text-footer-accent transition hover:border-footer-accent/70 hover:text-footer-accentHover"
+              class="footer-link inline-flex text-footer-accent transition hover:text-footer-accentHover"
               href="events.html"
               data-i18n="nav.events"
             ></a>
@@ -327,26 +315,20 @@ function buildFooterHtml() {
       </div>
       <div>
         <h2
-          class="mb-3 font-bold uppercase tracking-[0.2em] text-footer-accent"
+          class="mb-3 font-bold uppercase tracking-[0.2em] text-footer-ink"
           data-i18n="footer.headingAddress"
         >
         </h2>
         <p class="leading-relaxed text-footer-ink" data-i18n-html="content.contacts.addressHtml">
         </p>
-        <p class="mt-2 text-footer-muted">
+        <p class="mt-4 text-footer-muted">
           <a
             href="contacts.html"
-            class="border-b border-transparent text-footer-accent transition hover:border-footer-accent/70 hover:text-footer-accentHover"
+            class="footer-link inline-flex text-footer-accent transition hover:text-footer-accentHover"
             data-i18n="footer.writeUs"
           >
           </a>
         </p>
-        <a
-          href="donate.html"
-          class="mt-4 inline-flex w-full items-center justify-center rounded-md border border-footer-accent bg-footer-accent px-3 py-2.5 text-center font-semibold text-white shadow-sm transition hover:brightness-110 sm:w-auto"
-          data-i18n="header.donateCta"
-        >
-        </a>
       </div>
     </div>
     <div
